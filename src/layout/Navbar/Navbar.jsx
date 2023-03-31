@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Wrapper } from "../../styles/createGlobalStyle";
-import { NavBar } from "../../styles/Navbar/Navbar.style";
+import {
+  NavBar,
+  NavbarContainer,
+  BurgerIcon,
+  BurgerIconOpen,
+} from "../../styles/Navbar/Navbar.style";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 import data from "./data";
 
 export default function Navbar() {
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
+
+  const handleButtonClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <NavBar className="navbar">
       <Wrapper className="nav-main">
-        <ul className="nav-container">
+        <NavbarContainer className={isMenuOpen ? "active" : ""}>
           {data.map((link) => {
             const { id, text, path } = link;
             return (
@@ -19,15 +37,19 @@ export default function Navbar() {
               </li>
             );
           })}
-          <li className="nav-items">
-            <i className="fa-solid fa-moon fa-rotate-180"></i>
-            <i className="fa-solid fa-sun"></i>
+          <li className="nav-items" onClick={toggleTheme}>
+            <FontAwesomeIcon
+              icon={isDarkTheme ? faSun : faMoon}
+              style={{ color: "#222", fontSize: "1.7rem" }}
+              className="fa-rotate-180"
+            />
           </li>
-        </ul>
+        </NavbarContainer>
       </Wrapper>
       <div className="nav-icon-container">
-        <i className="nav-icon" id="rotate-icon"></i>
-        <i className="nav-icon"></i>
+        <button onClick={handleButtonClick}>
+          {isMenuOpen ? <BurgerIconOpen /> : <BurgerIcon />}
+        </button>
       </div>
     </NavBar>
   );

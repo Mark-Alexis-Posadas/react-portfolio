@@ -10,37 +10,97 @@ export const NavBar = styled.nav`
     position: fixed;
     z-index: 2;
     width: 100%;
-  }
-
-  .nav-container {
-    margin-top: 20px;
     .nav-items {
       width: 100%;
       text-align: center;
+      &:first-child {
+        .nav-links {
+          color: ${(props) => props.theme.primaryColor};
+        }
+      }
       .nav-links {
+        color: ${(props) => props.theme.textColor};
         padding: 10px;
         display: block;
         font-weight: 400;
       }
     }
-  }
-
-  .nav-icon-container {
-    align-self: flex-start;
-    transition: all 0.5s ease-out;
-    position: relative;
-    .nav-icon {
-      width: 28px;
-      height: 3px;
-      margin: 0 0 5px;
-      color: #701dc9;
-      background: #701dc9;
-      -webkit-transition: all 0.5s ease-out;
+    .nav-icon-container {
+      align-self: flex-start;
       transition: all 0.5s ease-out;
-      display: block;
-      &:last-child {
-        margin: 0;
+      position: relative;
+      button {
+        display: flex;
+        height: 42px;
+        border: none;
+        outline: none;
+        background: transparent;
       }
     }
+    @media screen and (min-width: 500px) {
+      padding: 2rem 0;
+      .nav-items {
+        width: auto;
+        &:last-child {
+          margin-left: auto;
+        }
+        .nav-links {
+          padding: 0;
+          margin-right: 1rem;
+        }
+      }
+
+      .nav-icon-container {
+        display: none;
+      }
+    }
+  }
+`;
+
+export const NavbarContainer = styled.ul`
+  margin-top: 20px;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+  @media screen and (min-width: 500px) {
+    margin-top: 0;
+    display: flex;
+  }
+`;
+
+export const BurgerIcon = styled.div`
+  position: relative;
+  width: 26px;
+  height: 11px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: ${(props) => props.theme.primaryColor};
+    transition: transform 0.2s ease-out;
+  }
+
+  &::before {
+    top: 17px;
+  }
+
+  &::after {
+    bottom: -1px;
+  }
+`;
+
+export const BurgerIconOpen = styled(BurgerIcon)`
+  &::before {
+    transform: rotate(45deg) translate(0, -6px);
+  }
+
+  &::after {
+    transform: rotate(-45deg) translate(0, 6px);
   }
 `;

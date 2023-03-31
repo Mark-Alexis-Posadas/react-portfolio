@@ -19,6 +19,9 @@ const GlobalStyle = createGlobalStyle`
   html,body {
     font-family: "Jost", sans-serif;
   }
+  /* html, body, #root, #root>div {
+  height: 100%
+} */
   
   h1,
   h2,
@@ -35,6 +38,8 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.05rem;
   }
 
 `;
