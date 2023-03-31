@@ -8,20 +8,32 @@ export const Wrapper = styled.div`
   padding: 0 2rem;
 `;
 
-const GlobalStyle = createGlobalStyle`
+export const SectionHeading = styled.h1`
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  @media screen and (min-width: 500px) {
+    font-size: 3rem;
+  }
+`;
 
+const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
   }
 
-  html,body {
+  html,
+  body {
     font-family: "Jost", sans-serif;
   }
   /* html, body, #root, #root>div {
   height: 100%
-} */
+  } */
+  section, header {
+    min-height: calc(650px - 6rem);
+    padding: 3rem 0;
+  }
   
   h1,
   h2,
@@ -40,8 +52,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     text-transform: capitalize;
     font-size: 1.05rem;
+    &.active {
+      color: red;
+    }
   }
-
 `;
 
 export default GlobalStyle;

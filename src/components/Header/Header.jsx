@@ -1,5 +1,12 @@
 import React from "react";
+import { Wrapper } from "../../styles/createGlobalStyle";
 
 export default function Header() {
-  return <div>Header</div>;
+  return (
+    <header id="home">
+      <Wrapper>
+        <h1>Header</h1>
+      </Wrapper>
+    </header>
+  );
 }

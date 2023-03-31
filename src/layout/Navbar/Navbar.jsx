@@ -8,6 +8,7 @@ import {
 } from "../../styles/Navbar/Navbar.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-scroll";
 
 import data from "./data";
 
@@ -27,13 +28,21 @@ export default function Navbar() {
     <NavBar className="navbar">
       <Wrapper className="nav-main">
         <NavbarContainer className={isMenuOpen ? "active" : ""}>
-          {data.map((link) => {
-            const { id, text, path } = link;
+          {data.map((link, index) => {
+            const { text, path } = link;
             return (
-              <li key={id} className="nav-items">
-                <a href={path} className="nav-links">
+              <li key={index} className="nav-items">
+                <Link
+                  to={path} // the path should be the id of the section you want to scroll to
+                  smooth={true} // set smooth scrolling behavior
+                  duration={500} // set the duration of the scroll animation
+                  offset={-70} // adjust the scroll offset as needed
+                  className="nav-links"
+                  activeClass="active"
+                  spy={true}
+                >
                   {text}
-                </a>
+                </Link>
               </li>
             );
           })}

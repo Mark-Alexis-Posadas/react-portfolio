@@ -1,34 +1,28 @@
 const data = [
   {
-    id: 1,
+    path: "home",
     text: "home",
-    path: "#home",
   },
   {
-    id: 2,
+    path: "about",
     text: "about",
-    path: "#about",
   },
   {
-    id: 3,
+    path: "projects",
     text: "projects",
-    path: "#projects",
   },
 
   {
-    id: 4,
-    text: "skill",
-    path: "#skill",
+    path: "skills",
+    text: "skills",
   },
   {
-    id: 5,
+    path: "experience",
     text: "experience",
-    path: "#experience",
   },
   {
-    id: 6,
+    path: "contact",
     text: "contact",
-    path: "#contact",
   },
 ];
 

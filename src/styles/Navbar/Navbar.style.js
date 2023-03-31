@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const NavBar = styled.nav`
   &.navbar {
+    background-color: ${(props) => props.theme.body};
     display: flex;
     align-items: center;
     justify-content: end;
@@ -13,16 +14,17 @@ export const NavBar = styled.nav`
     .nav-items {
       width: 100%;
       text-align: center;
-      &:first-child {
-        .nav-links {
-          color: ${(props) => props.theme.primaryColor};
-        }
-      }
+
       .nav-links {
         color: ${(props) => props.theme.textColor};
         padding: 10px;
         display: block;
         font-weight: 400;
+        cursor: pointer;
+        &.active {
+          color: ${(props) => props.theme.primaryColor};
+          font-weight: 700;
+        }
       }
     }
     .nav-icon-container {

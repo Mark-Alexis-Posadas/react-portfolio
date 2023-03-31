@@ -1,5 +1,12 @@
 import React from "react";
+import { SectionHeading, Wrapper } from "../../styles/createGlobalStyle";
 
 export default function Skills() {
-  return <div>Skills</div>;
+  return (
+    <section id="skills">
+      <Wrapper>
+        <SectionHeading>Skills</SectionHeading>
+      </Wrapper>
+    </section>
+  );
 }
