@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { Wrapper } from "../../styles/createGlobalStyle";
+import { Wrapper } from "./styles/createGlobalStyle";
 import {
   NavBar,
   NavbarContainer,
   BurgerIcon,
   BurgerIconOpen,
-} from "../../styles/Navbar/Navbar.style";
+} from "./styles/Navbar/Navbar.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
 
-import data from "./data";
+import navbarApi from "./api/navbarApi";
 
 export default function Navbar({ toggleMainTheme }) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -32,7 +32,7 @@ export default function Navbar({ toggleMainTheme }) {
     <NavBar className="navbar">
       <Wrapper className="nav-main">
         <NavbarContainer className={isMenuOpen ? "active" : ""}>
-          {data.map((link, index) => {
+          {navbarApi.map((link, index) => {
             const { text, path } = link;
             return (
               <li key={index} className="nav-items">

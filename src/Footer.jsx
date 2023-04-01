@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper } from "../../styles/createGlobalStyle";
+import { Wrapper } from "./styles/createGlobalStyle";
 
 export default function Footer() {
   return (
