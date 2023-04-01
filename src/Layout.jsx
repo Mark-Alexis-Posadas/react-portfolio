@@ -25,7 +25,7 @@ const darkTheme = {
   textColor: "#fff",
 };
 
-const Main = () => {
+const Layout = () => {
   const [theme, setTheme] = useState("light");
   const isDarkTheme = theme === "dark";
   console.log("text0");
@@ -50,4 +50,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Layout;

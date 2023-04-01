@@ -11,8 +11,17 @@ export const Wrapper = styled.div`
 export const SectionHeading = styled.h1`
   font-size: 1.8rem;
   margin-bottom: 2rem;
+  color: ${(props) => props.theme.textColor};
   @media screen and (min-width: 500px) {
     font-size: 3rem;
+  }
+`;
+export const Paragraph = styled.p`
+  font-size: 1.2rem;
+  color: ${(props) => props.theme.textColor};
+
+  @media screen and (min-width: 1366px) {
+    font-size: 25px;
   }
 `;
 

@@ -15,10 +15,7 @@ export const HeaderContainer = styled.header`
         color: ${(props) => props.theme.primaryColor};
       }
     }
-    p {
-      font-size: 1.2rem;
-      color: ${(props) => props.theme.textColor};
-    }
+ 
   }
   @media screen and (min-width: 768px) {
     .header-inner {
@@ -31,7 +28,6 @@ export const HeaderContainer = styled.header`
       }
     }
     p {
-      font-size: 1.2rem;
       max-width: 70%;
       margin: 0 auto;
       text-align: center;
@@ -40,11 +36,7 @@ export const HeaderContainer = styled.header`
 
   @media screen and (min-width: 1366px) {
     min-height: calc(100vh - 6rem);
-    .header-inner {
-      p {
-        font-size: 25px;
-      }
-    }
+
   
   }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper } from "../../styles/createGlobalStyle";
+import { Paragraph, Wrapper } from "../../styles/createGlobalStyle";
 import { HeaderContainer } from "../../styles/Header/Header.style";
 
 export default function Header() {
@@ -12,10 +12,10 @@ export default function Header() {
             Hello! I'm <span>Mark Alexis Posadas</span>
           </h1>
 
-          <p>
+          <Paragraph>
             I am a front-end developer with a passion for creating beautiful,
             functional, and user-friendly websites.
-          </p>
+          </Paragraph>
         </div>
       </Wrapper>
     </HeaderContainer>
