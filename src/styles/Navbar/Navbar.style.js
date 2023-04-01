@@ -26,6 +26,10 @@ export const NavBar = styled.nav`
           font-weight: 700;
         }
       }
+
+      svg.svg-inline--fa {
+        color: ${(props) => props.theme.textColor};
+      }
     }
     .nav-icon-container {
       align-self: flex-start;

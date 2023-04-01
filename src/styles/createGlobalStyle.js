@@ -34,6 +34,10 @@ const GlobalStyle = createGlobalStyle`
     min-height: calc(650px - 6rem);
     padding: 3rem 0;
   }
+
+  p {
+    line-height: 1.625;
+  }
   
   h1,
   h2,

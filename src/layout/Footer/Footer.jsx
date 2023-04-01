@@ -3,7 +3,7 @@ import { Wrapper } from "../../styles/createGlobalStyle";
 
 export default function Footer() {
   return (
-    <Footer>
+    <footer>
       <Wrapper>
         {" "}
         <nav>
@@ -21,6 +21,6 @@ export default function Footer() {
           </ul>
         </nav>
       </Wrapper>
-    </Footer>
+    </footer>
   );
 }

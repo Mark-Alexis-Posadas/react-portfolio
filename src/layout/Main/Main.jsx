@@ -11,17 +11,19 @@ import Skills from "../../components/Skills/Skills";
 import Experience from "../../components/Experience/Experience";
 import Contact from "../../components/Contact/Contact";
 import Footer from "../Footer/Footer";
+import { ThemeContainer } from "../../styles/ThemeContainer.style";
 
 const lightTheme = {
   body: "#fafafa",
   primaryColor: "#701dc9",
   textColor: "#131313",
+  secondaryColor: "#fff",
 };
 
 const darkTheme = {
   body: "#131313",
   primaryColor: "#701dc9",
-  textColor: "#ffff",
+  textColor: "#fff",
 };
 
 const Main = () => {
@@ -33,15 +35,17 @@ const Main = () => {
   };
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-      <GlobalStyle />
-      <Navbar />
-      <Header />
-      <About />
-      <Projects />
-      <Skills />
-      <Experience />
-      <Contact />
-      <Footer />
+      <ThemeContainer>
+        <GlobalStyle />
+        <Navbar />
+        <Header />
+        <About />
+        <Projects />
+        <Skills />
+        <Experience />
+        <Contact />
+        <Footer />
+      </ThemeContainer>
     </ThemeProvider>
   );
 };

@@ -49,7 +49,7 @@ export default function Navbar() {
           <li className="nav-items" onClick={toggleTheme}>
             <FontAwesomeIcon
               icon={isDarkTheme ? faSun : faMoon}
-              style={{ color: "#222", fontSize: "1.7rem" }}
+              style={{ fontSize: "1.7rem" }}
               className="fa-rotate-180"
             />
           </li>
