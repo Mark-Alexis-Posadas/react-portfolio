@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     font-family: "Jost", sans-serif;
+    height: 100%
   }
   /* html, body, #root, #root>div {
   height: 100%

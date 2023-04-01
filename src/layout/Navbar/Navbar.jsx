@@ -12,12 +12,16 @@ import { Link } from "react-scroll";
 
 import data from "./data";
 
-export default function Navbar() {
+export default function Navbar({ toggleMainTheme }) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isToggled, setIsToggled] = useState(false);
 
+  //Theme Icon
   const toggleTheme = () => {
     setIsDarkTheme(!isDarkTheme);
+    setIsToggled(!isToggled);
+    toggleMainTheme();
   };
 
   const handleButtonClick = () => {
@@ -46,8 +50,9 @@ export default function Navbar() {
               </li>
             );
           })}
-          <li className="nav-items" onClick={toggleTheme}>
+          <li className="nav-items">
             <FontAwesomeIcon
+              onClick={toggleTheme}
               icon={isDarkTheme ? faSun : faMoon}
               style={{ fontSize: "1.7rem" }}
               className="fa-rotate-180"

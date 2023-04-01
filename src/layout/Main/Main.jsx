@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../../styles/createGlobalStyle";
-import { MainTheme } from "../../styles/Main/Main.style";
 
 import Navbar from "../Navbar/Navbar";
 import Header from "../../components/Header/Header";
@@ -30,15 +29,17 @@ const Main = () => {
   const [theme, setTheme] = useState("light");
   const isDarkTheme = theme === "dark";
 
-  const toggleTheme = () => {
+  const toggleMainTheme = () => {
     setTheme(isDarkTheme ? "light" : "dark");
   };
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <ThemeContainer>
         <GlobalStyle />
-        <Navbar />
+
+        <Navbar toggleMainTheme={toggleMainTheme} />
         <Header />
+
         <About />
         <Projects />
         <Skills />
