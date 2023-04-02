@@ -54,4 +54,10 @@ export const mySkills = [
     name: "Styled Components",
     icon: "SiStyledcomponents",
   },
+
+  {
+    id: 12,
+    name: "Figma",
+    icon: "FaFigma",
+  },
 ];

@@ -10,10 +10,12 @@ import {
   FaNpm,
   FaGit,
   FaReact,
+  FaFigma,
 } from "react-icons/fa";
 
 import { SiStyledcomponents, SiBem } from "react-icons/si";
 import { mySkills } from "../../api/skillsApi";
+import { SkillsSection } from "../../styles/Skills/Skills.style";
 
 export default function Skills() {
   const renderIcon = (iconName) => {
@@ -40,13 +42,15 @@ export default function Skills() {
         return <FaReact />;
       case "SiStyledcomponents":
         return <SiStyledcomponents />;
+      case "FaFigma":
+        return <FaFigma />;
       default:
         return null;
     }
   };
 
   return (
-    <section id="skills">
+    <SkillsSection id="skills">
       <Wrapper>
         <SectionHeading>Skills</SectionHeading>
         <ul>
@@ -55,12 +59,12 @@ export default function Skills() {
             return (
               <li key={id}>
                 {renderIcon(icon)}
-                <span>{name}</span>
+                <span className="mt-1">{name}</span>
               </li>
             );
           })}
         </ul>
       </Wrapper>
-    </section>
+    </SkillsSection>
   );
 }
