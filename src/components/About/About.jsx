@@ -5,12 +5,14 @@ import {
   Wrapper,
 } from "../../styles/createGlobalStyle";
 
+// import { AboutSection } from "../../styles/About/About.style";
+
 export default function About() {
   return (
     <section id="about">
       <Wrapper>
         <SectionHeading>About Me</SectionHeading>
-        <Paragraph>
+        <Paragraph className="lg-font-size">
           Welcome to my portfolio website! My name is Mark Alexis Posadas, and I
           am a front-end developer with a passion for creating beautiful,
           functional, and user-friendly websites. With expertise in HTML, CSS,

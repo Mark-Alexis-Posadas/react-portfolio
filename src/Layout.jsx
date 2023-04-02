@@ -17,12 +17,15 @@ const lightTheme = {
   primaryColor: "#701dc9",
   textColor: "#131313",
   secondaryColor: "#fff",
+  tags: "#999",
 };
 
 const darkTheme = {
   body: "#131313",
   primaryColor: "#701dc9",
   textColor: "#fff",
+  secondaryColor: "#701dc9",
+  tags: "#fff",
 };
 
 const Layout = () => {

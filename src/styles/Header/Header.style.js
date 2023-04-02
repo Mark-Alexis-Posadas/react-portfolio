@@ -42,6 +42,7 @@ export const HeaderContainer = styled.header`
 
   @media screen and (min-width: 1440px) {
     min-height: calc(100vh - 6rem);
+    
     .header-inner {
       .header-title {
         font-size: 7rem;

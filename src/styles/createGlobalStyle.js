@@ -25,6 +25,30 @@ export const Paragraph = styled.p`
   }
 `;
 
+export const Card = styled.article`
+  background-color: ${(props) => props.theme.secondaryColor};
+  box-shadow: rgba(90, 90, 90, 0.1) 1px 7px 29px 0px;
+  padding: 2rem;
+  margin-bottom: 1.9rem;
+  border-radius: 5px;
+
+  header {
+    min-height: auto;
+    padding: 0;
+    h1 {
+      color: ${(props) => props.theme.textColor};
+    }
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      color: ${(props) => props.theme.tags};
+      margin-right: 1rem;
+    }
+  }
+`;
+
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
@@ -45,8 +69,21 @@ const GlobalStyle = createGlobalStyle`
     padding: 3rem 0;
   }
 
+  .my-1 {
+    margin: 1rem 0;
+  }
+  .mb-1 {
+    margin-bottom: 1rem;
+  }
+
   p {
     line-height: 1.625;
+  }
+
+  @media screen and (min-width: 1366px) {
+    .lg-font-size {
+      font-size: 1.2rem;
+    }
   }
   
   h1,
