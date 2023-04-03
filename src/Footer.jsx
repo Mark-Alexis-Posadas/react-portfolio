@@ -1,13 +1,14 @@
 import React from "react";
 import { Wrapper } from "./styles/createGlobalStyle";
-
+import { FooterSection } from "./styles/Footer/Footer.style";
+import { FaGithub } from "react-icons/fa";
 export default function Footer() {
   return (
-    <footer>
+    <FooterSection>
       <Wrapper>
         {" "}
         <nav>
-          <ul className="d-flex align-items-center justify-content-between">
+          <ul>
             <li>&#169; 2023 Mark Alexis Posadas</li>
             <li>
               <a
@@ -15,12 +16,12 @@ export default function Footer() {
                 href="https://github.com/Mark-Alexis-Posadas"
                 target="_blank"
               >
-                <i className="fa-brands fa-github"></i>
+                <FaGithub />
               </a>
             </li>
           </ul>
         </nav>
       </Wrapper>
-    </footer>
+    </FooterSection>
   );
 }

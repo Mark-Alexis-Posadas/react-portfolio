@@ -56,6 +56,7 @@ export default function Skills() {
         <ul>
           {mySkills.map((skill) => {
             const { id, name, icon } = skill;
+
             return (
               <li key={id}>
                 {renderIcon(icon)}
