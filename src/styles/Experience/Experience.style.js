@@ -3,6 +3,16 @@ import styled from "styled-components";
 export const ExperienceSection = styled.section`
   article {
     margin-bottom: 1.9rem;
+    h3 {
+      color: ${(props) => props.theme.textColor};
+    }
+
+    h2 {
+      color: ${(props) => props.theme.primaryColor};
+    }
+    span {
+      color: ${(props) => props.theme.textColor};
+    }
   }
 
   header {
@@ -22,6 +32,7 @@ export const ExperienceSection = styled.section`
     list-style: disc;
     li {
       line-height: 1.5;
+      color: ${(props) => props.theme.textColor};
     }
   }
 

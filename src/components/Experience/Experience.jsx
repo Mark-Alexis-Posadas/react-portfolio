@@ -23,7 +23,7 @@ export default function Experience() {
                   <span>{date}</span>
                   <span>{address}</span>
                 </header>
-                <ul>
+                <ul className="mt-1">
                   {experience.jobDescriptions.map((job, idx) => {
                     return <li key={idx}>{job}</li>;
                   })}

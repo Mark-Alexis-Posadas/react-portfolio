@@ -54,7 +54,7 @@ export default function Navbar({ toggleMainTheme }) {
             <FontAwesomeIcon
               onClick={toggleTheme}
               icon={isDarkTheme ? faSun : faMoon}
-              style={{ fontSize: "1.7rem" }}
+              style={{ fontSize: "1.7rem", cursor: "pointer" }}
               className="fa-rotate-180"
             />
           </li>

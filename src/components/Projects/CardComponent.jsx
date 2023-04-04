@@ -28,9 +28,11 @@ const CardComponent = ({ propData, Card }) => {
             </ul>
 
             <ul>
-              {data.tags.map((tag, idx) => {
-                return <li key={idx}>{tag}</li>;
-              })}
+              <li>
+                {data.tags.map((tag, idx) =>
+                  idx === data.tags.length - 1 ? tag : tag + ", "
+                )}
+              </li>
             </ul>
           </Card>
         );

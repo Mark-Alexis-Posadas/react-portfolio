@@ -73,6 +73,7 @@ export const NavbarContainer = styled.ul`
   @media screen and (min-width: 500px) {
     margin-top: 0;
     display: flex;
+    align-items: center;
   }
 `;
 
