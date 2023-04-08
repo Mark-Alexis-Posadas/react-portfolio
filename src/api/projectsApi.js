@@ -19,7 +19,7 @@ const data = [
     id: 3,
     pageTitle: "Accordion",
     description:
-      "This project is a simple implementation of tabs using Vanilla JavaScript. It allows you to switch between different content sections without the need for page refresh.",
+      "This is a simple accordion project built using HTML, CSS, and JavaScript.",
     buttons: ["Demo", "Source"],
 
     tags: ["HTML", "CSS", "JavaScript"],

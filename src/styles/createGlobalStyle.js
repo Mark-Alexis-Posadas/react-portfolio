@@ -16,12 +16,22 @@ export const SectionHeading = styled.h1`
     font-size: 3rem;
   }
 `;
+
 export const Paragraph = styled.p`
   font-size: 1.2rem;
   color: ${(props) => props.theme.textColor};
 
   @media screen and (min-width: 1366px) {
     font-size: 25px;
+  }
+`;
+
+export const FormInput = styled.input`
+  padding: 1rem;
+  border: none;
+  &::placeholder {
+    font-family: Jost, sans-serif;
+    font-size: 1rem;
   }
 `;
 
