@@ -31,7 +31,6 @@ const darkTheme = {
 const Layout = () => {
   const [theme, setTheme] = useState("light");
   const isDarkTheme = theme === "dark";
-  console.log("text0");
   const toggleMainTheme = () => {
     setTheme(isDarkTheme ? "light" : "dark");
   };

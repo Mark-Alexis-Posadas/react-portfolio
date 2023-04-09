@@ -5,12 +5,12 @@ export const ContactSection = styled.section`
   fieldset {
     border: none;
     p {
-      padding: 1rem 0;
+      margin: 1rem 0;
       display: flex;
       flex-direction: column;
       textarea {
-        min-height: 400px;
         padding: 1rem;
+        min-height: 400px;
         border: none;
         &::placeholder {
           font-family: Jost, sans-serif;
