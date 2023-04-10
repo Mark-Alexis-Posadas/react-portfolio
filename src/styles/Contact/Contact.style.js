@@ -4,10 +4,7 @@ export const ContactSection = styled.section`
   min-height: calc(100vh - 6rem);
   fieldset {
     border: none;
-    p {
-      margin: 1rem 0;
-      display: flex;
-      flex-direction: column;
+    div {
       textarea {
         padding: 1rem;
         min-height: 400px;
@@ -18,7 +15,7 @@ export const ContactSection = styled.section`
         }
       }
     }
-    button {
+    input[type="submit"] {
       background-color: ${(props) => props.theme.textColor};
       color: ${(props) => props.theme.secondaryColor};
       border: none;
@@ -30,4 +27,10 @@ export const ContactSection = styled.section`
       cursor: pointer;
     }
   }
+`;
+
+export const FormInputContainer = styled.div`
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
 `;

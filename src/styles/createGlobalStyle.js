@@ -27,12 +27,17 @@ export const Paragraph = styled.p`
 `;
 
 export const FormInput = styled.input`
+  background-color: ${(props) => props.theme.input};
   padding: 1rem;
   border: none;
   &::placeholder {
     font-family: Jost, sans-serif;
     font-size: 1rem;
   }
+`;
+
+export const FormTextArea = styled.textarea`
+  background-color: ${(props) => props.theme.input};
 `;
 
 export const Card = styled.article`
@@ -120,6 +125,15 @@ const GlobalStyle = createGlobalStyle`
     &.active {
       color: red;
     }
+  }
+
+  input,button,textarea {
+    font-family: "Jost", sans-serif;
+    font-size: 1.1rem;
+  }
+
+  .Toastify__toast--success {
+    font-family: "Jost", sans-serif;
   }
 `;
 

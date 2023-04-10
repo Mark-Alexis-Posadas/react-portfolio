@@ -18,6 +18,7 @@ const lightTheme = {
   textColor: "#131313",
   secondaryColor: "#fff",
   tags: "#999",
+  input: "#fff",
 };
 
 const darkTheme = {
@@ -26,6 +27,7 @@ const darkTheme = {
   textColor: "#fff",
   secondaryColor: "#701dc9",
   tags: "#fff",
+  input: "#263238",
 };
 
 const Layout = () => {
