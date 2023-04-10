@@ -17,6 +17,16 @@ const data = [
 
     tags: ["HTML", "CSS", "JavaScript"],
   },
+
+  {
+    id: 3,
+    pageTitle: "Multiple Tabs",
+    description:
+      "This project demonstrates how to create a multiple tabs interface using vanilla JavaScript.",
+    buttons: ["Demo", "Source"],
+
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
 ];
 
 export default data;
