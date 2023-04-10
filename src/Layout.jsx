@@ -19,15 +19,17 @@ const lightTheme = {
   secondaryColor: "#fff",
   tags: "#999",
   input: "#fff",
+  btn: "#222",
 };
 
 const darkTheme = {
   body: "#131313",
   primaryColor: "#701dc9",
   textColor: "#fff",
-  secondaryColor: "#701dc9",
+  secondaryColor: "#263236",
   tags: "#fff",
   input: "#263238",
+  btn: "#263236",
 };
 
 const Layout = () => {

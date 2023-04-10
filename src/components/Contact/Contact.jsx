@@ -10,6 +10,7 @@ import {
   SectionHeading,
   Wrapper,
 } from "../../styles/createGlobalStyle";
+
 import {
   ContactSection,
   FormInputContainer,
@@ -112,7 +113,6 @@ export default function Contact() {
         <SectionHeading>Contact</SectionHeading>
         <form ref={form} onSubmit={handleSubmit}>
           <fieldset>
-            <legend>Say hello!</legend>
             <FormInputContainer>
               <FormInput
                 type="text"

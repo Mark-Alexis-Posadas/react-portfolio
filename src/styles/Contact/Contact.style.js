@@ -16,7 +16,7 @@ export const ContactSection = styled.section`
       }
     }
     input[type="submit"] {
-      background-color: ${(props) => props.theme.textColor};
+      background-color: ${(props) => props.theme.btn};
       color: ${(props) => props.theme.secondaryColor};
       border: none;
       outline: none;

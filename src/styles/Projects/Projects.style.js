@@ -10,7 +10,7 @@ export const ProjectsSection = styled.section`
   }
 
   a {
-    background-color: ${(props) => props.theme.textColor};
+    background-color: ${(props) => props.theme.btn};
     color: ${(props) => props.theme.secondaryColor};
     border: 1px solid #222;
     padding: 0.1rem 0.9rem;
