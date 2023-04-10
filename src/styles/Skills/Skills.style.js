@@ -1,14 +1,9 @@
 import styled from "styled-components";
 
 export const SkillsSection = styled.section`
-  ul {
+  .skills-container {
     display: grid;
-    li {
-      background-color: ${(props) => props.theme.secondaryColor};
-      box-shadow: rgba(90, 90, 90, 0.1) 1px 7px 29px 0px;
-      padding: 2rem;
-      margin-bottom: 1.9rem;
-      border-radius: 5px;
+    article {
       display: flex;
       flex-direction: column;
       align-items: center;

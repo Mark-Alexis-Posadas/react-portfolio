@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionHeading, Wrapper } from "../../styles/createGlobalStyle";
+import { Card, SectionHeading, Wrapper } from "../../styles/createGlobalStyle";
 
 import experienceApi from "../../api/experienceApi";
 import { ExperienceSection } from "../../styles/Experience/Experience.style";
@@ -12,7 +12,7 @@ export default function Experience() {
         {experienceApi.map((experience) => {
           const { id, logo, title, company, date, address } = experience;
           return (
-            <article key={id}>
+            <Card key={id}>
               <figure>
                 <img src={logo} alt={logo} />
               </figure>
@@ -29,7 +29,7 @@ export default function Experience() {
                   })}
                 </ul>
               </div>
-            </article>
+            </Card>
           );
         })}
       </Wrapper>

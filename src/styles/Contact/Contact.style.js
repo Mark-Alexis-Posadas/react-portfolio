@@ -17,7 +17,7 @@ export const ContactSection = styled.section`
     }
     input[type="submit"] {
       background-color: ${(props) => props.theme.btn};
-      color: ${(props) => props.theme.secondaryColor};
+      color: ${(props) => props.theme.tags};
       border: none;
       outline: none;
       padding: 1rem;

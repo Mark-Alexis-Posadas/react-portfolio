@@ -29,7 +29,7 @@ const darkTheme = {
   secondaryColor: "#263236",
   tags: "#fff",
   input: "#263238",
-  btn: "#263236",
+  btn: "#701dc9",
 };
 
 const Layout = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionHeading, Wrapper } from "../../styles/createGlobalStyle";
+import { Card, SectionHeading, Wrapper } from "../../styles/createGlobalStyle";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -53,18 +53,18 @@ export default function Skills() {
     <SkillsSection id="skills">
       <Wrapper>
         <SectionHeading>Skills</SectionHeading>
-        <ul>
+        <div className="skills-container">
           {mySkills.map((skill) => {
             const { id, name, icon } = skill;
 
             return (
-              <li key={id}>
+              <Card key={id}>
                 {renderIcon(icon)}
                 <span className="mt-1">{name}</span>
-              </li>
+              </Card>
             );
           })}
-        </ul>
+        </div>
       </Wrapper>
     </SkillsSection>
   );

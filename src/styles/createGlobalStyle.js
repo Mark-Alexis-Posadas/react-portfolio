@@ -46,22 +46,6 @@ export const Card = styled.article`
   padding: 2rem;
   margin-bottom: 1.9rem;
   border-radius: 5px;
-
-  header {
-    min-height: auto;
-    padding: 0;
-    h1 {
-      color: ${(props) => props.theme.textColor};
-    }
-  }
-  ul {
-    display: flex;
-    align-items: center;
-    li {
-      color: ${(props) => props.theme.tags};
-      margin-right: 1rem;
-    }
-  }
 `;
 
 const GlobalStyle = createGlobalStyle`
