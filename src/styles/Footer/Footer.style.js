@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterSection = styled.footer`
-  padding: 2rem;
+  padding: 2rem 0;
   ul {
     display: flex;
     align-items: center;
