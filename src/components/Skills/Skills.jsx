@@ -55,13 +55,15 @@ export default function Skills() {
         <SectionHeading>Skills</SectionHeading>
         <div className="skills-container">
           {mySkills.map((skill) => {
-            const { id, name, icon } = skill;
+            const { id, name, icon, url } = skill;
 
             return (
-              <Card key={id}>
-                {renderIcon(icon)}
-                <span className="mt-1">{name}</span>
-              </Card>
+              <a key={id} href={url} target="_blank" rel="noopener noreferrer">
+                <Card>
+                  {renderIcon(icon)}
+                  <span className="mt-1">{name}</span>
+                </Card>
+              </a>
             );
           })}
         </div>
