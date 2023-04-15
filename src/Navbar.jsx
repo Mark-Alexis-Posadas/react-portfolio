@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 import { Wrapper } from "./styles/createGlobalStyle";
 import {
   NavBar,
@@ -12,26 +12,47 @@ import { Link } from "react-scroll";
 
 import navbarApi from "./api/navbarApi";
 
+const initialState = {
+  isDarkTheme: false,
+  isMenuOpen: false,
+  isToggled: false,
+};
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "TOGGLE_THEME":
+      return {
+        ...state,
+        isDarkTheme: !state.isDarkTheme,
+        isToggled: !state.isToggled,
+      };
+    case "TOGGLE_MENU":
+      return {
+        ...state,
+        isMenuOpen: !state.isMenuOpen,
+      };
+    default:
+      throw new Error("Invalid action type");
+  }
+}
+
 export default function Navbar({ toggleMainTheme }) {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isToggled, setIsToggled] = useState(false);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   //Theme Icon
   const toggleTheme = () => {
-    setIsDarkTheme(!isDarkTheme);
-    setIsToggled(!isToggled);
+    dispatch({ type: "TOGGLE_THEME" });
     toggleMainTheme();
   };
 
   const handleButtonClick = () => {
-    setIsMenuOpen(!isMenuOpen);
+    dispatch({ type: "TOGGLE_MENU" });
   };
 
   return (
     <NavBar className="navbar">
-      <Wrapper className="nav-main">
-        <NavbarContainer className={isMenuOpen ? "active" : ""}>
+      <Wrapper>
+        <NavbarContainer className={state.isMenuOpen ? "active" : ""}>
           {navbarApi.map((link, index) => {
             const { text, path } = link;
             return (
@@ -53,7 +74,7 @@ export default function Navbar({ toggleMainTheme }) {
           <li className="nav-items">
             <FontAwesomeIcon
               onClick={toggleTheme}
-              icon={isDarkTheme ? faSun : faMoon}
+              icon={state.isDarkTheme ? faSun : faMoon}
               style={{ fontSize: "1.7rem", cursor: "pointer" }}
               className="fa-rotate-180"
             />
@@ -62,7 +83,7 @@ export default function Navbar({ toggleMainTheme }) {
       </Wrapper>
       <div className="nav-icon-container">
         <button onClick={handleButtonClick}>
-          {isMenuOpen ? <BurgerIconOpen /> : <BurgerIcon />}
+          {state.isMenuOpen ? <BurgerIconOpen /> : <BurgerIcon />}
         </button>
       </div>
     </NavBar>
