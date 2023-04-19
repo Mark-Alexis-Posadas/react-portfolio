@@ -33,10 +33,16 @@ const darkTheme = {
 };
 
 const Layout = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  // const [theme, setTheme] = useState("light");
   const isDarkTheme = theme === "dark";
+  const newTheme = isDarkTheme ? "light" : "dark";
+
   const toggleMainTheme = () => {
     setTheme(isDarkTheme ? "light" : "dark");
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
   };
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>

@@ -21,10 +21,14 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case "TOGGLE_THEME":
+      const newIsDarkTheme = !state.isDarkTheme;
+      const newIsToggled = !state.isToggled;
+      localStorage.setItem("isDarkTheme", newIsDarkTheme);
+      localStorage.setItem("isToggled", newIsToggled);
       return {
         ...state,
-        isDarkTheme: !state.isDarkTheme,
-        isToggled: !state.isToggled,
+        isDarkTheme: newIsDarkTheme,
+        isToggled: newIsToggled,
       };
     case "TOGGLE_MENU":
       return {
@@ -37,7 +41,11 @@ function reducer(state, action) {
 }
 
 export default function Navbar({ toggleMainTheme }) {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, {
+    isDarkTheme: localStorage.getItem("isDarkTheme") === "true",
+    isMenuOpen: false,
+    isToggled: localStorage.getItem("isToggled") === "true",
+  });
 
   //Theme Icon
   const toggleTheme = () => {
