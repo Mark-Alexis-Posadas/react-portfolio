@@ -15,34 +15,28 @@ export const HeaderContainer = styled.header`
         color: ${(props) => props.theme.activeColor};
       }
     }
- 
   }
   @media screen and (min-width: 768px) {
     .header-inner {
-
-    .header-title {
-      text-align:center;
-      font-size: 4rem;
-      span {
-        color: ${(props) => props.theme.primaryColor};
+      .header-title {
+        text-align: center;
+        font-size: 4rem;
       }
-    }
-    p {
-      max-width: 70%;
-      margin: 0 auto;
-      text-align: center;
+      p {
+        max-width: 70%;
+        margin: 0 auto;
+        text-align: center;
+      }
     }
   }
 
   @media screen and (min-width: 1366px) {
     min-height: calc(100vh - 6rem);
-
-  
   }
 
   @media screen and (min-width: 1440px) {
     min-height: calc(100vh - 6rem);
-    
+
     .header-inner {
       .header-title {
         font-size: 7rem;
