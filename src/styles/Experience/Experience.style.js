@@ -8,7 +8,7 @@ export const ExperienceSection = styled.section`
     }
 
     h2 {
-      color: ${(props) => props.theme.primaryColor};
+      color: ${(props) => props.theme.activeColor};
     }
     span {
       color: ${(props) => props.theme.textColor};
