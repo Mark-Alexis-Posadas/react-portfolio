@@ -12,7 +12,7 @@ export const HeaderContainer = styled.header`
       color: ${(props) => props.theme.textColor};
 
       span {
-        color: ${(props) => props.theme.primaryColor};
+        color: ${(props) => props.theme.activeColor};
       }
     }
  

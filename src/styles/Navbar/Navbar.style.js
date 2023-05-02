@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const NavBar = styled.nav`
   &.navbar {
-    background-color: ${(props) => props.theme.body};
+    background-color: ${(props) => props.theme.primary};
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.01), 0 2px 5px rgba(0, 0, 0, 0.08);
     display: flex;
     align-items: center;
     justify-content: end;
@@ -22,8 +23,8 @@ export const NavBar = styled.nav`
         font-weight: 400;
         cursor: pointer;
         &.active {
-          color: ${(props) => props.theme.primaryColor};
           font-weight: 700;
+          color: ${(props) => props.theme.activeColor};
         }
       }
 
@@ -89,7 +90,7 @@ export const BurgerIcon = styled.div`
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: ${(props) => props.theme.primaryColor};
+    background-color: ${(props) => props.theme.textColor};
     transition: transform 0.2s ease-out;
   }
 

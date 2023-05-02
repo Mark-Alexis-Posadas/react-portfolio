@@ -12,7 +12,6 @@ export const ProjectsSection = styled.section`
     display: flex;
     align-items: center;
     li {
-      color: ${(props) => props.theme.tags};
       margin-right: 1rem;
     }
   }
@@ -26,9 +25,9 @@ export const ProjectsSection = styled.section`
   }
 
   a {
-    background-color: ${(props) => props.theme.btn};
-    color: ${(props) => props.theme.tags};
-    border: 1px solid #222;
+    background-color: ${(props) => props.theme.activeColor};
+    border: none;
+    color: ${(props) => props.theme.primary};
     padding: 0.1rem 0.9rem;
     border-radius: 4px;
     display: flex;

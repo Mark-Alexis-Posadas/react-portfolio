@@ -10,20 +10,8 @@ export const SkillsSection = styled.section`
       align-items: center;
       justify-content: center;
 
-      /* &:nth-child(11) {
-        svg {
-          color: #61dbfb;
-        }
-      }
-
-      &:nth-child(12) {
-        svg {
-          color: #61dbfb;
-        }
-      } */
-
       &:hover {
-        background-color: rgb(112, 29, 201);
+        background-color: rgb(79, 209, 197);
         svg,
         span {
           color: #fff;
@@ -34,7 +22,7 @@ export const SkillsSection = styled.section`
         color: ${(props) => props.theme.textColor};
       }
       span {
-        color: ${(props) => props.theme.tags};
+        color: ${(props) => props.theme.textColor};
       }
     }
 

@@ -13,29 +13,23 @@ import Footer from "./Footer";
 import { ThemeContainer } from "./styles/ThemeContainer.style";
 
 const lightTheme = {
-  body: "#fafafa",
-  primaryColor: "#701dc9",
+  primary: "#ffffff",
   textColor: "#131313",
-  secondaryColor: "#fff",
-  tags: "#999",
-  input: "#fff",
-  btn: "#222",
+  activeColor: "#4fd1c5",
+  cardBgColor: "#ffffff",
+  formBgColor: "#fafafa",
 };
 
 const darkTheme = {
-  body: "#131313",
-  primaryColor: "#701dc9",
-  textColor: "#fff",
-  secondaryColor: "#263236",
-  tags: "#fff",
-  input: "#263238",
-  btn: "#701dc9",
+  primary: "#2b3945",
+  textColor: "#ffffff",
+  activeColor: "#4fd1c5",
+  cardBgColor: "#263236",
+  formBgColor: "#263236",
 };
 
 const Layout = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-
-  // const [theme, setTheme] = useState("light");
   const isDarkTheme = theme === "dark";
   const newTheme = isDarkTheme ? "light" : "dark";
 
@@ -48,7 +42,6 @@ const Layout = () => {
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <ThemeContainer>
         <GlobalStyle />
-
         <Navbar toggleMainTheme={toggleMainTheme} />
         <Header />
         <About />

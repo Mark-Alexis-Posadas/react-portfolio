@@ -12,12 +12,6 @@ import { Link } from "react-scroll";
 
 import navbarApi from "./api/navbarApi";
 
-const initialState = {
-  isDarkTheme: false,
-  isMenuOpen: false,
-  isToggled: false,
-};
-
 function reducer(state, action) {
   switch (action.type) {
     case "TOGGLE_THEME":
@@ -66,10 +60,10 @@ export default function Navbar({ toggleMainTheme }) {
             return (
               <li key={index} className="nav-items">
                 <Link
-                  to={path} // the path should be the id of the section you want to scroll to
-                  smooth={true} // set smooth scrolling behavior
-                  duration={500} // set the duration of the scroll animation
-                  offset={-70} // adjust the scroll offset as needed
+                  to={path}
+                  smooth={true}
+                  duration={500}
+                  offset={-70}
                   className="nav-links"
                   activeClass="active"
                   spy={true}
@@ -82,7 +76,7 @@ export default function Navbar({ toggleMainTheme }) {
           <li className="nav-items">
             <FontAwesomeIcon
               onClick={toggleTheme}
-              icon={state.isDarkTheme ? faSun : faMoon}
+              icon={state.isDarkTheme ? faMoon : faSun}
               style={{ fontSize: "1.7rem", cursor: "pointer" }}
               className="fa-rotate-180"
             />

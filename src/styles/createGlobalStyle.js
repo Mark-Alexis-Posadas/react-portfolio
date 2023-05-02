@@ -27,9 +27,9 @@ export const Paragraph = styled.p`
 `;
 
 export const FormInput = styled.input`
-  background-color: ${(props) => props.theme.input};
   padding: 1rem;
   border: none;
+  background-color: ${(props) => props.theme.formBgColor};
   &::placeholder {
     font-family: Jost, sans-serif;
     font-size: 1rem;
@@ -37,15 +37,20 @@ export const FormInput = styled.input`
 `;
 
 export const FormTextArea = styled.textarea`
-  background-color: ${(props) => props.theme.input};
+  background-color: ${(props) => props.theme.formBgColor};
 `;
 
 export const Card = styled.article`
-  background-color: ${(props) => props.theme.secondaryColor};
+  background-color: ${(props) => props.theme.cardBgColor};
   box-shadow: rgba(90, 90, 90, 0.1) 1px 7px 29px 0px;
   padding: 2rem;
   margin-bottom: 1.9rem;
   border-radius: 5px;
+  ul {
+    li {
+      color: ${(props) => props.theme.textColor};
+    }
+  }
 `;
 
 const GlobalStyle = createGlobalStyle`
@@ -60,9 +65,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Jost", sans-serif;
     height: 100%
   }
-  /* html, body, #root, #root>div {
-  height: 100%
-  } */
+  
   section, header {
     min-height: calc(650px - 6rem);
     padding: 3rem 0;
@@ -106,9 +109,6 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     text-transform: capitalize;
     font-size: 1.05rem;
-    &.active {
-      color: red;
-    }
   }
 
   input,button,textarea {
