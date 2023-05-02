@@ -8,7 +8,7 @@ export const NavBar = styled.nav`
     align-items: center;
     justify-content: end;
     min-height: auto;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     position: fixed;
     z-index: 2;
     width: 100%;
@@ -38,7 +38,6 @@ export const NavBar = styled.nav`
       position: relative;
       button {
         display: flex;
-        height: 42px;
         border: none;
         outline: none;
         background: transparent;
@@ -81,7 +80,6 @@ export const NavbarContainer = styled.ul`
 export const BurgerIcon = styled.div`
   position: relative;
   width: 26px;
-  height: 11px;
 
   &::before,
   &::after {
@@ -95,11 +93,11 @@ export const BurgerIcon = styled.div`
   }
 
   &::before {
-    top: 17px;
+    top: 5px;
   }
 
   &::after {
-    bottom: -1px;
+    bottom: 3px;
   }
 `;
 
