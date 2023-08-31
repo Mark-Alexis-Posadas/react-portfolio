@@ -34,7 +34,6 @@ const Layout = () => {
   const newTheme = isDarkTheme ? "light" : "dark";
 
   const toggleMainTheme = () => {
-    setTheme(isDarkTheme ? "light" : "dark");
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
   };

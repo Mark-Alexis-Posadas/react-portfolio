@@ -76,7 +76,7 @@ export default function Navbar({ toggleMainTheme }) {
           <li className="nav-items">
             <FontAwesomeIcon
               onClick={toggleTheme}
-              icon={state.isDarkTheme ? faMoon : faSun}
+              icon={state.isDarkTheme ? faSun : faMoon}
               style={{ fontSize: "1.7rem", cursor: "pointer" }}
               className="fa-rotate-180"
             />
