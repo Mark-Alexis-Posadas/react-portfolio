@@ -2,7 +2,7 @@ import Wrapper from "../../components/Wrapper";
 
 export default function Home() {
   return (
-    <section className="flex items-center justify-center h-[700px] text-center">
+    <section className="flex items-center justify-center min-h-[calc(100vh-5rem)] text-center">
       <Wrapper>
         <h1 className="text-9xl font-bold">
           Hello! I'm Mark <br /> Alexis Posadas
