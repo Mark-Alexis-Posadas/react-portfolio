@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import sidebarData from "../api/sidebarData";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -30,12 +30,25 @@ const MyContext = createContext("");
 const MyProvider = ({ children }) => {
   const [active, setActive] = useState(0);
 
+  const handleSetActive = (index) => {
+    setActive(index);
+    localStorage.setItem("activeIndex", index);
+  };
+
+  useEffect(() => {
+    const storedIndex = localStorage.getItem("activeIndex");
+    if (storedIndex !== null) {
+      setActive(parseInt(storedIndex));
+    }
+  }, []);
+
   return (
     <MyContext.Provider
       value={{
         sidebarData,
         active,
         setActive,
+        handleSetActive,
         aboutTitle,
         projectsTitle,
         skillsTitle,
