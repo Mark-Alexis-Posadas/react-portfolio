@@ -1,5 +1,6 @@
-import React, { createContext, useState } from "react";
+import React, { createContext } from "react";
 import sidebarData from "../api/sidebarData";
+
 const MyContext = createContext("");
 
 const MyProvider = ({ children }) => {
