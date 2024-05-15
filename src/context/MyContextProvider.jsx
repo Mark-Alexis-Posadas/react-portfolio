@@ -20,7 +20,11 @@ library.add(
 );
 
 const headingText = ["About", "Projects", "Skills", "Experience", "Contact"];
+const aboutTitle = headingText[0];
 const projectsTitle = headingText[1];
+const skillsTitle = headingText[2];
+const experienceTitle = headingText[3];
+const contactTitle = headingText[4];
 const MyContext = createContext("");
 
 const MyProvider = ({ children }) => {
@@ -28,7 +32,16 @@ const MyProvider = ({ children }) => {
 
   return (
     <MyContext.Provider
-      value={{ sidebarData, active, setActive, projectsTitle }}
+      value={{
+        sidebarData,
+        active,
+        setActive,
+        aboutTitle,
+        projectsTitle,
+        skillsTitle,
+        experienceTitle,
+        contactTitle,
+      }}
     >
       {children}
     </MyContext.Provider>
