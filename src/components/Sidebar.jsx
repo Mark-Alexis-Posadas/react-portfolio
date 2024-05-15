@@ -1,6 +1,26 @@
 import { useContext } from "react";
 import { MyContext } from "../context/MyContextProvider";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faHouseChimney,
+  faUser,
+  faDiagramProject,
+  faUserGear,
+  faBriefcase,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(
+  faHouseChimney,
+  faUser,
+  faDiagramProject,
+  faUserGear,
+  faBriefcase,
+  faEnvelope
+);
+
 export default function Sidebar() {
   const sidebarData = useContext(MyContext);
 
@@ -9,6 +29,7 @@ export default function Sidebar() {
       <ul>
         {sidebarData.map((data) => (
           <li key={data.id}>
+            <FontAwesomeIcon icon={data.icon} />
             <Link to={`/${data.text === "home" ? "" : data.text}`}>
               {data.text}
             </Link>
