@@ -1,5 +1,5 @@
 const Layout = () => {
-  return <div>Layout</div>;
+  return <div className="text-red-500">Layout</div>;
 };
 
 export default Layout;
