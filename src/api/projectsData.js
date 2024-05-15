@@ -1,4 +1,4 @@
-const data = [
+const projectsData = [
   {
     id: 1,
     pageTitle: "Tab",
@@ -36,4 +36,4 @@ const data = [
   },
 ];
 
-export default data;
+export default projectsData;
