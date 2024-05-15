@@ -1,29 +1,29 @@
-const data = [
+const navbarData = [
   {
-    path: "home",
+    id: 1,
     text: "home",
   },
   {
-    path: "about",
+    id: 2,
     text: "about",
   },
   {
-    path: "projects",
+    id: 3,
     text: "projects",
   },
 
   {
-    path: "skills",
+    id: 4,
     text: "skills",
   },
   {
-    path: "experience",
+    id: 5,
     text: "experience",
   },
   {
-    path: "contact",
+    id: 6,
     text: "contact",
   },
 ];
 
-export default data;
+export default navbarData;
