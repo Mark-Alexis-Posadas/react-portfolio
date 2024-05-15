@@ -11,7 +11,7 @@ import Contact from "./pages/Contact/Contact";
 
 const Layout = () => {
   return (
-    <div className="min-h-screen flex items-center">
+    <div className="min-h-screen flex items-center font-sans">
       <MyProvider>
         <Sidebar />
         <Main>
