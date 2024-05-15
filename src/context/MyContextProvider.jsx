@@ -19,13 +19,17 @@ library.add(
   faEnvelope
 );
 
+const headingText = ["About", "Projects", "Skills", "Experience", "Contact"];
+const projectsTitle = headingText[1];
 const MyContext = createContext("");
 
 const MyProvider = ({ children }) => {
   const [active, setActive] = useState(0);
 
   return (
-    <MyContext.Provider value={{ sidebarData, active, setActive }}>
+    <MyContext.Provider
+      value={{ sidebarData, active, setActive, projectsTitle }}
+    >
       {children}
     </MyContext.Provider>
   );
