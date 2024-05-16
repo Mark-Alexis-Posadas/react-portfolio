@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import sidebarData from "../api/sidebarData";
+import projectsData from "../api/projectsData";
 import contactData from "../api/contactData";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -50,6 +51,7 @@ const MyProvider = ({ children }) => {
       value={{
         sidebarData,
         contactData,
+        projectsData,
         active,
         setActive,
         handleSetActive,
