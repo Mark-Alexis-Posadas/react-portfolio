@@ -1,6 +1,7 @@
+import { v4 as uuidv4 } from "uuid";
 const projectsData = [
   {
-    id: 1,
+    id: uuidv4(),
     pageTitle: "Tab",
     description:
       "This project is a simple implementation of tabs using Vanilla JavaScript. It allows you to switch between different content sections without the need for page refresh.",
@@ -12,7 +13,7 @@ const projectsData = [
   },
 
   {
-    id: 2,
+    id: uuidv4(),
     pageTitle: "Accordion",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
@@ -23,7 +24,7 @@ const projectsData = [
     tags: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 3,
+    id: uuidv4(),
     pageTitle: "Color Picker",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
@@ -34,7 +35,7 @@ const projectsData = [
     tags: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 4,
+    id: uuidv4(),
     pageTitle: "Simple Quiz",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
@@ -45,7 +46,7 @@ const projectsData = [
     tags: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 5,
+    id: uuidv4(),
     pageTitle: "TodoList App",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
@@ -56,7 +57,7 @@ const projectsData = [
     tags: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 6,
+    id: uuidv4(),
     pageTitle: "Form Inputs",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
@@ -68,7 +69,7 @@ const projectsData = [
   },
 
   {
-    id: 7,
+    id: uuidv4(),
     pageTitle: "Toggle switch",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
@@ -79,7 +80,7 @@ const projectsData = [
     tags: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 8,
+    id: uuidv4(),
     pageTitle: "Modal",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
@@ -91,7 +92,7 @@ const projectsData = [
   },
 
   {
-    id: 9,
+    id: uuidv4(),
     pageTitle: "Carousel",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
@@ -102,7 +103,7 @@ const projectsData = [
     tags: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 10,
+    id: uuidv4(),
     pageTitle: "Theme",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
@@ -113,7 +114,7 @@ const projectsData = [
     tags: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 11,
+    id: uuidv4(),
     pageTitle: "Search Filtering",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
@@ -124,7 +125,7 @@ const projectsData = [
     tags: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 12,
+    id: uuidv4(),
     pageTitle: "Star Ratings",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
@@ -136,7 +137,7 @@ const projectsData = [
   },
 
   {
-    id: 13,
+    id: uuidv4(),
     pageTitle: "Counter App",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",

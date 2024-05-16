@@ -5,6 +5,7 @@ import Wrapper from "../../components/Wrapper";
 export default function ProjectDetail() {
   const { id } = useParams();
   const { projectsData } = useContext(MyContext);
+
   const project = projectsData.find((proj) => proj.id.toString() === id);
 
   if (!project) {
