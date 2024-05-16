@@ -9,11 +9,11 @@ export default function Projects() {
   return (
     <section>
       <Wrapper>
-        <h1 className="font-bold text-4xl">{projectsTitle}</h1>
+        <h1 className="font-bold text-4xl mb-4">{projectsTitle}</h1>
         <ul className="grid grid-cols-3 gap-3">
           {projectsData.map((data, index) => (
             <li key={data.id} className="bg-slate-100 shadow-md rounded p-3">
-              <Link to={`/projects/${data.id}`}>
+              <Link to={`/projects/${data.pageTitle}`}>
                 <h1 className="font-bold">{data.pageTitle}</h1>
                 <p>{data.description}</p>
               </Link>

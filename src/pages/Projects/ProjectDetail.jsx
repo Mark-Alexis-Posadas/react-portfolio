@@ -3,10 +3,10 @@ import { useContext } from "react";
 import { MyContext } from "../../context/MyContextProvider";
 import Wrapper from "../../components/Wrapper";
 export default function ProjectDetail() {
-  const { id } = useParams();
+  const { pageTitle } = useParams();
   const { projectsData } = useContext(MyContext);
 
-  const project = projectsData.find((proj) => proj.id.toString() === id);
+  const project = projectsData.find((proj) => proj.pageTitle === pageTitle);
 
   if (!project) {
     return <div>Project not found</div>;
