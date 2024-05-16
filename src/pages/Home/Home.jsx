@@ -1,6 +1,21 @@
+import { useNavigate, Link } from "react-router-dom";
 import Wrapper from "../../components/Wrapper";
+import { useContext } from "react";
+import { MyContext } from "../../context/MyContextProvider";
+import sidebarData from "../../api/sidebarData";
 
 export default function Home() {
+  const { handleSetActive } = useContext(MyContext);
+  const navigate = useNavigate();
+
+  const handleGetInTouchClick = () => {
+    const contactIndex = sidebarData.findIndex(
+      (data) => data.text === "contact"
+    );
+    handleSetActive(contactIndex);
+    navigate("/contact");
+  };
+
   return (
     <section className="flex items-center justify-center min-h-[calc(100vh-5rem)] text-center">
       <Wrapper>
@@ -11,9 +26,14 @@ export default function Home() {
           I am a front-end developer with a passion for creating beautiful,
           functional, and user-friendly websites.
         </p>
-        <button className="text-white rounded bg-black p-3 min-w-[500px]">
-          Get In Touch!
-        </button>
+        <Link to="/contact">
+          <button
+            className="text-white rounded bg-black p-3 min-w-[500px]"
+            onClick={handleGetInTouchClick}
+          >
+            Get In Touch!
+          </button>
+        </Link>
       </Wrapper>
     </section>
   );
