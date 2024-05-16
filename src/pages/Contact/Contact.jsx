@@ -47,7 +47,17 @@ export default function Contact() {
           <ul className="px-4">
             {contactData.map((data, index) => (
               <li key={data.id} className="mb-3">
-                <FontAwesomeIcon icon={data.icon} className="text-3xl" />
+                {index === 0 ? (
+                  <a
+                    href="https://www.linkedin.com/in/mark-alexis-posadas-996a04151/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon icon={data.icon} className="text-3xl" />
+                  </a>
+                ) : (
+                  <FontAwesomeIcon icon={data.icon} className="text-3xl" />
+                )}
               </li>
             ))}
           </ul>
