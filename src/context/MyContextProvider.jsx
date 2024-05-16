@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import sidebarData from "../api/sidebarData";
+import contactData from "../api/contactData";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faHouseChimney,
@@ -9,6 +10,7 @@ import {
   faBriefcase,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
   faHouseChimney,
@@ -16,7 +18,8 @@ library.add(
   faDiagramProject,
   faUserGear,
   faBriefcase,
-  faEnvelope
+  faEnvelope,
+  faLinkedinIn
 );
 
 const headingText = ["About", "Projects", "Skills", "Experience", "Contact"];
@@ -46,6 +49,7 @@ const MyProvider = ({ children }) => {
     <MyContext.Provider
       value={{
         sidebarData,
+        contactData,
         active,
         setActive,
         handleSetActive,
