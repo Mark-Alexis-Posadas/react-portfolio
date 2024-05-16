@@ -9,6 +9,7 @@ import Skills from "./pages/Skills/Skills";
 import Experience from "./pages/Experience/Experience";
 import Contact from "./pages/Contact/Contact";
 import ProjectDetail from "./pages/Projects/ProjectDetail";
+import NotFound from "./pages/NotFound";
 
 const Layout = () => {
   return (
@@ -24,6 +25,7 @@ const Layout = () => {
             <Route path="/skills" element={<Skills />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Main>
       </MyProvider>
