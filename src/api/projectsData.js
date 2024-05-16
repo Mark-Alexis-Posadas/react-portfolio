@@ -22,15 +22,127 @@ const projectsData = [
     buttons: ["Demo", "Source"],
     tags: ["HTML", "CSS", "JavaScript"],
   },
-
   {
     id: 3,
-    pageTitle: "Multiple Tabs",
+    pageTitle: "Color Picker",
     description:
-      "This project demonstrates how to create a multiple tabs interface using vanilla JavaScript.",
+      "This is a simple accordion project built using HTML, CSS, and JavaScript.",
     source:
-      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/multiple-tabs",
-    demo: "https://multiple-tabs.vercel.app/",
+      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
+    demo: "https://accordion-sage-eight.vercel.app/",
+    buttons: ["Demo", "Source"],
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    id: 4,
+    pageTitle: "Simple Quiz",
+    description:
+      "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    source:
+      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
+    demo: "https://accordion-sage-eight.vercel.app/",
+    buttons: ["Demo", "Source"],
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    id: 5,
+    pageTitle: "TodoList App",
+    description:
+      "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    source:
+      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
+    demo: "https://accordion-sage-eight.vercel.app/",
+    buttons: ["Demo", "Source"],
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    id: 6,
+    pageTitle: "Form Inputs",
+    description:
+      "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    source:
+      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
+    demo: "https://accordion-sage-eight.vercel.app/",
+    buttons: ["Demo", "Source"],
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+
+  {
+    id: 7,
+    pageTitle: "Toggle switch",
+    description:
+      "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    source:
+      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
+    demo: "https://accordion-sage-eight.vercel.app/",
+    buttons: ["Demo", "Source"],
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    id: 8,
+    pageTitle: "Modal",
+    description:
+      "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    source:
+      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
+    demo: "https://accordion-sage-eight.vercel.app/",
+    buttons: ["Demo", "Source"],
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+
+  {
+    id: 9,
+    pageTitle: "Carousel",
+    description:
+      "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    source:
+      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
+    demo: "https://accordion-sage-eight.vercel.app/",
+    buttons: ["Demo", "Source"],
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    id: 10,
+    pageTitle: "Theme",
+    description:
+      "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    source:
+      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
+    demo: "https://accordion-sage-eight.vercel.app/",
+    buttons: ["Demo", "Source"],
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    id: 11,
+    pageTitle: "Search Filtering",
+    description:
+      "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    source:
+      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
+    demo: "https://accordion-sage-eight.vercel.app/",
+    buttons: ["Demo", "Source"],
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    id: 12,
+    pageTitle: "Star Ratings",
+    description:
+      "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    source:
+      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
+    demo: "https://accordion-sage-eight.vercel.app/",
+    buttons: ["Demo", "Source"],
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+
+  {
+    id: 13,
+    pageTitle: "Counter App",
+    description:
+      "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    source:
+      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
+    demo: "https://accordion-sage-eight.vercel.app/",
     buttons: ["Demo", "Source"],
     tags: ["HTML", "CSS", "JavaScript"],
   },
