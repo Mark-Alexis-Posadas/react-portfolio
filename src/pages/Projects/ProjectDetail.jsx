@@ -6,7 +6,9 @@ export default function ProjectDetail() {
   const { pageTitle } = useParams();
   const { projectsData } = useContext(MyContext);
 
-  const project = projectsData.find((proj) => proj.pageTitle === pageTitle);
+  const project = projectsData.find(
+    (proj) => proj.pageTitle.replace(/ /g, "") === pageTitle.replace(/ /g, "")
+  );
 
   if (!project) {
     return <div>Project not found</div>;

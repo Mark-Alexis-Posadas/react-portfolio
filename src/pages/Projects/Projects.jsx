@@ -12,7 +12,7 @@ export default function Projects() {
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-3 gap-3">
           {projectsData.map((data, index) => (
             <li key={data.id} className="bg-zinc-50 shadow-md rounded p-3">
-              <Link to={`/projects/${data.pageTitle}`}>
+              <Link to={`/projects/${data.pageTitle.replace(/ /g, "")}`}>
                 <h1 className="font-bold">{data.pageTitle}</h1>
                 <p>{data.description}</p>
               </Link>
