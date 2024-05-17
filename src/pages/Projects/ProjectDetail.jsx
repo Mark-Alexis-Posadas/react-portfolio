@@ -26,18 +26,9 @@ export default function ProjectDetail() {
           <p className="text-lg text-slate-600 my-4">{project.description}</p>
           <h2 className="font-bold">Features</h2>
           <ul className="list-disc ml-3 my-4">
-            {projectsData.map((item, index) =>
-              item.features
-                ? item.features.map((feature, featureIndex) => (
-                    <li
-                      key={`${index}-${featureIndex}`}
-                      className="text-slate-600 mb-2"
-                    >
-                      {feature.text}
-                    </li>
-                  ))
-                : null
-            )}
+            {project.features.map((feature, index) => (
+              <li key={index}>{feature.text}</li>
+            ))}
           </ul>
 
           <div className="flex items-center justify-between">

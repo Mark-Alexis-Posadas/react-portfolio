@@ -34,6 +34,23 @@ const projectsData = [
     pageTitle: "Accordion",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    features: [
+      {
+        text: "Tabbed Navigation: Seamlessly switch between different content sections.",
+      },
+      {
+        text: "Fully responsive layout with Tailwind CSS.",
+      },
+      {
+        text: "Efficient and clean state management using React Hooks",
+      },
+      {
+        text: "Render content dynamically based on the active tab",
+      },
+      {
+        text: "Easily customizable styles and components",
+      },
+    ],
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
@@ -45,6 +62,23 @@ const projectsData = [
     pageTitle: "Color Picker",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    features: [
+      {
+        text: "Tabbed Navigation: Seamlessly switch between different content sections.",
+      },
+      {
+        text: "Fully responsive layout with Tailwind CSS.",
+      },
+      {
+        text: "Efficient and clean state management using React Hooks",
+      },
+      {
+        text: "Render content dynamically based on the active tab",
+      },
+      {
+        text: "Easily customizable styles and components",
+      },
+    ],
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
@@ -56,6 +90,23 @@ const projectsData = [
     pageTitle: "Simple Quiz",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    features: [
+      {
+        text: "Tabbed Navigation: Seamlessly switch between different content sections.",
+      },
+      {
+        text: "Fully responsive layout with Tailwind CSS.",
+      },
+      {
+        text: "Efficient and clean state management using React Hooks",
+      },
+      {
+        text: "Render content dynamically based on the active tab",
+      },
+      {
+        text: "Easily customizable styles and components",
+      },
+    ],
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
@@ -67,6 +118,23 @@ const projectsData = [
     pageTitle: "TodoList App",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    features: [
+      {
+        text: "Tabbed Navigation: Seamlessly switch between different content sections.",
+      },
+      {
+        text: "Fully responsive layout with Tailwind CSS.",
+      },
+      {
+        text: "Efficient and clean state management using React Hooks",
+      },
+      {
+        text: "Render content dynamically based on the active tab",
+      },
+      {
+        text: "Easily customizable styles and components",
+      },
+    ],
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
@@ -78,6 +146,23 @@ const projectsData = [
     pageTitle: "Form Inputs",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    features: [
+      {
+        text: "Tabbed Navigation: Seamlessly switch between different content sections.",
+      },
+      {
+        text: "Fully responsive layout with Tailwind CSS.",
+      },
+      {
+        text: "Efficient and clean state management using React Hooks",
+      },
+      {
+        text: "Render content dynamically based on the active tab",
+      },
+      {
+        text: "Easily customizable styles and components",
+      },
+    ],
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
@@ -90,6 +175,23 @@ const projectsData = [
     pageTitle: "Toggle switch",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    features: [
+      {
+        text: "Tabbed Navigation: Seamlessly switch between different content sections.",
+      },
+      {
+        text: "Fully responsive layout with Tailwind CSS.",
+      },
+      {
+        text: "Efficient and clean state management using React Hooks",
+      },
+      {
+        text: "Render content dynamically based on the active tab",
+      },
+      {
+        text: "Easily customizable styles and components",
+      },
+    ],
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
@@ -101,6 +203,23 @@ const projectsData = [
     pageTitle: "Modal",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    features: [
+      {
+        text: "Tabbed Navigation: Seamlessly switch between different content sections.",
+      },
+      {
+        text: "Fully responsive layout with Tailwind CSS.",
+      },
+      {
+        text: "Efficient and clean state management using React Hooks",
+      },
+      {
+        text: "Render content dynamically based on the active tab",
+      },
+      {
+        text: "Easily customizable styles and components",
+      },
+    ],
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
@@ -113,6 +232,23 @@ const projectsData = [
     pageTitle: "Carousel",
     description:
       "This is a simple accordion project built using HTML, CSS, and JavaScript.",
+    features: [
+      {
+        text: "Tabbed Navigation: Seamlessly switch between different content sections.",
+      },
+      {
+        text: "Fully responsive layout with Tailwind CSS.",
+      },
+      {
+        text: "Efficient and clean state management using React Hooks",
+      },
+      {
+        text: "Render content dynamically based on the active tab",
+      },
+      {
+        text: "Easily customizable styles and components",
+      },
+    ],
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
