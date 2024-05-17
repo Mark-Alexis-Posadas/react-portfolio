@@ -24,6 +24,22 @@ export default function ProjectDetail() {
           <h1 className="font-bold text-5xl">{project.pageTitle}</h1>
 
           <p className="text-lg text-slate-600 my-4">{project.description}</p>
+          <h2 className="font-bold">Features</h2>
+          <ul className="list-disc ml-3 my-4">
+            {projectsData.map((item, index) =>
+              item.features
+                ? item.features.map((feature, featureIndex) => (
+                    <li
+                      key={`${index}-${featureIndex}`}
+                      className="text-slate-600 mb-2"
+                    >
+                      {feature.text}
+                    </li>
+                  ))
+                : null
+            )}
+          </ul>
+
           <div className="flex items-center justify-between">
             <ul className="flex items-center gap-3">
               <a
@@ -44,8 +60,10 @@ export default function ProjectDetail() {
               </a>
             </ul>
             <ul className="flex items-center gap-3">
-              {project.tags.map((tag) => (
-                <li key={tag}>{tag}</li>
+              {project.tags.map((tag, idx) => (
+                <li key={tag}>
+                  {idx === project.tags.length - 1 ? tag : tag + ", "}
+                </li>
               ))}
             </ul>
           </div>

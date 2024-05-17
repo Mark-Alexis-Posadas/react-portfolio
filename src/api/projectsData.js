@@ -4,7 +4,24 @@ const projectsData = [
     id: uuidv4(),
     pageTitle: "Tab",
     description:
-      "This project is a simple implementation of tabs using Vanilla JavaScript. It allows you to switch between different content sections without the need for page refresh.",
+      "This project is a tabbed interface built with React, utilizing Tailwind CSS for styling and React Hooks for state management. The project provides a simple and intuitive way to navigate between different sections or content within a single page application.",
+    features: [
+      {
+        text: "Tabbed Navigation: Seamlessly switch between different content sections.",
+      },
+      {
+        text: "Fully responsive layout with Tailwind CSS.",
+      },
+      {
+        text: "Efficient and clean state management using React Hooks",
+      },
+      {
+        text: "Render content dynamically based on the active tab",
+      },
+      {
+        text: "Easily customizable styles and components",
+      },
+    ],
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/tab",
     demo: "https://tab-theta.vercel.app/",
