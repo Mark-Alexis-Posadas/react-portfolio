@@ -11,7 +11,7 @@ import {
   faBriefcase,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn, faReact } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
   faHouseChimney,
@@ -20,7 +20,8 @@ library.add(
   faUserGear,
   faBriefcase,
   faEnvelope,
-  faLinkedinIn
+  faLinkedinIn,
+  faReact
 );
 
 const headingText = ["About", "Projects", "Skills", "Experience", "Contact"];
