@@ -7,7 +7,7 @@ export default function Contact() {
     <section>
       <Wrapper>
         <h1 className="font-bold text-4xl mb-4">{contactTitle}</h1>
-        <p className="mb-4">
+        <p className="mb-4 text-2xl text-slate-600">
           I'd love to hear from you! Whether you have a question, want to
           collaborate on a project, or just want to say hello, feel free to get
           in touch. Fill out the form below, and I'll get back to you as soon as
