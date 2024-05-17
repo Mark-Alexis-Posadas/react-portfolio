@@ -53,7 +53,7 @@ const projectsData = [
     ],
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
-    demo: "https://accordion-sage-eight.vercel.app/",
+    demo: "https://codesandbox.io/p/sandbox/faq-accordion-59gsdr",
     buttons: ["Demo", "Source"],
     tags: ["HTML", "CSS", "JavaScript"],
   },

@@ -27,37 +27,37 @@ export default function ProjectDetail() {
           <h2 className="font-bold">Features</h2>
           <ul className="list-disc ml-3 my-4">
             {project.features.map((feature, index) => (
-              <li key={index}>{feature.text}</li>
+              <li key={index} className="text-slate-600">
+                {feature.text}
+              </li>
             ))}
           </ul>
 
-          <div className="flex items-center justify-between">
-            <ul className="flex items-center gap-3">
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white bg-black rounded p-2"
-              >
-                Demo
-              </a>
-              <a
-                href={project.source}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded text-black border border-black p-2"
-              >
-                Source
-              </a>
-            </ul>
-            <ul className="flex items-center gap-3">
-              {project.tags.map((tag, idx) => (
-                <li key={tag}>
-                  {idx === project.tags.length - 1 ? tag : tag + ", "}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="flex items-center gap-3">
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white bg-black rounded p-2"
+            >
+              Demo
+            </a>
+            <a
+              href={project.source}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded text-black border border-black p-2"
+            >
+              Source
+            </a>
+          </ul>
+          {/* <ul className="flex items-center gap-3">
+            {project.tags.map((tag, idx) => (
+              <li key={tag}>
+                {idx === project.tags.length - 1 ? tag : tag + ", "}
+              </li>
+            ))}
+          </ul> */}
         </div>
       </Wrapper>
     </section>

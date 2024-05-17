@@ -10,7 +10,7 @@ export default function Projects() {
     <section>
       <Wrapper>
         <h1 className="font-bold text-4xl mb-4">{projectsTitle}</h1>
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <ul className="grid grid-cols-1 md:grid-cols-3  gap-3">
           {projectsData.map((data, index) => (
             <Card data={data} key={index} />
           ))}
