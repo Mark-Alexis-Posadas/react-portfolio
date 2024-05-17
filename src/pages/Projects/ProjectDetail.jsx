@@ -1,10 +1,8 @@
 import { Link, useParams } from "react-router-dom";
-import { useContext } from "react";
-import { MyContext } from "../../context/MyContextProvider";
+
 import Wrapper from "../../components/Wrapper";
-export default function ProjectDetail() {
+export default function ProjectDetail({ projectsData }) {
   const { pageTitle } = useParams();
-  const { projectsData } = useContext(MyContext);
 
   const project = projectsData.find(
     (proj) => proj.pageTitle.replace(/ /g, "") === pageTitle.replace(/ /g, "")

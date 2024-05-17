@@ -1,7 +1,4 @@
-import { useContext } from "react";
-import { MyContext } from "../../context/MyContextProvider";
-export default function About() {
-  const { aboutTitle } = useContext(MyContext);
+export default function About({ aboutTitle }) {
   return (
     <section>
       <h1 className="font-bold text-4xl">{aboutTitle}</h1>

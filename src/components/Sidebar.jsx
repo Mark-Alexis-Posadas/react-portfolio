@@ -1,12 +1,12 @@
-import { useContext } from "react";
-import { MyContext } from "../context/MyContextProvider";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Sidebar() {
-  const { sidebarData, contactData, active, handleSetActive } =
-    useContext(MyContext);
-
+export default function Sidebar({
+  sidebarData,
+  contactData,
+  active,
+  handleSetActive,
+}) {
   return (
     <aside className="2xl:w-[350px] md:w-auto fixed bg-white shadow-md h-full overflow-hidden left-0 top-0 bottom-0 md:p-3 p-10 hidden lg:block">
       <ul>

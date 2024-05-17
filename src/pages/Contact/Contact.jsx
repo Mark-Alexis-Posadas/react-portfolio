@@ -1,8 +1,5 @@
-import { useContext } from "react";
-import { MyContext } from "../../context/MyContextProvider";
 import Wrapper from "../../components/Wrapper";
-export default function Contact() {
-  const { contactTitle } = useContext(MyContext);
+export default function Contact({ contactTitle }) {
   return (
     <section>
       <Wrapper>

@@ -1,10 +1,7 @@
 import { useNavigate, Link } from "react-router-dom";
-import { useContext } from "react";
-import { MyContext } from "../context/MyContextProvider";
 import Wrapper from "../components/Wrapper";
 
-export default function NotFound() {
-  const { handleSetActive, sidebarData } = useContext(MyContext);
+export default function NotFound({ handleSetActive, sidebarData }) {
   const navigate = useNavigate();
 
   const handleClick = () => {

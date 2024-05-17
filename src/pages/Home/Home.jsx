@@ -1,11 +1,8 @@
 import { useNavigate, Link } from "react-router-dom";
 import Wrapper from "../../components/Wrapper";
-import { useContext } from "react";
-import { MyContext } from "../../context/MyContextProvider";
 import sidebarData from "../../api/sidebarData";
 
-export default function Home() {
-  const { handleSetActive } = useContext(MyContext);
+export default function Home({ handleSetActive }) {
   const navigate = useNavigate();
 
   const handleGetInTouchClick = () => {
