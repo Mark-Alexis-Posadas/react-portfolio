@@ -18,14 +18,17 @@ export default function Sidebar() {
                 index === active ? "text-white bg-black" : "text-black"
               }`}
             >
-              <FontAwesomeIcon icon={data.icon} className="hidden md:block" />
+              <FontAwesomeIcon
+                icon={data.icon}
+                className="hidden md:block text-2xl"
+              />
               {data.text.charAt(0).toUpperCase() + data.text.slice(1)}
             </Link>
           </li>
         ))}
       </ul>
 
-      <ul className="flex items-center gap-3 absolute bottom-0">
+      <ul className="flex items-center justify-center w-full gap-3 absolute bottom-0">
         {contactData.map((data, index) => (
           <li key={data.id} className="mb-3">
             {index === 0 ? (
@@ -34,10 +37,10 @@ export default function Sidebar() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={data.icon} className="text-3xl" />
+                <FontAwesomeIcon icon={data.icon} className="text-2xl" />
               </a>
             ) : (
-              <FontAwesomeIcon icon={data.icon} className="text-3xl" />
+              <FontAwesomeIcon icon={data.icon} className="text-2xl" />
             )}
           </li>
         ))}

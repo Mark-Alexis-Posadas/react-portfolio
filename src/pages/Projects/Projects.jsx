@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { MyContext } from "../../context/MyContextProvider";
 import Wrapper from "../../components/Wrapper";
-import { Link } from "react-router-dom";
+
 import Card from "../../components/Card";
 
 export default function Projects() {
-  const { projectsTitle, projectsData } = useContext(MyContext);
+  const { projectsTitle, projectsData, handleToggleReadMore, readMore } =
+    useContext(MyContext);
   return (
     <section>
       <Wrapper>
