@@ -60,7 +60,7 @@ const Layout = () => {
     <div className="min-h-screen flex items-center font-sans">
       <Sidebar
         sidebarData={sidebarData}
-        contaData={contactData}
+        contactData={contactData}
         active={active}
         handleSetActive={handleSetActive}
       />
