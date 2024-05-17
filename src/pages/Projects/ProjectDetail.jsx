@@ -17,26 +17,39 @@ export default function ProjectDetail() {
   return (
     <section>
       <Wrapper>
-        <div className="flex items-center">
-          <Link to="/projects" className="mr-5">
-            <button className="bg-black rounded p-2 text-white">Back</button>
-          </Link>
-          <h1 className="font-bold">{project.pageTitle}</h1>
+        <Link to="/projects" className="mr-5">
+          <button className="bg-black rounded p-2 text-white">Back</button>
+        </Link>
+        <div className="mt-4">
+          <h1 className="font-bold text-5xl">{project.pageTitle}</h1>
+
+          <p className="text-lg text-slate-600 my-4">{project.description}</p>
+          <div className="flex items-center justify-between">
+            <ul className="flex items-center gap-3">
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white bg-black rounded p-2"
+              >
+                Demo
+              </a>
+              <a
+                href={project.source}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded text-black border border-black p-2"
+              >
+                Source
+              </a>
+            </ul>
+            <ul className="flex items-center gap-3">
+              {project.tags.map((tag) => (
+                <li key={tag}>{tag}</li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <p>{project.description}</p>
-        <div>
-          <a href={project.demo} target="_blank" rel="noopener noreferrer">
-            Demo
-          </a>
-          <a href={project.source} target="_blank" rel="noopener noreferrer">
-            Source
-          </a>
-        </div>
-        <ul>
-          {project.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
       </Wrapper>
     </section>
   );
