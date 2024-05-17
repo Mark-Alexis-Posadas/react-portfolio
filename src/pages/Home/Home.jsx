@@ -22,7 +22,7 @@ export default function Home() {
         <h1 className="text-9xl font-bold">
           Hello! I'm Mark <br /> Alexis Posadas
         </h1>
-        <p className="text-4xl font-medium  max-w-[739px] m-auto my-7">
+        <p className="text-4xl text-slate-600 font-medium  max-w-[739px] m-auto my-7">
           I am a front-end developer with a passion for creating beautiful,
           functional, and user-friendly websites.
         </p>
