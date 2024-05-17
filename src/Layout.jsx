@@ -76,7 +76,7 @@ const Layout = () => {
             element={
               <Projects
                 projectsData={projectsData}
-                projecstTitle={projectsTitle}
+                projectsTitle={projectsTitle}
               />
             }
           />
