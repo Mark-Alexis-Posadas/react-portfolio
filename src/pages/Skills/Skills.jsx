@@ -1,7 +1,9 @@
+import PageTitle from "../../components/PageTitle";
+
 export default function Skills({ skillsTitle }) {
   return (
     <section>
-      <h1 className="font-bold text-4xl">{skillsTitle}</h1>
+      <PageTitle pageTitle={skillsTitle} />
     </section>
   );
 }

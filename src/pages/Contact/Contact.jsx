@@ -1,9 +1,10 @@
+import PageTitle from "../../components/PageTitle";
 import Wrapper from "../../components/Wrapper";
 export default function Contact({ contactTitle }) {
   return (
     <section>
       <Wrapper>
-        <h1 className="font-bold text-4xl mb-4">{contactTitle}</h1>
+        <PageTitle pageTitle={contactTitle} />
         <p className="mb-4 text-2xl text-slate-600">
           I'd love to hear from you! Whether you have a question, want to
           collaborate on a project, or just want to say hello, feel free to get

@@ -43,6 +43,7 @@ const experienceTitle = headingText[3];
 const contactTitle = headingText[4];
 
 const Layout = () => {
+  //sidebar
   const [active, setActive] = useState(0);
 
   useEffect(() => {

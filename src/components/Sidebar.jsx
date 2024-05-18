@@ -8,7 +8,7 @@ export default function Sidebar({
   handleSetActive,
 }) {
   return (
-    <aside className="2xl:w-[350px] md:w-auto fixed bg-white shadow-md h-full overflow-hidden left-0 top-0 bottom-0 md:p-3 p-10 hidden lg:block">
+    <aside className="2xl:w-[350px] md:w-auto fixed bg-white shadow-md h-full overflow-hidden left-0 top-0 bottom-0 md:p-3 lg:p-10 hidden lg:block">
       <ul>
         {sidebarData.map((data, index) => (
           <li key={data.id} onClick={() => handleSetActive(index)}>
