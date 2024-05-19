@@ -1,17 +1,12 @@
 import PageTitle from "../../components/PageTitle";
+import SubTitle from "../../components/SubTitle";
 import Wrapper from "../../components/Wrapper";
-export default function Contact({ contactTitle }) {
+export default function Contact({ contactTitle, contactSubTitle }) {
   return (
     <section>
       <Wrapper>
         <PageTitle pageTitle={contactTitle} />
-        <p className="mb-4 text-2xl text-slate-600">
-          I'd love to hear from you! Whether you have a question, want to
-          collaborate on a project, or just want to say hello, feel free to get
-          in touch. Fill out the form below, and I'll get back to you as soon as
-          I can. Your message is important to me, and I look forward to
-          connecting with you.
-        </p>
+        <SubTitle subTitle={contactSubTitle} />
 
         <form className="w-full">
           <fieldset>

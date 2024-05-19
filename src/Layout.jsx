@@ -35,12 +35,16 @@ import sidebarData from "./api/sidebarData";
 import contactData from "./api/contactData";
 import projectsData from "./api/projectsData";
 
-const headingText = ["About", "Projects", "Skills", "Experience", "Contact"];
-const aboutTitle = headingText[0];
-const projectsTitle = headingText[1];
-const skillsTitle = headingText[2];
-const experienceTitle = headingText[3];
-const contactTitle = headingText[4];
+const pageTitle = ["About", "Projects", "Skills", "Experience", "Contact"];
+const contactSubtitle = [
+  "I'd love to hear from you! Whether you have a question, want to collaborate on a project, or just want to say hello, feel free to get in touch. Fill out the form below, and I'll get back to you as soon as I can. Your message is important to me, and I look forward to connecting with you.",
+];
+
+const aboutTitle = pageTitle[0];
+const projectsTitle = pageTitle[1];
+const skillsTitle = pageTitle[2];
+const experienceTitle = pageTitle[3];
+const contactTitle = pageTitle[4];
 
 const Layout = () => {
   //sidebar
@@ -95,7 +99,12 @@ const Layout = () => {
           />
           <Route
             path="/contact"
-            element={<Contact contactTitle={contactTitle} />}
+            element={
+              <Contact
+                contactTitle={contactTitle}
+                contactSubtitle={contactSubtitle}
+              />
+            }
           />
           <Route
             path="*"
