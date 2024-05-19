@@ -6,7 +6,7 @@ export default function Contact({ contactTitle, contactSubTitle }) {
     <section>
       <Wrapper>
         <PageTitle pageTitle={contactTitle} />
-        <SubTitle subTitle={contactSubTitle} />
+        <SubTitle subTitleText={contactSubTitle} />
 
         <form className="w-full">
           <fieldset>
