@@ -1,6 +1,6 @@
 import { useNavigate, Link } from "react-router-dom";
 import Wrapper from "../../components/Wrapper";
-import sidebarData from "../../api/sidebarData";
+import sidebarData from "../../data/sidebarData";
 
 export default function Home({ handleSetActive }) {
   const navigate = useNavigate();

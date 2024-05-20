@@ -31,9 +31,9 @@ import Experience from "./pages/Experience/Experience";
 import Contact from "./pages/Contact/Contact";
 import ProjectDetail from "./pages/Projects/ProjectDetail";
 import NotFound from "./pages/NotFound";
-import sidebarData from "./api/sidebarData";
-import contactData from "./api/contactData";
-import projectsData from "./api/projectsData";
+import sidebarData from "./data/sidebarData";
+import contactData from "./data/contactData";
+import projectsData from "./data/projectsData";
 
 const pageTitle = ["About", "Projects", "Skills", "Experience", "Contact"];
 const contactSubtitle =
