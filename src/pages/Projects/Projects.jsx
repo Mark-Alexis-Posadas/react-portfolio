@@ -14,8 +14,8 @@ export default function Projects({
         <PageTitle pageTitle={projectsTitle} />
         <SubTitle subTitleText={projectsSubTitle} />
         <ul className="grid grid-cols-1 md:grid-cols-3  gap-3">
-          {projectsData.map((data, index) => (
-            <Card data={data} key={index} />
+          {projectsData.map((data) => (
+            <Card data={data} key={data.id} />
           ))}
         </ul>
       </Wrapper>

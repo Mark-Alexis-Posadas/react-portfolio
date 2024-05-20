@@ -34,6 +34,7 @@ import NotFound from "./pages/NotFound";
 import sidebarData from "./data/sidebarData";
 import contactData from "./data/contactData";
 import projectsData from "./data/projectsData";
+import skillsData from "./data/skillsData";
 
 import pageTitles from "./data/pageTitles";
 import subTitles from "./data/subTitles";
@@ -113,6 +114,7 @@ const Layout = () => {
               <Skills
                 skillsTitle={skillsTitle}
                 skillsSubTitle={skillsSubTitle}
+                skillsData={skillsData}
               />
             }
           />

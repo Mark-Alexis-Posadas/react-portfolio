@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-export const mySkills = [
+export const skillsData = [
   {
     id: uuidv4(),
     name: "HTML",
@@ -74,3 +74,5 @@ export const mySkills = [
     url: "https://www.figma.com/",
   },
 ];
+
+export default skillsData;
