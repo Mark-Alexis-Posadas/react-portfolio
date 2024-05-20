@@ -1,4 +1,8 @@
 const subTitles = [
+  //home
+  {
+    text: "I am a front-end developer with a passion for creating beautiful, functional, and user-friendly websites.",
+  },
   //about
   { text: "about subtitle" },
   //projects

@@ -46,11 +46,12 @@ const experienceTitle = pageTitles[3];
 const contactTitle = pageTitles[4];
 
 //subtitle
-const aboutSubTitle = subTitles[0].text;
-const projectsSubTitle = subTitles[1].text;
-const skillsSubTitle = subTitles[2].text;
-const experienceSubTitle = subTitles[3].text;
-const contactSubTitle = subTitles[4].text;
+const homeSubTitle = subTitles[0].text;
+const aboutSubTitle = subTitles[1].text;
+const projectsSubTitle = subTitles[2].text;
+const skillsSubTitle = subTitles[3].text;
+const experienceSubTitle = subTitles[4].text;
+const contactSubTitle = subTitles[5].text;
 
 const Layout = () => {
   //sidebar
@@ -79,7 +80,12 @@ const Layout = () => {
         <Routes>
           <Route
             path="/"
-            element={<Home handleSetActive={handleSetActive} />}
+            element={
+              <Home
+                handleSetActive={handleSetActive}
+                homeSubTitle={homeSubTitle}
+              />
+            }
           />
           <Route
             path="/about"

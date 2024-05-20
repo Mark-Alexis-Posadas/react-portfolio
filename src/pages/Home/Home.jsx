@@ -1,8 +1,9 @@
 import { useNavigate, Link } from "react-router-dom";
 import Wrapper from "../../components/Wrapper";
 import sidebarData from "../../data/sidebarData";
+import SubTitle from "../../components/SubTitle";
 
-export default function Home({ handleSetActive }) {
+export default function Home({ handleSetActive, homeSubTitle }) {
   const navigate = useNavigate();
 
   const handleGetInTouchClick = () => {
@@ -14,15 +15,12 @@ export default function Home({ handleSetActive }) {
   };
 
   return (
-    <section className="flex items-center justify-center min-h-[calc(100vh-5rem)] text-center">
+    <section className="min-h-[calc(100vh-5rem)]">
       <Wrapper>
-        <h1 className="text-9xl font-bold">
+        <h1 className="text-4xl font-bold">
           Hello! I'm Mark <br /> Alexis Posadas
         </h1>
-        <p className="text-4xl text-slate-600 font-medium  max-w-[739px] m-auto my-7">
-          I am a front-end developer with a passion for creating beautiful,
-          functional, and user-friendly websites.
-        </p>
+        <SubTitle subTitleText={homeSubTitle} />
         <Link to="/contact">
           <button
             className="text-white rounded bg-black p-3 min-w-[500px]"
