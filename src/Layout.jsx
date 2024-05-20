@@ -35,23 +35,22 @@ import sidebarData from "./data/sidebarData";
 import contactData from "./data/contactData";
 import projectsData from "./data/projectsData";
 
-const pageTitle = ["About", "Projects", "Skills", "Experience", "Contact"];
-const contactSubtitle =
-  "I'd love to hear from you! Whether you have a question, want to collaborate on a project, or just want to say hello, feel free to get in touch. Fill out the form below, and I'll get back to you as soon as I can. Your message is important to me, and I look forward to connecting with you.";
-const experienceSubTitle =
-  "Discover the diverse range of projects and roles I've embraced throughout my career. From leading innovative initiatives to collaborating with dynamic teams, each experience has shaped my professional journey. Explore the highlights and milestones that showcase my skills and growth.";
+import pageTitles from "./data/pageTitles";
+import subTitles from "./data/subTitles";
 
-const skillsSubTitle =
-  "Explore the comprehensive set of skills I've honed over the years. From technical expertise to creative problem-solving, these abilities enable me to tackle challenges and drive success. Discover how my diverse skill set can contribute to achieving remarkable results in any endeavor.";
+//page title
+const aboutTitle = pageTitles[0];
+const projectsTitle = pageTitles[1];
+const skillsTitle = pageTitles[2];
+const experienceTitle = pageTitles[3];
+const contactTitle = pageTitles[4];
 
-const projectsSubTitle =
-  "Take a look at the innovative projects I've brought to life. Each project showcases my ability to turn ideas into reality, demonstrating my commitment to excellence and creativity. Dive into the details of my work and see how I've made a tangible impact through these initiatives.";
-
-const aboutTitle = pageTitle[0];
-const projectsTitle = pageTitle[1];
-const skillsTitle = pageTitle[2];
-const experienceTitle = pageTitle[3];
-const contactTitle = pageTitle[4];
+//subtitle
+const aboutSubTitle = subTitles[0].text;
+const projectsSubTitle = subTitles[1].text;
+const skillsSubTitle = subTitles[2].text;
+const experienceSubTitle = subTitles[3].text;
+const contactSubTitle = subTitles[4].text;
 
 const Layout = () => {
   //sidebar
@@ -82,7 +81,12 @@ const Layout = () => {
             path="/"
             element={<Home handleSetActive={handleSetActive} />}
           />
-          <Route path="/about" element={<About aboutTitle={aboutTitle} />} />
+          <Route
+            path="/about"
+            element={
+              <About aboutTitle={aboutTitle} aboutSubTitle={aboutSubTitle} />
+            }
+          />
           <Route
             path="/projects"
             element={
@@ -120,7 +124,7 @@ const Layout = () => {
             element={
               <Contact
                 contactTitle={contactTitle}
-                contactSubTitle={contactSubtitle}
+                contactSubTitle={contactSubTitle}
               />
             }
           />
