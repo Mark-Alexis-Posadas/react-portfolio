@@ -1,5 +1,6 @@
+import { v4 as uuidv4 } from "uuid";
 const contactData = [
-  { id: 1, icon: ["fab", "fa-linkedin-in"] },
-  { id: 2, icon: ["fas", "envelope"] },
+  { id: uuidv4(), icon: ["fab", "fa-linkedin-in"] },
+  { id: uuidv4(), icon: ["fas", "envelope"] },
 ];
 export default contactData;

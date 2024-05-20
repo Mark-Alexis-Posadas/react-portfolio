@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from "uuid";
+
 const data = [
   {
-    id: 1,
+    id: uuidv4(),
     logo: "/assets/images/ipsum-logo.png",
     title: "Front-End Developer",
     company: "Ipsum.ph",
@@ -21,7 +23,7 @@ const data = [
   },
 
   {
-    id: 2,
+    id: uuidv4(),
     logo: "/assets/images/olit-logo.png",
     title: "Front-End Developer",
     company: "Online IT Solutions",
