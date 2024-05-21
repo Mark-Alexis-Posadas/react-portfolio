@@ -14,7 +14,10 @@ export default function Projects({
       <Wrapper>
         <PageTitle pageTitle={projectsTitle} />
         <SubTitle subTitleText={projectsSubTitle} />
-        <ul className="grid grid-cols-1 md:grid-cols-3  gap-3">
+        <ul
+          className="grid grid-cols-1 md:grid-cols-3  gap-3"
+          style={{ gridAutoRows: "225px" }}
+        >
           {projectsData.map((data) => (
             <Card
               data={data}
