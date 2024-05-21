@@ -57,6 +57,7 @@ const contactSubTitle = subTitles[5].text;
 const Layout = () => {
   //sidebar
   const [active, setActive] = useState(0);
+  const [toggleSidebar, setToggleSidebar] = useState(false);
 
   useEffect(() => {
     const storedIndex = localStorage.getItem("activeIndex");
@@ -69,6 +70,10 @@ const Layout = () => {
     setActive(index);
     localStorage.setItem("activeIndex", index);
   };
+
+  const handleToggleSidebar = () => {
+    setToggleSidebar((prev) => !prev);
+  };
   return (
     <div className="min-h-screen flex items-center font-sans">
       <Sidebar
@@ -76,8 +81,10 @@ const Layout = () => {
         contactData={contactData}
         active={active}
         handleSetActive={handleSetActive}
+        toggleSidebar={toggleSidebar}
       />
-      <Main>
+
+      <Main handleToggleSidebar={handleToggleSidebar}>
         <Routes>
           <Route
             path="/"

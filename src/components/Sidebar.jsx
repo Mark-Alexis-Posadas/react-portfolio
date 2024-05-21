@@ -6,9 +6,14 @@ export default function Sidebar({
   contactData,
   active,
   handleSetActive,
+  toggleSidebar,
 }) {
   return (
-    <aside className="2xl:w-[350px] md:w-auto fixed bg-white shadow-md h-full overflow-hidden left-0 top-0 bottom-0 md:p-3 lg:p-10 hidden lg:block">
+    <aside
+      className={`2xl:w-[350px] md:w-auto fixed bg-white shadow-md h-full overflow-hidden left-0 top-0 z-10 bottom-0 md:p-3 lg:p-10 lg:block ${
+        toggleSidebar ? "block" : "hidden"
+      }`}
+    >
       <ul>
         {sidebarData.map((data, index) => (
           <li key={data.id} onClick={() => handleSetActive(index)}>
