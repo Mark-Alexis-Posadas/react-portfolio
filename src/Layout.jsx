@@ -84,7 +84,10 @@ const Layout = () => {
         toggleSidebar={toggleSidebar}
       />
 
-      <Main handleToggleSidebar={handleToggleSidebar}>
+      <Main
+        handleToggleSidebar={handleToggleSidebar}
+        toggleSidebar={toggleSidebar}
+      >
         <Routes>
           <Route
             path="/"
