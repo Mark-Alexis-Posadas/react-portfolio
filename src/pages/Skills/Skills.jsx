@@ -14,7 +14,10 @@ export default function Skills({
       <Wrapper>
         <PageTitle pageTitle={skillsTitle} />
         <SubTitle subTitleText={skillsSubTitle} />
-        <ul>
+        <ul
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3"
+          style={{ gridAutoRows: "225px" }}
+        >
           {skillsData.map((data) => (
             <Card
               data={data}

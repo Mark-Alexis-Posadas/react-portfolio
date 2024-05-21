@@ -126,9 +126,15 @@ const projectsCardLayout = (data) => {
 
 const skillsCardLayout = (data) => {
   return (
-    <a key={data.id} href={data.url} target="_blank" rel="noopener noreferrer">
-      {renderIcon(data.icon)}
-      <span> {data.name}</span>
+    <a
+      className="h-full flex flex-col items-center justify-center"
+      key={data.id}
+      href={data.url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div className="text-[7rem]">{renderIcon(data.icon)}</div>
+      <span className="mt-1">{data.name}</span>
     </a>
   );
 };
