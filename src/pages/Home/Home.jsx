@@ -43,14 +43,14 @@ export default function Home({ handleSetActive, homeSubTitle }) {
           into a professional setting and contribute to innovative projects that push
           the boundaries of what is possible on the web."
         />
-        <Link to="/contact">
+        {/* <Link to="/contact">
           <button
             className="text-white rounded bg-black p-3 min-w-[500px]"
             onClick={handleGetInTouchClick}
           >
             Get In Touch!
           </button>
-        </Link>
+        </Link> */}
       </Wrapper>
     </section>
   );
