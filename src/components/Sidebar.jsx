@@ -10,7 +10,7 @@ export default function Sidebar({
 }) {
   return (
     <aside
-      className={`2xl:w-[350px] md:w-auto fixed bg-white shadow-md h-full overflow-hidden left-0 top-0 z-10 bottom-0 md:p-3 lg:p-10 lg:block ${
+      className={`md:w-[250px]  lg:w-[300px] 2xl:w-[350px] fixed bg-white shadow-md h-full overflow-hidden left-0 top-0 z-10 bottom-0 md:p-3 lg:p-10 lg:block ${
         toggleSidebar ? "block" : "hidden"
       }`}
     >
@@ -19,7 +19,7 @@ export default function Sidebar({
           <li key={data.id} onClick={() => handleSetActive(index)}>
             <Link
               to={`/${data.text === "home" ? "" : data.text}`}
-              className={`w-full flex items-center justify-between p-2 my-3 rounded cursor-pointer ${
+              className={`w-full flex items-center justify-between p-2 my-3 md:rounded cursor-pointer ${
                 index === active ? "text-white bg-black" : "text-black"
               }`}
             >
