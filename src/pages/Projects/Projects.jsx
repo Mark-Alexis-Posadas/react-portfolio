@@ -7,6 +7,7 @@ export default function Projects({
   projectsData,
   projectsTitle,
   projectsSubTitle,
+  projectsCardLayout,
 }) {
   return (
     <section>
@@ -15,7 +16,11 @@ export default function Projects({
         <SubTitle subTitleText={projectsSubTitle} />
         <ul className="grid grid-cols-1 md:grid-cols-3  gap-3">
           {projectsData.map((data) => (
-            <Card data={data} key={data.id} />
+            <Card
+              data={data}
+              key={data.id}
+              projectsCardLayout={projectsCardLayout(data)}
+            />
           ))}
         </ul>
       </Wrapper>

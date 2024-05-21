@@ -8,6 +8,7 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedinIn, faReact } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 library.add(
   faHouseChimney,
@@ -19,10 +20,26 @@ library.add(
   faLinkedinIn,
   faReact
 );
+
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaSass,
+  FaBootstrap,
+  FaGulp,
+  FaNpm,
+  FaGit,
+  FaReact,
+  FaFigma,
+} from "react-icons/fa";
+
+import { SiStyledcomponents, SiBem } from "react-icons/si";
+
 import { library } from "@fortawesome/fontawesome-svg-core";
 import Main from "./components/Main";
 import Sidebar from "./components/Sidebar";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
@@ -53,6 +70,68 @@ const projectsSubTitle = subTitles[2].text;
 const skillsSubTitle = subTitles[3].text;
 const experienceSubTitle = subTitles[4].text;
 const contactSubTitle = subTitles[5].text;
+
+const renderIcon = (iconName) => {
+  switch (iconName) {
+    case "FaHtml5":
+      return <FaHtml5 />;
+    case "FaCss3Alt":
+      return <FaCss3Alt />;
+    case "FaJsSquare":
+      return <FaJsSquare />;
+    case "FaSass":
+      return <FaSass />;
+    case "SiBem":
+      return <SiBem />;
+    case "FaBootstrap":
+      return <FaBootstrap />;
+    case "FaGulp":
+      return <FaGulp />;
+    case "FaNpm":
+      return <FaNpm />;
+    case "FaGit":
+      return <FaGit />;
+    case "FaReact":
+      return <FaReact />;
+    case "SiStyledcomponents":
+      return <SiStyledcomponents />;
+    case "FaFigma":
+      return <FaFigma />;
+    default:
+      return null;
+  }
+};
+
+//Card component layouts
+const projectsCardLayout = (data) => {
+  return (
+    <>
+      <Link
+        to={`/projects/${data.pageTitle.replace(/ /g, "")}`}
+        className="h-full block p-3"
+      >
+        <h1 className="font-bold text-rose-600 mb-2">{data.pageTitle}</h1>
+        <p className="text-sm text-slate-600">{data.description}</p>
+        <ul>
+          {data.tags.map((tag, index) => (
+            <li key={index}>
+              <FontAwesomeIcon icon={["fab", tag]} className="text-blue-500" />
+            </li>
+          ))}
+        </ul>
+      </Link>
+    </>
+  );
+};
+
+const skillsCardLayout = (data) => {
+  return (
+    <a key={data.id} href={data.url} target="_blank" rel="noopener noreferrer">
+      {renderIcon(data.icon)}
+      <span> {data.name}</span>
+    </a>
+  );
+};
 
 const Layout = () => {
   //sidebar
@@ -111,6 +190,7 @@ const Layout = () => {
                 projectsData={projectsData}
                 projectsTitle={projectsTitle}
                 projectsSubTitle={projectsSubTitle}
+                projectsCardLayout={projectsCardLayout}
               />
             }
           />
@@ -125,6 +205,7 @@ const Layout = () => {
                 skillsTitle={skillsTitle}
                 skillsSubTitle={skillsSubTitle}
                 skillsData={skillsData}
+                skillsCardLayout={skillsCardLayout}
               />
             }
           />
