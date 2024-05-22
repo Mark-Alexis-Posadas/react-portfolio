@@ -1,4 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 import {
   faHouseChimney,
   faUser,
@@ -168,10 +171,10 @@ const experienceCardLayout = (data) => {
 };
 
 const Layout = () => {
-  //sidebar
   const [active, setActive] = useState(0);
   const [toggleSidebar, setToggleSidebar] = useState(false);
 
+  //sidebar
   useEffect(() => {
     const storedIndex = localStorage.getItem("activeIndex");
     if (storedIndex !== null) {
@@ -187,6 +190,97 @@ const Layout = () => {
   const handleToggleSidebar = () => {
     setToggleSidebar((prev) => !prev);
   };
+
+  //contact
+  const [forms, setForms] = useState({
+    name: "",
+    email: "",
+    textArea: "",
+    nameError: "",
+    emailError: "",
+  });
+
+  const validateName = () => {
+    let nameError = "";
+    if (!forms.name.trim()) {
+      nameError = "Name is required";
+    }
+    setForms({ ...forms, nameError });
+    return nameError;
+  };
+
+  const validateEmail = () => {
+    let emailError = "";
+    if (!forms.email.trim()) {
+      emailError = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(forms.email)) {
+      emailError = "Email is invalid";
+    }
+    setForms({ ...forms, emailError });
+    return emailError;
+  };
+
+  const validate = () => {
+    let nameError = validateName();
+    let emailError = validateEmail();
+    return !nameError && !emailError;
+  };
+
+  const form = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const isValid = validate();
+
+    if (isValid) {
+      emailjs
+        .sendForm(
+          "service_mxfvfqc",
+          "template_qvffixo",
+          form.current,
+          "9KuKr6DAiOQgw8m_u"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            toast.success("Form submitted successfully!");
+            setForms({
+              name: "",
+              email: "",
+              textarea: "",
+              nameError: "",
+              emailError: "",
+            });
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
+  };
+
+  const handleNameChange = (e) => {
+    setForms({ ...forms, name: e.target.value });
+    if (forms.nameError && e.target.value.trim() === forms.name) {
+      setForms({ ...forms, nameError: "" });
+    }
+  };
+
+  const handleEmailChange = (e) => {
+    setForms({ ...forms, email: e.target.value });
+    if (forms.emailError && e.target.value.trim() === forms.email) {
+      setForms({ ...forms, emailError: "" });
+    }
+  };
+
+  const handleBlur = (e) => {
+    if (e.target.name === "user_name") {
+      validateName();
+    } else if (e.target.name === "user_email") {
+      validateEmail();
+    }
+  };
+
   return (
     <div className="min-h-screen flex items-center font-sans">
       <Sidebar
