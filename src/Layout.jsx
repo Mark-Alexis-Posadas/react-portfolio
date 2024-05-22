@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
 import {
@@ -236,7 +237,7 @@ const Layout = () => {
         .sendForm(
           "service_mxfvfqc",
           "template_qvffixo",
-          form.current,
+          formRef.current,
           "9KuKr6DAiOQgw8m_u"
         )
         .then(
