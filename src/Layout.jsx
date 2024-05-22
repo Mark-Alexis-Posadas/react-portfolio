@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from "react-toastify";
+
 import {
   faHouseChimney,
   faUser,
@@ -226,7 +225,7 @@ const Layout = () => {
     return !nameError && !emailError;
   };
 
-  const form = useRef();
+  const formRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -354,6 +353,13 @@ const Layout = () => {
               <Contact
                 contactTitle={contactTitle}
                 contactSubTitle={contactSubTitle}
+                forms={forms}
+                setForms={setForms}
+                formRef={formRef}
+                handleSubmit={handleSubmit}
+                handleNameChange={handleNameChange}
+                handleEmailChange={handleEmailChange}
+                handleBlur={handleBlur}
               />
             }
           />
