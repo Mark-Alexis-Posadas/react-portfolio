@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 
-const data = [
+const experienceData = [
   {
     id: uuidv4(),
     logo: "/assets/images/ipsum-logo.png",
@@ -41,4 +41,4 @@ const data = [
   },
 ];
 
-export default data;
+export default experienceData;

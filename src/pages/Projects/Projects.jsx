@@ -15,7 +15,7 @@ export default function Projects({
         <PageTitle pageTitle={projectsTitle} />
         <SubTitle subTitleText={projectsSubTitle} />
         <ul
-          className="grid grid-cols-1 md:grid-cols-3  gap-3"
+          className="grid grid-cols-1 md:grid-cols-3  gap-5"
           style={{ gridAutoRows: "225px" }}
         >
           {projectsData.map((data) => (

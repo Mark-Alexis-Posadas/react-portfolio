@@ -15,7 +15,7 @@ export default function Skills({
         <PageTitle pageTitle={skillsTitle} />
         <SubTitle subTitleText={skillsSubTitle} />
         <ul
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3"
+          className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
           style={{ gridAutoRows: "225px" }}
         >
           {skillsData.map((data) => (

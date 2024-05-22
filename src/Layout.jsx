@@ -52,6 +52,7 @@ import sidebarData from "./data/sidebarData";
 import contactData from "./data/contactData";
 import projectsData from "./data/projectsData";
 import skillsData from "./data/skillsData";
+import experienceData from "./data/experienceData";
 
 import pageTitles from "./data/pageTitles";
 import subTitles from "./data/subTitles";
@@ -139,6 +140,29 @@ const skillsCardLayout = (data) => {
   );
 };
 
+const experienceCardLayout = (data) => {
+  return (
+    <article>
+      <figure>
+        <img src={data.logo} alt="logo" />
+      </figure>
+      <div>
+        <header>
+          <h3>{data.title}</h3>
+          <h2>{data.company}</h2>
+          <span>{data.date}</span>
+          <span>{data.address}</span>
+        </header>
+        <ul>
+          {data.jobDescriptions.map((description, index) => (
+            <li key={index}>{description}</li>
+          ))}
+        </ul>
+      </div>
+    </article>
+  );
+};
+
 const Layout = () => {
   //sidebar
   const [active, setActive] = useState(0);
@@ -221,6 +245,8 @@ const Layout = () => {
               <Experience
                 experienceTitle={experienceTitle}
                 experienceSubTitle={experienceSubTitle}
+                experienceData={experienceData}
+                experienceCardLayout={experienceCardLayout}
               />
             }
           />
