@@ -106,22 +106,20 @@ const renderIcon = (iconName) => {
 //Card component layouts
 const projectsCardLayout = (data) => {
   return (
-    <>
-      <Link
-        to={`/projects/${data.pageTitle.replace(/ /g, "")}`}
-        className="h-full block p-3"
-      >
-        <h1 className="font-bold text-rose-600 mb-2">{data.pageTitle}</h1>
-        <p className="text-sm text-slate-600">{data.description}</p>
-        <ul>
-          {data.tags.map((tag, index) => (
-            <li key={index}>
-              <FontAwesomeIcon icon={["fab", tag]} className="text-blue-500" />
-            </li>
-          ))}
-        </ul>
-      </Link>
-    </>
+    <Link
+      to={`/projects/${data.pageTitle.replace(/ /g, "")}`}
+      className="h-full block p-3"
+    >
+      <h1 className="font-bold text-rose-600 mb-2">{data.pageTitle}</h1>
+      <p className="text-sm text-slate-600">{data.description}</p>
+      <ul>
+        {data.tags.map((tag, index) => (
+          <li key={index}>
+            <FontAwesomeIcon icon={["fab", tag]} className="text-blue-500" />
+          </li>
+        ))}
+      </ul>
+    </Link>
   );
 };
 
@@ -142,18 +140,22 @@ const skillsCardLayout = (data) => {
 
 const experienceCardLayout = (data) => {
   return (
-    <article>
+    <article className="flex items-center mb-5 p-3">
       <figure>
-        <img src={data.logo} alt="logo" />
+        <img
+          src={data.logo}
+          alt="logo"
+          className="w-[218px] object-cover pr-10"
+        />
       </figure>
       <div>
-        <header>
-          <h3>{data.title}</h3>
-          <h2>{data.company}</h2>
-          <span>{data.date}</span>
-          <span>{data.address}</span>
+        <header className="mb-3">
+          <h3 className="font-medium text-slate-600">{data.title}</h3>
+          <h2 className="font-bold text-rose-600 mb-2">{data.company}</h2>
+          <span className="italic text-base mr-2">{data.date}</span>
+          <span className="text-base">{data.address}</span>
         </header>
-        <ul>
+        <ul className="list-disc">
           {data.jobDescriptions.map((description, index) => (
             <li key={index}>{description}</li>
           ))}
