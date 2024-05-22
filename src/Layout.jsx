@@ -157,7 +157,9 @@ const experienceCardLayout = (data) => {
         </header>
         <ul className="list-disc">
           {data.jobDescriptions.map((description, index) => (
-            <li key={index}>{description}</li>
+            <li key={index} className="text-slate-600">
+              {description}
+            </li>
           ))}
         </ul>
       </div>
