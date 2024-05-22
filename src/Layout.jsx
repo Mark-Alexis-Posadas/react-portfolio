@@ -108,7 +108,7 @@ const projectsCardLayout = (data) => {
   return (
     <Link
       to={`/projects/${data.pageTitle.replace(/ /g, "")}`}
-      className="h-full block p-3"
+      className="h-full block p-7"
     >
       <h1 className="font-bold text-rose-600 mb-2">{data.pageTitle}</h1>
       <p className="text-sm text-slate-600">{data.description}</p>
@@ -140,7 +140,7 @@ const skillsCardLayout = (data) => {
 
 const experienceCardLayout = (data) => {
   return (
-    <article className="flex items-center mb-5 p-3">
+    <article className="flex items-center mb-5 p-7">
       <figure>
         <img
           src={data.logo}
