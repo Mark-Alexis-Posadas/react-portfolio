@@ -45,7 +45,7 @@ export default function Contact({
                 onBlur={handleBlur}
                 value={forms.email}
               />
-              <div className="text-red-700">{forms.nameError}</div>
+              <div className="text-red-700">{forms.emailError}</div>
             </div>
             <div className="mb-3">
               <textarea
@@ -57,7 +57,6 @@ export default function Contact({
                   setForms({ ...forms, textarea: e.target.value })
                 }
               ></textarea>
-              <div className="text-red-700">{forms.nameError}</div>
             </div>
           </fieldset>
           <button
