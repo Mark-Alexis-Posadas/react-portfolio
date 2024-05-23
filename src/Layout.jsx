@@ -143,8 +143,8 @@ const skillsCardLayout = (data) => {
 
 const experienceCardLayout = (data) => {
   return (
-    <article className="flex items-center mb-5 p-7">
-      <figure>
+    <article className="flex flex-col md:flex-row items-center mb-5 p-7">
+      <figure className="mb-5 md:mb-0">
         <img
           src={data.logo}
           alt="logo"
