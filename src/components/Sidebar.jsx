@@ -45,7 +45,13 @@ export default function Sidebar({
                 <FontAwesomeIcon icon={data.icon} className="text-2xl" />
               </a>
             ) : (
-              <FontAwesomeIcon icon={data.icon} className="text-2xl" />
+              <a
+                href="https://github.com/Mark-Alexis-Posadas"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={data.icon} className="text-2xl" />
+              </a>
             )}
           </li>
         ))}

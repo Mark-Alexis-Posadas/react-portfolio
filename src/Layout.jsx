@@ -10,7 +10,13 @@ import {
   faBriefcase,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedinIn, faReact } from "@fortawesome/free-brands-svg-icons";
+
+import {
+  faLinkedinIn,
+  faGithub,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 library.add(
@@ -21,6 +27,7 @@ library.add(
   faBriefcase,
   faEnvelope,
   faLinkedinIn,
+  faGithub,
   faReact
 );
 
