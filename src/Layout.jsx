@@ -44,7 +44,7 @@ import Main from "./components/Main";
 import Sidebar from "./components/Sidebar";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
+// import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
 import Skills from "./pages/Skills/Skills";
 import Experience from "./pages/Experience/Experience";
@@ -69,7 +69,7 @@ const contactTitle = pageTitles[4];
 
 //subtitle
 const homeSubTitle = subTitles[0].text;
-const aboutSubTitle = subTitles[1].text;
+// const aboutSubTitle = subTitles[1].text;
 const projectsSubTitle = subTitles[2].text;
 const skillsSubTitle = subTitles[3].text;
 const experienceSubTitle = subTitles[4].text;
@@ -305,12 +305,12 @@ const Layout = () => {
               />
             }
           />
-          <Route
+          {/* <Route
             path="/about"
             element={
               <About aboutTitle={aboutTitle} aboutSubTitle={aboutSubTitle} />
             }
-          />
+          /> */}
           <Route
             path="/projects"
             element={

@@ -18,7 +18,10 @@ export default function Contact({
     <section>
       <Wrapper>
         <PageTitle pageTitle={contactTitle} />
-        <SubTitle subTitleText={contactSubTitle} />
+        <SubTitle
+          subTitleText={contactSubTitle}
+          classNames="mb-4 font-light text-base lg:text-2xl text-slate-900"
+        />
 
         <form ref={formRef} onSubmit={handleSubmit} className="w-full">
           <ToastContainer />

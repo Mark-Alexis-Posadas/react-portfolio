@@ -13,7 +13,10 @@ export default function Skills({
     <section>
       <Wrapper>
         <PageTitle pageTitle={skillsTitle} />
-        <SubTitle subTitleText={skillsSubTitle} />
+        <SubTitle
+          subTitleText={skillsSubTitle}
+          classNames="mb-4 font-light text-base lg:text-2xl text-slate-900"
+        />
         <ul
           className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
           style={{ gridAutoRows: "225px" }}

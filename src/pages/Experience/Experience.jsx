@@ -11,7 +11,10 @@ export default function Experience({
   return (
     <section>
       <PageTitle pageTitle={experienceTitle} />
-      <SubTitle subTitleText={experienceSubTitle} />
+      <SubTitle
+        subTitleText={experienceSubTitle}
+        classNames="mb-4 font-light text-base lg:text-2xl text-slate-900"
+      />
       <ul>
         {experienceData.map((data) => (
           <Card
