@@ -1,37 +1,30 @@
-# My Portfolio Website
+# React + TypeScript + Vite
 
-This is my portfolio website showcasing my projects, skills, and achievements. It is built with Vite, ReactJS, and Styled Components. I have used React Scroll and React Icons for navigation and icon components.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Getting Started
+Currently, two official plugins are available:
 
-To get a local copy of the project, follow these steps:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-1. Clone the repository: `git clone https://github.com/your-username/your-repo-name.git`
-2. Install dependencies: `npm install`
-3. Start the development server: `npm run dev`
-4. Open `http://localhost:3000` in your browser to view the website.
+## Expanding the ESLint configuration
 
-## Features
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Clean and modern design.
-- Responsive layout.
-- Navigation using React Scroll.
-- Icon components using React Icons.
-- Showcase of my skills, projects, and achievements.
+- Configure the top-level `parserOptions` property like this:
 
-## Built With
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
 
-- [Vite](https://vitejs.dev/) - A build tool that provides fast and efficient development experience.
-- [ReactJS](https://reactjs.org/) - A JavaScript library for building user interfaces.
-- [Styled Components](https://styled-components.com/) - A CSS-in-JS library for styling React components.
-- [React Scroll](https://www.npmjs.com/package/react-scroll) - A library for smooth scrolling to sections on the page.
-- [React Icons](https://react-icons.github.io/react-icons/) - A library of popular icons for React.
-
-## Acknowledgments
-
-- Hat tip to anyone who's code was used.
-- Inspiration for the design was taken from various sources on the web.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
