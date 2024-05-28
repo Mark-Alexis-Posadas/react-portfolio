@@ -2,7 +2,26 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Sidebar: React.FC = ({
+interface Sidebar {
+  id: string;
+  text: string;
+  icon: string[];
+}
+
+interface ContactType {
+  id: string;
+  icon: string[];
+}
+
+interface SidebarType {
+  sidebarData: Sidebar;
+  contactData: ContactType;
+  active: number;
+  handleSetActive: (index: number) => void;
+  toggleSidebar: boolean;
+}
+
+const Sidebar: React.FC<SidebarType> = ({
   sidebarData,
   contactData,
   active,

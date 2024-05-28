@@ -164,6 +164,14 @@ interface SkillsCardLayoutProps {
   data: Skills;
 }
 
+interface FormState {
+  name: string;
+  email: string;
+  textarea: string;
+  nameError: string;
+  emailError: string;
+}
+
 const skillsCardLayout: React.FC<SkillsCardLayoutProps> = ({ data }) => {
   return (
     <a
@@ -224,8 +232,8 @@ const experienceCardLayout: React.FC<ExperienceCardLayoutProps> = ({
 };
 
 const App: React.FC = () => {
-  const [active, setActive] = useState(0);
-  const [toggleSidebar, setToggleSidebar] = useState(false);
+  const [active, setActive] = useState<number>(0);
+  const [toggleSidebar, setToggleSidebar] = useState<boolean>(false);
 
   //sidebar
   useEffect(() => {
@@ -237,20 +245,13 @@ const App: React.FC = () => {
 
   const handleSetActive = (index: number) => {
     setActive(index);
-    localStorage.setItem("activeIndex", index);
+    localStorage.setItem("activeIndex", index.toString());
   };
 
   const handleToggleSidebar = () => {
     setToggleSidebar((prev) => !prev);
   };
 
-  interface FormState {
-    name: string;
-    email: string;
-    textarea: string;
-    nameError: string;
-    emailError: string;
-  }
   //contact
   const [forms, setForms] = useState<FormState>({
     name: "",
