@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 
 interface ExperienceTypes {
-  id: any;
+  id: string;
   logo: string;
   title: string;
   company: string;

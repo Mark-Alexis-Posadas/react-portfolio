@@ -1,6 +1,6 @@
 import { useNavigate, Link } from "react-router-dom";
 import Wrapper from "../../components/Wrapper";
-import sidebarData from "../../data/sidebarData";
+import sidebarData from "../../data/sidebar-data";
 import SubTitle from "../../components/SubTitle";
 
 export default function Home({ handleSetActive, homeSubTitle }) {

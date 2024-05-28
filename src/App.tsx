@@ -58,14 +58,15 @@ import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";
 // import ProjectDetail from "./pages/Projects/ProjectDetail";
 // import NotFound from "./pages/NotFound";
-import sidebarData from "./data/sidebarData";
-import contactData from "./data/contactData";
-import projectsData from "./data/projectsData";
-import skillsData from "./data/skillsData";
-import experienceData from "./data/experienceData";
+import sidebarData from "./data/sidebar-data";
 
-import pageTitles from "./data/pageTitles";
-import subTitles from "./data/subTitles";
+import contactData from "./data/contact-data";
+import projectsData from "./data/projects-data";
+import skillsData from "./data/skills-data";
+import experienceData from "./data/experience-data";
+
+import pageTitles from "./data/page-titles";
+import subTitles from "./data/sub-titles";
 
 //page title
 const aboutTitle = pageTitles[0];
