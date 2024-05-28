@@ -50,14 +50,14 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import Main from "./components/Main";
 import Sidebar from "./components/Sidebar";
 import { Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home/Home";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 // import About from "./pages/About/About";
-import Projects from "./pages/Projects/Projects";
-import Skills from "./pages/Skills/Skills";
-import Experience from "./pages/Experience/Experience";
-import Contact from "./pages/Contact/Contact";
-import ProjectDetail from "./pages/Projects/ProjectDetail";
-import NotFound from "./pages/NotFound";
+import Projects from "./pages/Projects";
+import Skills from "./pages/Skills";
+import Experience from "./pages/Experience";
+// import ProjectDetail from "./pages/Projects/ProjectDetail";
+// import NotFound from "./pages/NotFound";
 import sidebarData from "./data/sidebarData";
 import contactData from "./data/contactData";
 import projectsData from "./data/projectsData";
@@ -82,7 +82,7 @@ const skillsSubTitle = subTitles[3].text;
 const experienceSubTitle = subTitles[4].text;
 const contactSubTitle = subTitles[5].text;
 
-const renderIcon = (iconName) => {
+const renderIcon = (iconName: string) => {
   switch (iconName) {
     case "FaHtml5":
       return <FaHtml5 />;
@@ -189,7 +189,7 @@ const App: React.FC = () => {
     }
   }, []);
 
-  const handleSetActive = (index) => {
+  const handleSetActive = (index: number) => {
     setActive(index);
     localStorage.setItem("activeIndex", index);
   };
@@ -198,8 +198,15 @@ const App: React.FC = () => {
     setToggleSidebar((prev) => !prev);
   };
 
+  interface FormState {
+    name: string;
+    email: string;
+    textArea: string;
+    nameError: string;
+    emailError: string;
+  }
   //contact
-  const [forms, setForms] = useState({
+  const [forms, setForms] = useState<FormState>({
     name: "",
     email: "",
     textArea: "",
@@ -228,18 +235,18 @@ const App: React.FC = () => {
   };
 
   const validate = () => {
-    let nameError = validateName();
-    let emailError = validateEmail();
+    const nameError: string = validateName();
+    const emailError: string = validateEmail();
     return !nameError && !emailError;
   };
 
-  const formRef = useRef();
+  const formRef = useRef<HTMLFormElement | null>(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     const isValid = validate();
 
-    if (isValid) {
+    if (isValid && formRef.current) {
       emailjs
         .sendForm(
           "service_mxfvfqc",
@@ -254,7 +261,7 @@ const App: React.FC = () => {
             setForms({
               name: "",
               email: "",
-              textarea: "",
+              textArea: "",
               nameError: "",
               emailError: "",
             });
@@ -266,21 +273,21 @@ const App: React.FC = () => {
     }
   };
 
-  const handleNameChange = (e) => {
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setForms({ ...forms, name: e.target.value });
     if (forms.nameError && e.target.value.trim() === forms.name) {
       setForms({ ...forms, nameError: "" });
     }
   };
 
-  const handleEmailChange = (e) => {
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setForms({ ...forms, email: e.target.value });
     if (forms.emailError && e.target.value.trim() === forms.email) {
       setForms({ ...forms, emailError: "" });
     }
   };
 
-  const handleBlur = (e) => {
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>): void => {
     if (e.target.name === "user_name") {
       validateName();
     } else if (e.target.name === "user_email") {
