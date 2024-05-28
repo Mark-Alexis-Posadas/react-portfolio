@@ -1,8 +1,28 @@
+import React from "react";
 import { Link, useParams } from "react-router-dom";
-
 import Wrapper from "../../components/Wrapper";
-export default function ProjectDetail({ projectsData }) {
-  const { pageTitle } = useParams();
+
+interface Project {
+  id: string;
+  pageTitle: string;
+  description: string;
+  features: { text: string }[];
+  source: string;
+  demo: string;
+  buttons: string[];
+  tags: string[];
+}
+
+interface Props {
+  projectsData: Project[];
+}
+
+const ProjectDetails: React.FC<Props> = ({ projectsData }) => {
+  const { pageTitle } = useParams<{ pageTitle?: string }>(); // Make pageTitle optional
+
+  if (!pageTitle) {
+    return <div>Project not found</div>; // Handle the case where pageTitle is undefined
+  }
 
   const project = projectsData.find(
     (proj) => proj.pageTitle.replace(/ /g, "") === pageTitle.replace(/ /g, "")
@@ -49,15 +69,10 @@ export default function ProjectDetail({ projectsData }) {
               Source
             </a>
           </ul>
-          {/* <ul className="flex items-center gap-3">
-            {project.tags.map((tag, idx) => (
-              <li key={tag}>
-                {idx === project.tags.length - 1 ? tag : tag + ", "}
-              </li>
-            ))}
-          </ul> */}
         </div>
       </Wrapper>
     </section>
   );
-}
+};
+
+export default ProjectDetails;

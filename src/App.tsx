@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import { IconName } from "@fortawesome/fontawesome-svg-core";
 
 import {
   faHouseChimney,
@@ -56,10 +57,10 @@ import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";
-// import ProjectDetail from "./pages/Projects/ProjectDetail";
+import ProjectDetails from "./pages/ProjectDetails";
+
 // import NotFound from "./pages/NotFound";
 import sidebarData from "./data/sidebar-data";
-
 import contactData from "./data/contact-data";
 import projectsData from "./data/projects-data";
 import skillsData from "./data/skills-data";
@@ -69,7 +70,7 @@ import pageTitles from "./data/page-titles";
 import subTitles from "./data/sub-titles";
 
 //page title
-const aboutTitle = pageTitles[0];
+// const aboutTitle = pageTitles[0];
 const projectsTitle = pageTitles[1];
 const skillsTitle = pageTitles[2];
 const experienceTitle = pageTitles[3];
@@ -114,8 +115,23 @@ const renderIcon = (iconName: string) => {
   }
 };
 
+interface Project {
+  id: string;
+  pageTitle: string;
+  description: string;
+  features: { text: string }[];
+  source: string;
+  demo: string;
+  buttons: string[];
+  tags: string[];
+}
+
+interface ProjectsCardLayoutProps {
+  data: Project;
+}
+
 //Card component layouts
-const projectsCardLayout = (data) => {
+const projectsCardLayout: React.FC<ProjectsCardLayoutProps> = ({ data }) => {
   return (
     <Link
       to={`/projects/${data.pageTitle.replace(/ /g, "")}`}
@@ -126,7 +142,10 @@ const projectsCardLayout = (data) => {
       <ul>
         {data.tags.map((tag, index) => (
           <li key={index}>
-            <FontAwesomeIcon icon={["fab", tag]} className="text-blue-500" />
+            <FontAwesomeIcon
+              icon={["fab", tag as IconName]}
+              className="text-blue-500"
+            />
           </li>
         ))}
       </ul>
@@ -134,7 +153,18 @@ const projectsCardLayout = (data) => {
   );
 };
 
-const skillsCardLayout = (data) => {
+interface Skills {
+  id: string;
+  name: string;
+  icon: string;
+  url: string;
+}
+
+interface SkillsCardLayoutProps {
+  data: Skills;
+}
+
+const skillsCardLayout: React.FC<SkillsCardLayoutProps> = ({ data }) => {
   return (
     <a
       className="h-full flex flex-col items-center justify-center"
@@ -149,7 +179,22 @@ const skillsCardLayout = (data) => {
   );
 };
 
-const experienceCardLayout = (data) => {
+interface Experience {
+  id: string;
+  logo: string;
+  title: string;
+  company: string;
+  date: string;
+  address: string;
+  jobDescriptions: string[];
+}
+
+interface ExperienceCardLayoutProps {
+  data: Experience;
+}
+const experienceCardLayout: React.FC<ExperienceCardLayoutProps> = ({
+  data,
+}) => {
   return (
     <article className="flex flex-col md:flex-row items-center mb-5 p-7">
       <figure className="mb-5 md:mb-0">
@@ -202,7 +247,7 @@ const App: React.FC = () => {
   interface FormState {
     name: string;
     email: string;
-    textArea: string;
+    textarea: string;
     nameError: string;
     emailError: string;
   }
@@ -210,7 +255,7 @@ const App: React.FC = () => {
   const [forms, setForms] = useState<FormState>({
     name: "",
     email: "",
-    textArea: "",
+    textarea: "",
     nameError: "",
     emailError: "",
   });
@@ -262,7 +307,7 @@ const App: React.FC = () => {
             setForms({
               name: "",
               email: "",
-              textArea: "",
+              textarea: "",
               nameError: "",
               emailError: "",
             });
@@ -339,7 +384,7 @@ const App: React.FC = () => {
           />
           <Route
             path="/projects/:pageTitle"
-            element={<ProjectDetail projectsData={projectsData} />}
+            element={<ProjectDetails projectsData={projectsData} />}
           />
           <Route
             path="/skills"
@@ -379,7 +424,7 @@ const App: React.FC = () => {
               />
             }
           />
-          <Route
+          {/* <Route
             path="*"
             element={
               <NotFound
@@ -387,7 +432,7 @@ const App: React.FC = () => {
                 sidebarData={sidebarData}
               />
             }
-          />
+          /> */}
         </Routes>
       </Main>
     </div>

@@ -1,5 +1,13 @@
 import { v4 as uuidv4 } from "uuid";
-export const skillsData = [
+
+interface Skills {
+  id: string;
+  name: string;
+  icon: string;
+  url: string;
+}
+
+export const skillsData: Skills[] = [
   {
     id: uuidv4(),
     name: "HTML",

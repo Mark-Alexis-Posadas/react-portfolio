@@ -1,5 +1,17 @@
 import { v4 as uuidv4 } from "uuid";
-const projectsData = [
+
+interface Project {
+  id: string;
+  pageTitle: string;
+  description: string;
+  features: { text: string }[];
+  source: string;
+  demo: string;
+  buttons: string[];
+  tags: string[];
+}
+
+const projectsData: Project[] = [
   {
     id: uuidv4(),
     pageTitle: "Tab",

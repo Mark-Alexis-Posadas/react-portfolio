@@ -1,14 +1,37 @@
+import React from "react";
 import Wrapper from "../../components/Wrapper";
 import Card from "../../components/Card";
 import PageTitle from "../../components/PageTitle";
 import SubTitle from "../../components/SubTitle";
 
-export default function Projects({
+interface Project {
+  id: string;
+  pageTitle: string;
+  description: string;
+  features: { text: string }[];
+  source: string;
+  demo: string;
+  buttons: string[];
+  tags: string[];
+}
+
+interface ProjectsCardLayoutProps {
+  data: Project;
+}
+
+interface ProjectsProps {
+  projectsData: Project[];
+  projectsTitle: string;
+  projectsSubTitle: string;
+  projectsCardLayout: React.FC<ProjectsCardLayoutProps>;
+}
+
+const Projects: React.FC<ProjectsProps> = ({
   projectsData,
   projectsTitle,
   projectsSubTitle,
   projectsCardLayout,
-}) {
+}) => {
   return (
     <section>
       <Wrapper>
@@ -32,4 +55,6 @@ export default function Projects({
       </Wrapper>
     </section>
   );
-}
+};
+
+export default Projects;
