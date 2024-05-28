@@ -1,13 +1,14 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Sidebar({
+const Sidebar: React.FC = ({
   sidebarData,
   contactData,
   active,
   handleSetActive,
   toggleSidebar,
-}) {
+}) => {
   return (
     <aside
       className={`md:w-[250px] lg:w-[300px] 2xl:w-[350px] fixed bg-white shadow-md h-full overflow-hidden left-0 top-0 z-10 bottom-0 md:p-3 lg:p-10 lg:block ${
@@ -58,4 +59,6 @@ export default function Sidebar({
       </ul>
     </aside>
   );
-}
+};
+
+export default Sidebar;
