@@ -1,9 +1,14 @@
+import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Wrapper from "../../components/Wrapper";
 import sidebarData from "../../data/sidebar-data";
 import SubTitle from "../../components/SubTitle";
 
-export default function Home({ handleSetActive, homeSubTitle }) {
+interface HomeType {
+  handleSetActive: (index: number) => void;
+  homeSubTitle: string;
+}
+const Home: React.FC<HomeType> = ({ handleSetActive, homeSubTitle }) => {
   const navigate = useNavigate();
 
   const handleGetInTouchClick = () => {
@@ -13,15 +18,14 @@ export default function Home({ handleSetActive, homeSubTitle }) {
     handleSetActive(contactIndex);
     navigate("/contact");
   };
-
   return (
-    <section className="min-h-[calc(100vh-5rem)] flex text-center">
+    <section className="min-h-[calc(100vh-5rem)] flex items-center text-center">
       <Wrapper>
         <h1 className="lg:text-8xl text-4xl font-bold">
           Hello! I'm Mark Alexis Posadas
         </h1>
         <SubTitle
-          subTitleText="I am a front-end developer with a passion for creating beautiful, functional, and user-friendly websites."
+          subTitleText={homeSubTitle}
           classNames="mb-4 font-light text-2xl lg:text-3xl text-slate-900 my-8"
         />
         <div className="flex flex-col md:flex-row items-center justify-center gap-5">
@@ -40,4 +44,6 @@ export default function Home({ handleSetActive, homeSubTitle }) {
       </Wrapper>
     </section>
   );
-}
+};
+
+export default Home;

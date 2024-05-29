@@ -80,19 +80,20 @@ import { FormState } from "./types/Form";
 import { ProjectsCardLayoutProps } from "./types/Project";
 
 //page title
-// const aboutTitle = pageTitles[0];
+
 const projectsTitle = pageTitles[1];
 const skillsTitle = pageTitles[2];
 const experienceTitle = pageTitles[3];
 const contactTitle = pageTitles[4];
 
 //subtitle
-const homeSubTitle = subTitles[0].text;
+
 // const aboutSubTitle = subTitles[1].text;
-const projectsSubTitle = subTitles[2].text;
-const skillsSubTitle = subTitles[3].text;
-const experienceSubTitle = subTitles[4].text;
-const contactSubTitle = subTitles[5].text;
+const homeSubTitle = subTitles[0].text;
+const projectsSubTitle = subTitles[1].text;
+const skillsSubTitle = subTitles[2].text;
+const experienceSubTitle = subTitles[3].text;
+const contactSubTitle = subTitles[4].text;
 
 const renderIcon = (iconName: string) => {
   switch (iconName) {

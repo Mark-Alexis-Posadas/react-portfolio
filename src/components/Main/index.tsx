@@ -1,7 +1,18 @@
+import React, { ReactNode } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-export default function Main({ children, handleToggleSidebar, toggleSidebar }) {
+interface MainTypes {
+  children: ReactNode;
+  handleToggleSidebar: () => void;
+  toggleSidebar: boolean;
+}
+
+const Main: React.FC<MainTypes> = ({
+  children,
+  handleToggleSidebar,
+  toggleSidebar,
+}) => {
   return (
     <main className="ml-0 lg:ml-[300px] 2xl:ml-[350px] w-full min-h-screen p-3 lg:p-10 relative">
       {children}
@@ -17,4 +28,6 @@ export default function Main({ children, handleToggleSidebar, toggleSidebar }) {
       </button>
     </main>
   );
-}
+};
+
+export default Main;

@@ -7,8 +7,7 @@ const subTitles: TextType[] = [
   {
     text: "I am a front-end developer with a passion for creating beautiful, functional, and user-friendly websites.",
   },
-  //about
-  { text: "about subtitle" },
+
   //projects
   {
     text: "Take a look at the innovative projects I've brought to life. Each project showcases my ability to turn ideas into reality, demonstrating my commitment to excellence and creativity. Dive into the details of my work and see how I've made a tangible impact through these initiatives.",
