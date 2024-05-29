@@ -1,14 +1,15 @@
+import React from "react";
 import Card from "../../components/Card";
 import PageTitle from "../../components/PageTitle";
 import SubTitle from "../../components/SubTitle";
 import Wrapper from "../../components/Wrapper";
-
-export default function Skills({
+import { SkillsProps } from "../../types/Skills";
+const Skills: React.FC<SkillsProps> = ({
   skillsTitle,
   skillsSubTitle,
   skillsData,
   skillsCardLayout,
-}) {
+}) => {
   return (
     <section>
       <Wrapper>
@@ -32,4 +33,6 @@ export default function Skills({
       </Wrapper>
     </section>
   );
-}
+};
+
+export default Skills;

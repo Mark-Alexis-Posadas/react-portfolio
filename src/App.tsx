@@ -72,6 +72,8 @@ import subTitles from "./data/sub-titles";
 //types
 import { ExperienceCardLayoutProps } from "./types/Experience";
 import { SkillsCardLayoutProps } from "./types/Skills";
+import { FormState } from "./types/Form";
+import { ProjectsCardLayoutProps } from "./types/Project";
 
 //page title
 // const aboutTitle = pageTitles[0];
@@ -119,21 +121,6 @@ const renderIcon = (iconName: string) => {
   }
 };
 
-interface Project {
-  id: string;
-  pageTitle: string;
-  description: string;
-  features: { text: string }[];
-  source: string;
-  demo: string;
-  buttons: string[];
-  tags: string[];
-}
-
-interface ProjectsCardLayoutProps {
-  data: Project;
-}
-
 //Card component layouts
 const projectsCardLayout: React.FC<ProjectsCardLayoutProps> = ({ data }) => {
   return (
@@ -156,14 +143,6 @@ const projectsCardLayout: React.FC<ProjectsCardLayoutProps> = ({ data }) => {
     </Link>
   );
 };
-
-interface FormState {
-  name: string;
-  email: string;
-  textarea: string;
-  nameError: string;
-  emailError: string;
-}
 
 const skillsCardLayout: React.FC<SkillsCardLayoutProps> = ({ data }) => {
   return (

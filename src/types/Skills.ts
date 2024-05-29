@@ -8,3 +8,10 @@ export interface Skills {
 export interface SkillsCardLayoutProps {
   data: Skills;
 }
+
+export interface SkillsProps {
+  skillsTitle: string;
+  skillsSubTitle: string;
+  skillsData: Skills[];
+  skillsCardLayout?: React.FC<SkillsCardLayoutProps>;
+}

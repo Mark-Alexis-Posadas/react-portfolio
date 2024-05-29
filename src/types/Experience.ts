@@ -16,5 +16,6 @@ export interface ExperienceProps {
   experienceTitle: string;
   experienceSubTitle: string;
   experienceData: Experience[];
-  experienceCardLayout: (data: Experience) => JSX.Element;
+  // experienceCardLayout: (data: Experience) => JSX.Element;
+  experienceCardLayout?: React.FC<ExperienceCardLayoutProps>;
 }
