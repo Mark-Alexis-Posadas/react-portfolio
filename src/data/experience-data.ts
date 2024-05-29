@@ -1,15 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 
-interface ExperienceTypes {
-  id: string;
-  logo: string;
-  title: string;
-  company: string;
-  date: string;
-  address: string;
-  jobDescriptions: string[];
-}
-const experienceData: ExperienceTypes[] = [
+import { Experience } from "../types/Experience";
+const experienceData: Experience[] = [
   {
     id: uuidv4(),
     logo: "/assets/images/ipsum-logo.png",

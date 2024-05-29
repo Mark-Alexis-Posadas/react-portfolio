@@ -1,13 +1,15 @@
+import React from "react";
 import Card from "../../components/Card";
 import PageTitle from "../../components/PageTitle";
 import SubTitle from "../../components/SubTitle";
+import { ExperienceProps } from "../../types/Experience";
 
-export default function Experience({
+const Experience: React.FC<ExperienceProps> = ({
   experienceTitle,
   experienceSubTitle,
   experienceData,
   experienceCardLayout,
-}) {
+}) => {
   return (
     <section>
       <PageTitle pageTitle={experienceTitle} />
@@ -25,4 +27,6 @@ export default function Experience({
       </ul>
     </section>
   );
-}
+};
+
+export default Experience;

@@ -69,6 +69,9 @@ import experienceData from "./data/experience-data";
 import pageTitles from "./data/page-titles";
 import subTitles from "./data/sub-titles";
 
+//types
+import { ExperienceCardLayoutProps } from "./types/Experience";
+
 //page title
 // const aboutTitle = pageTitles[0];
 const projectsTitle = pageTitles[1];
@@ -187,19 +190,6 @@ const skillsCardLayout: React.FC<SkillsCardLayoutProps> = ({ data }) => {
   );
 };
 
-interface Experience {
-  id: string;
-  logo: string;
-  title: string;
-  company: string;
-  date: string;
-  address: string;
-  jobDescriptions: string[];
-}
-
-interface ExperienceCardLayoutProps {
-  data: Experience;
-}
 const experienceCardLayout: React.FC<ExperienceCardLayoutProps> = ({
   data,
 }) => {
