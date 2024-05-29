@@ -51,20 +51,24 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import Main from "./components/Main";
 import Sidebar from "./components/Sidebar";
 import { Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-// import About from "./pages/About/About";
-import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
-import Experience from "./pages/Experience";
-import ProjectDetails from "./pages/ProjectDetails";
+
+import {
+  Home,
+  Contact,
+  Projects,
+  Skills,
+  Experience,
+  ProjectDetails,
+} from "./pages";
 
 // import NotFound from "./pages/NotFound";
-import sidebarData from "./data/sidebar-data";
-import contactData from "./data/contact-data";
-import projectsData from "./data/projects-data";
-import skillsData from "./data/skills-data";
-import experienceData from "./data/experience-data";
+import {
+  sidebarData,
+  contactData,
+  projectsData,
+  skillsData,
+  experienceData,
+} from "./data";
 
 import pageTitles from "./data/page-titles";
 import subTitles from "./data/sub-titles";
