@@ -28,7 +28,8 @@ const Projects: React.FC<ProjectsProps> = ({
             <Card
               data={data}
               key={data.id}
-              projectsCardLayout={projectsCardLayout(data)}
+              // projectsCardLayout={projectsCardLayout(data)}
+              projectsCardLayout={projectsCardLayout}
             />
           ))}
         </ul>

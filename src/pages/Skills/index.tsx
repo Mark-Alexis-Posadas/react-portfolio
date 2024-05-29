@@ -26,7 +26,7 @@ const Skills: React.FC<SkillsProps> = ({
             <Card
               data={data}
               key={data.id}
-              skillsCardLayout={skillsCardLayout(data)}
+              skillsCardLayout={skillsCardLayout}
             />
           ))}
         </ul>

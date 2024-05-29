@@ -21,7 +21,8 @@ const Experience: React.FC<ExperienceProps> = ({
         {experienceData.map((data) => (
           <Card
             key={data.id}
-            experienceCardLayout={experienceCardLayout(data)}
+            data={data}
+            experienceCardLayout={experienceCardLayout}
           />
         ))}
       </ul>
