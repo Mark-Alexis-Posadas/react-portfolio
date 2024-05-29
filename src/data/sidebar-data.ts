@@ -1,5 +1,11 @@
 import { v4 as uuidv4 } from "uuid";
-const sidebarData = [
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+interface Types {
+  id: string;
+  text: string;
+  icon: IconProp;
+}
+const sidebarData: Types[] = [
   { id: uuidv4(), text: "home", icon: ["fas", "house-chimney"] },
   // { id: uuidv4(), text: "about", icon: ["fas", "user"] },
   { id: uuidv4(), text: "projects", icon: ["fas", "diagram-project"] },
