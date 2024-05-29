@@ -1,6 +1,6 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { ContactItem } from "./Contact";
-interface SidebarItem {
+export interface SidebarItem {
   id: string;
   text: string;
   icon: IconProp;

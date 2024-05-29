@@ -1,8 +1,13 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Wrapper from "../../components/Wrapper";
-import { SidebarType } from "../../types/Sidebar";
-const NotFound: React.FC<SidebarType> = ({ handleSetActive, sidebarData }) => {
+import { SidebarItem } from "../../types/Sidebar";
+
+interface NotFoundType {
+  sidebarData: SidebarItem[];
+  handleSetActive: (index: number) => void;
+}
+const NotFound: React.FC<NotFoundType> = ({ handleSetActive, sidebarData }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {

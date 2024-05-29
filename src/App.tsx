@@ -59,9 +59,9 @@ import {
   Skills,
   Experience,
   ProjectDetails,
+  NotFound,
 } from "./pages";
 
-// import NotFound from "./pages/NotFound";
 import {
   sidebarData,
   contactData,
@@ -330,12 +330,6 @@ const App: React.FC = () => {
               />
             }
           />
-          {/* <Route
-            path="/about"
-            element={
-              <About aboutTitle={aboutTitle} aboutSubTitle={aboutSubTitle} />
-            }
-          /> */}
           <Route
             path="/projects"
             element={
@@ -389,7 +383,7 @@ const App: React.FC = () => {
               />
             }
           />
-          {/* <Route
+          <Route
             path="*"
             element={
               <NotFound
@@ -397,7 +391,7 @@ const App: React.FC = () => {
                 sidebarData={sidebarData}
               />
             }
-          /> */}
+          />
         </Routes>
       </Main>
     </div>
