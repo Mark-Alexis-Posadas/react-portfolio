@@ -1,11 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-
-interface Skills {
-  id: string;
-  name: string;
-  icon: string;
-  url: string;
-}
+import { Skills } from "../types/Skills";
 
 export const skillsData: Skills[] = [
   {

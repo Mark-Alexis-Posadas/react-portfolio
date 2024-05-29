@@ -71,6 +71,7 @@ import subTitles from "./data/sub-titles";
 
 //types
 import { ExperienceCardLayoutProps } from "./types/Experience";
+import { SkillsCardLayoutProps } from "./types/Skills";
 
 //page title
 // const aboutTitle = pageTitles[0];
@@ -155,17 +156,6 @@ const projectsCardLayout: React.FC<ProjectsCardLayoutProps> = ({ data }) => {
     </Link>
   );
 };
-
-interface Skills {
-  id: string;
-  name: string;
-  icon: string;
-  url: string;
-}
-
-interface SkillsCardLayoutProps {
-  data: Skills;
-}
 
 interface FormState {
   name: string;
