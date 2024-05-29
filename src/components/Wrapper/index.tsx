@@ -1,8 +1,15 @@
 import React, { ReactNode } from "react";
 
-const Wrapper: React.FC<{ children: ReactNode }> = ({ children }) => {
+interface WrapperProps {
+  className?: string;
+  children: ReactNode;
+}
+
+const Wrapper: React.FC<WrapperProps> = ({ className, children }) => {
   return (
-    <div className="w-100 2xl:w-[1400px] max-w-full mx-auto">{children}</div>
+    <div className={`${className} w-100 2xl:w-[1400px] max-w-full mx-auto`}>
+      {children}
+    </div>
   );
 };
 

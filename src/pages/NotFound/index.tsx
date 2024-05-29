@@ -1,9 +1,8 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
-
 import Wrapper from "../../components/Wrapper";
-
-const NotFound: React.FC = ({ handleSetActive, sidebarData }) => {
+import { SidebarType } from "../../types/Sidebar";
+const NotFound: React.FC<SidebarType> = ({ handleSetActive, sidebarData }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
