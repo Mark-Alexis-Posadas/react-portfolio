@@ -1,9 +1,4 @@
-import React, { ReactNode } from "react";
-
-interface WrapperProps {
-  className?: string;
-  children: ReactNode;
-}
+import { WrapperProps } from "../../types/Wrapper";
 
 const Wrapper: React.FC<WrapperProps> = ({ className, children }) => {
   return (

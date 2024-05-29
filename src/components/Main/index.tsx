@@ -1,13 +1,7 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-
-interface MainTypes {
-  children: ReactNode;
-  handleToggleSidebar: () => void;
-  toggleSidebar: boolean;
-}
-
+import { MainTypes } from "../../types/Main";
 const Main: React.FC<MainTypes> = ({
   children,
   handleToggleSidebar,
