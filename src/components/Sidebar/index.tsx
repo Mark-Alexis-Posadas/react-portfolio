@@ -66,7 +66,7 @@ const Sidebar: React.FC<SidebarType> = ({
           <FontAwesomeIcon
             icon={toggleTheme ? faSun : faMoon}
             onClick={handleToggleTheme}
-            className="cursor-pointer"
+            className="cursor-pointer text-2xl"
           />
         </li>
       </ul>
