@@ -4,6 +4,8 @@ import emailjs from "@emailjs/browser";
 import { projectsCardLayout } from "./components/ProjectsCardLayout";
 import { skillsCardLayout } from "./components/SkillsCardLayout";
 import { experienceCardLayout } from "./components/ExperienceCardLayout";
+import { useTheme } from "./hooks/useTheme";
+
 import {
   faHouseChimney,
   faUser,
@@ -58,31 +60,25 @@ import pageTitles from "./data/page-titles";
 import subTitles from "./data/sub-titles";
 
 //types
-
 import { FormState } from "./types/Form";
 
 //page title
-
 const projectsTitle = pageTitles[1];
 const skillsTitle = pageTitles[2];
 const experienceTitle = pageTitles[3];
 const contactTitle = pageTitles[4];
 
 //subtitle
-
-// const aboutSubTitle = subTitles[1].text;
 const homeSubTitle = subTitles[0].text;
 const projectsSubTitle = subTitles[1].text;
 const skillsSubTitle = subTitles[2].text;
 const experienceSubTitle = subTitles[3].text;
 const contactSubTitle = subTitles[4].text;
 
-//Card component layouts
-
 const App: React.FC = () => {
   const [active, setActive] = useState<number>(0);
   const [toggleSidebar, setToggleSidebar] = useState<boolean>(false);
-  const [toggleTheme, setToggleTheme] = useState<boolean>(false);
+  const { isDark, toggleTheme } = useTheme();
 
   //sidebar
   useEffect(() => {
@@ -191,10 +187,6 @@ const App: React.FC = () => {
     }
   };
 
-  const handleToggleTheme = () => {
-    setToggleTheme((prev) => !prev);
-  };
-
   return (
     <div className="min-h-screen flex items-center font-sans">
       <Sidebar
@@ -203,7 +195,7 @@ const App: React.FC = () => {
         active={active}
         handleSetActive={handleSetActive}
         toggleSidebar={toggleSidebar}
-        handleToggleTheme={handleToggleTheme}
+        isDark={isDark}
         toggleTheme={toggleTheme}
       />
 

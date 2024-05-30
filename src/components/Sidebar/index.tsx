@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
-
 import { SidebarType } from "../../types/Sidebar";
 
 const Sidebar: React.FC<SidebarType> = ({
@@ -12,7 +10,7 @@ const Sidebar: React.FC<SidebarType> = ({
   active,
   handleSetActive,
   toggleSidebar,
-  handleToggleTheme,
+  isDark,
   toggleTheme,
 }) => {
   return (
@@ -64,8 +62,8 @@ const Sidebar: React.FC<SidebarType> = ({
         ))}
         <li className="mb-3">
           <FontAwesomeIcon
-            icon={toggleTheme ? faSun : faMoon}
-            onClick={handleToggleTheme}
+            icon={isDark ? faSun : faMoon}
+            onClick={toggleTheme}
             className="cursor-pointer text-2xl"
           />
         </li>
