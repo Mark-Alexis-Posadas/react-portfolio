@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
-import { IconName } from "@fortawesome/fontawesome-svg-core";
-
+import { projectsCardLayout } from "./components/ProjectsCardLayout";
+import { skillsCardLayout } from "./components/SkillsCardLayout";
+import { experienceCardLayout } from "./components/ExperienceCardLayout";
 import {
   faHouseChimney,
   faUser,
@@ -18,8 +19,6 @@ import {
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 library.add(
   faHouseChimney,
   faUser,
@@ -32,25 +31,10 @@ library.add(
   faReact
 );
 
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
-  FaSass,
-  FaBootstrap,
-  FaGulp,
-  FaNpm,
-  FaGit,
-  FaReact,
-  FaFigma,
-} from "react-icons/fa";
-
-import { SiStyledcomponents, SiBem } from "react-icons/si";
-
 import { library } from "@fortawesome/fontawesome-svg-core";
 import Main from "./components/Main";
 import Sidebar from "./components/Sidebar";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import {
   Home,
@@ -74,10 +58,8 @@ import pageTitles from "./data/page-titles";
 import subTitles from "./data/sub-titles";
 
 //types
-import { ExperienceCardLayoutProps } from "./types/Experience";
-import { SkillsCardLayoutProps } from "./types/Skills";
+
 import { FormState } from "./types/Form";
-import { ProjectsCardLayoutProps } from "./types/Project";
 
 //page title
 
@@ -95,105 +77,7 @@ const skillsSubTitle = subTitles[2].text;
 const experienceSubTitle = subTitles[3].text;
 const contactSubTitle = subTitles[4].text;
 
-const renderIcon = (iconName: string) => {
-  switch (iconName) {
-    case "FaHtml5":
-      return <FaHtml5 />;
-    case "FaCss3Alt":
-      return <FaCss3Alt />;
-    case "FaJsSquare":
-      return <FaJsSquare />;
-    case "FaSass":
-      return <FaSass />;
-    case "SiBem":
-      return <SiBem />;
-    case "FaBootstrap":
-      return <FaBootstrap />;
-    case "FaGulp":
-      return <FaGulp />;
-    case "FaNpm":
-      return <FaNpm />;
-    case "FaGit":
-      return <FaGit />;
-    case "FaReact":
-      return <FaReact />;
-    case "SiStyledcomponents":
-      return <SiStyledcomponents />;
-    case "FaFigma":
-      return <FaFigma />;
-    default:
-      return null;
-  }
-};
-
 //Card component layouts
-const projectsCardLayout: React.FC<ProjectsCardLayoutProps> = ({ data }) => {
-  return (
-    <Link
-      to={`/projects/${data.pageTitle.replace(/ /g, "")}`}
-      className="h-full block p-7"
-    >
-      <h1 className="font-bold text-rose-600 mb-2">{data.pageTitle}</h1>
-      <p className="text-sm text-slate-600">{data.description}</p>
-      <ul>
-        {data.tags.map((tag, index) => (
-          <li key={index}>
-            <FontAwesomeIcon
-              icon={["fab", tag as IconName]}
-              className="text-blue-500"
-            />
-          </li>
-        ))}
-      </ul>
-    </Link>
-  );
-};
-
-const skillsCardLayout: React.FC<SkillsCardLayoutProps> = ({ data }) => {
-  return (
-    <a
-      className="h-full flex flex-col items-center justify-center"
-      key={data.id}
-      href={data.url}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <div className="text-[7rem]">{renderIcon(data.icon)}</div>
-      <span className="mt-1">{data.name}</span>
-    </a>
-  );
-};
-
-const experienceCardLayout: React.FC<ExperienceCardLayoutProps> = ({
-  data,
-}) => {
-  return (
-    <article className="flex flex-col md:flex-row items-center mb-5 p-7">
-      <figure className="mb-5 md:mb-0">
-        <img
-          src={data.logo}
-          alt="logo"
-          className="w-[218px] object-cover pr-10"
-        />
-      </figure>
-      <div>
-        <header className="mb-3">
-          <h3 className="font-medium text-slate-600">{data.title}</h3>
-          <h2 className="font-bold text-rose-600 mb-2">{data.company}</h2>
-          <span className="italic text-base mr-2">{data.date}</span>
-          <span className="text-base">{data.address}</span>
-        </header>
-        <ul className="list-disc">
-          {data.jobDescriptions.map((description, index) => (
-            <li key={index} className="text-slate-600">
-              {description}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </article>
-  );
-};
 
 const App: React.FC = () => {
   const [active, setActive] = useState<number>(0);
