@@ -188,7 +188,11 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center font-sans">
+    <div
+      className={`${
+        isDark ? "dark:bg-black dark:text-white" : "dark:bg-white"
+      } min-h-screen flex items-center font-sans`}
+    >
       <Sidebar
         sidebarData={sidebarData}
         contactData={contactData}
