@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { faMoon } from "@fortawesome/free-solid-svg-icons";
+
 import { SidebarType } from "../../types/Sidebar";
 
 const Sidebar: React.FC<SidebarType> = ({
@@ -58,6 +60,9 @@ const Sidebar: React.FC<SidebarType> = ({
             )}
           </li>
         ))}
+        <li className="mb-3">
+          <FontAwesomeIcon icon={faMoon} />
+        </li>
       </ul>
     </aside>
   );
