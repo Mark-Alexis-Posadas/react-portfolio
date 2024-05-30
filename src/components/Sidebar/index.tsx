@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 import { SidebarType } from "../../types/Sidebar";
 
@@ -12,6 +12,8 @@ const Sidebar: React.FC<SidebarType> = ({
   active,
   handleSetActive,
   toggleSidebar,
+  handleToggleTheme,
+  toggleTheme,
 }) => {
   return (
     <aside
@@ -61,7 +63,11 @@ const Sidebar: React.FC<SidebarType> = ({
           </li>
         ))}
         <li className="mb-3">
-          <FontAwesomeIcon icon={faMoon} />
+          <FontAwesomeIcon
+            icon={toggleTheme ? faSun : faMoon}
+            onClick={handleToggleTheme}
+            className="cursor-pointer"
+          />
         </li>
       </ul>
     </aside>

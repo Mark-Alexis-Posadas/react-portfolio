@@ -198,6 +198,7 @@ const experienceCardLayout: React.FC<ExperienceCardLayoutProps> = ({
 const App: React.FC = () => {
   const [active, setActive] = useState<number>(0);
   const [toggleSidebar, setToggleSidebar] = useState<boolean>(false);
+  const [toggleTheme, setToggleTheme] = useState<boolean>(false);
 
   //sidebar
   useEffect(() => {
@@ -306,6 +307,10 @@ const App: React.FC = () => {
     }
   };
 
+  const handleToggleTheme = () => {
+    setToggleTheme((prev) => !prev);
+  };
+
   return (
     <div className="min-h-screen flex items-center font-sans">
       <Sidebar
@@ -314,6 +319,8 @@ const App: React.FC = () => {
         active={active}
         handleSetActive={handleSetActive}
         toggleSidebar={toggleSidebar}
+        handleToggleTheme={handleToggleTheme}
+        toggleTheme={toggleTheme}
       />
 
       <Main

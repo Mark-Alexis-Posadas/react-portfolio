@@ -12,4 +12,6 @@ export interface SidebarType {
   active: number;
   handleSetActive: (index: number) => void;
   toggleSidebar: boolean;
+  handleToggleTheme: () => void;
+  toggleTheme: boolean;
 }
