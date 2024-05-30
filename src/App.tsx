@@ -225,6 +225,7 @@ const App: React.FC = () => {
                 projectsTitle={projectsTitle}
                 projectsSubTitle={projectsSubTitle}
                 projectsCardLayout={projectsCardLayout}
+                isDark={isDark}
               />
             }
           />

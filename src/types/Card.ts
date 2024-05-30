@@ -7,4 +7,5 @@ export interface CardProps {
   projectsCardLayout?: React.FC<ProjectsCardLayoutProps>;
   skillsCardLayout?: React.FC<SkillsCardLayoutProps>;
   experienceCardLayout?: React.FC<ExperienceCardLayoutProps>;
+  isDark: boolean;
 }

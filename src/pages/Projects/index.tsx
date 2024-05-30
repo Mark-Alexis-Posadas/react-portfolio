@@ -3,7 +3,6 @@ import Wrapper from "../../components/Wrapper";
 import Card from "../../components/Card";
 import PageTitle from "../../components/PageTitle";
 import SubTitle from "../../components/SubTitle";
-
 import { ProjectsProps } from "../../types/Project";
 
 const Projects: React.FC<ProjectsProps> = ({
@@ -11,6 +10,7 @@ const Projects: React.FC<ProjectsProps> = ({
   projectsTitle,
   projectsSubTitle,
   projectsCardLayout,
+  isDark,
 }) => {
   return (
     <section>
@@ -28,8 +28,8 @@ const Projects: React.FC<ProjectsProps> = ({
             <Card
               data={data}
               key={data.id}
-              // projectsCardLayout={projectsCardLayout(data)}
               projectsCardLayout={projectsCardLayout}
+              isDark={isDark}
             />
           ))}
         </ul>

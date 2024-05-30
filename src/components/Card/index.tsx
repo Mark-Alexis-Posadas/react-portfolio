@@ -6,11 +6,18 @@ const Card: React.FC<CardProps> = ({
   projectsCardLayout,
   skillsCardLayout,
   experienceCardLayout,
+  isDark,
 }) => {
   return (
-    <li className="bg-zinc-50 shadow-md rounded transition transform duration-300 hover:shadow-lg hover:scale-105">
+    <li
+      className={`${
+        isDark
+          ? "dark:bg-[#1f1f1f] dark:text-[#999]"
+          : "dark:bg-white dark:text-slate-600"
+      } shadow-md rounded transition transform duration-300 hover:shadow-lg hover:scale-105`}
+    >
       {projectsCardLayout && "pageTitle" in data
-        ? projectsCardLayout({ data })
+        ? projectsCardLayout({ data, isDark })
         : skillsCardLayout && "name" in data
         ? skillsCardLayout({ data })
         : experienceCardLayout && "company" in data

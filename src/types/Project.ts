@@ -11,6 +11,7 @@ export interface Project {
 
 export interface ProjectsCardLayoutProps {
   data: Project;
+  isDark: boolean;
 }
 
 export interface ProjectsProps {
@@ -18,4 +19,5 @@ export interface ProjectsProps {
   projectsTitle: string;
   projectsSubTitle: string;
   projectsCardLayout: React.FC<ProjectsCardLayoutProps>;
+  isDark: boolean;
 }
