@@ -241,6 +241,7 @@ const App: React.FC = () => {
                 skillsSubTitle={skillsSubTitle}
                 skillsData={skillsData}
                 skillsCardLayout={skillsCardLayout}
+                isDark={isDark}
               />
             }
           />
@@ -252,6 +253,7 @@ const App: React.FC = () => {
                 experienceSubTitle={experienceSubTitle}
                 experienceData={experienceData}
                 experienceCardLayout={experienceCardLayout}
+                isDark={isDark}
               />
             }
           />

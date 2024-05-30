@@ -14,4 +14,5 @@ export interface SkillsProps {
   skillsSubTitle: string;
   skillsData: Skills[];
   skillsCardLayout?: React.FC<SkillsCardLayoutProps>;
+  isDark: boolean;
 }

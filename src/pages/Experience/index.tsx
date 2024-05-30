@@ -9,6 +9,7 @@ const Experience: React.FC<ExperienceProps> = ({
   experienceSubTitle,
   experienceData,
   experienceCardLayout,
+  isDark,
 }) => {
   return (
     <section>
@@ -23,6 +24,7 @@ const Experience: React.FC<ExperienceProps> = ({
             key={data.id}
             data={data}
             experienceCardLayout={experienceCardLayout}
+            isDark={isDark}
           />
         ))}
       </ul>

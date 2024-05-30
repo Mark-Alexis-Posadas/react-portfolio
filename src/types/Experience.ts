@@ -18,4 +18,5 @@ export interface ExperienceProps {
   experienceData: Experience[];
   // experienceCardLayout: (data: Experience) => JSX.Element;
   experienceCardLayout?: React.FC<ExperienceCardLayoutProps>;
+  isDark: boolean;
 }

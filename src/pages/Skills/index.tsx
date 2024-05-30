@@ -9,6 +9,7 @@ const Skills: React.FC<SkillsProps> = ({
   skillsSubTitle,
   skillsData,
   skillsCardLayout,
+  isDark,
 }) => {
   return (
     <section>
@@ -27,6 +28,7 @@ const Skills: React.FC<SkillsProps> = ({
               data={data}
               key={data.id}
               skillsCardLayout={skillsCardLayout}
+              isDark={isDark}
             />
           ))}
         </ul>
