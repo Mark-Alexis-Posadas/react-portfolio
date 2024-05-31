@@ -35,7 +35,9 @@ const Contact: React.FC<ContactTypes> = ({
                 type="text"
                 name="user_name"
                 placeholder="name"
-                className="p-2 rounded bg-white shadow-md w-full"
+                className={`${
+                  isDark ? "dark:bg-[#1f1f1f]" : "bg-white"
+                } p-2 rounded shadow-md w-full`}
                 onChange={handleNameChange}
                 onBlur={handleBlur}
                 value={forms.name}
@@ -47,7 +49,9 @@ const Contact: React.FC<ContactTypes> = ({
                 type="email"
                 name="user_email"
                 placeholder="email"
-                className="p-2 rounded bg-white shadow-md w-full"
+                className={`${
+                  isDark ? "dark:bg-[#1f1f1f]" : "bg-white"
+                } p-2 rounded shadow-md w-full`}
                 onChange={handleEmailChange}
                 onBlur={handleBlur}
                 value={forms.email}
@@ -58,7 +62,9 @@ const Contact: React.FC<ContactTypes> = ({
               <textarea
                 name="message"
                 placeholder="message"
-                className="p-2 rounded bg-white shadow-md w-full min-h-[500px]"
+                className={`${
+                  isDark ? "dark:bg-[#1f1f1f]" : "bg-white"
+                }  p-2 rounded shadow-md w-full min-h-[500px]`}
                 value={forms.textarea}
                 onChange={(e) =>
                   setForms({ ...forms, textarea: e.target.value })
@@ -67,7 +73,11 @@ const Contact: React.FC<ContactTypes> = ({
             </div>
           </fieldset>
           <button
-            className="text-white rounded bg-black p-3 w-full"
+            className={`${
+              isDark
+                ? "dark:bg-white dark:text-black"
+                : "dark:bg-white dark:text-white"
+            } rounded p-3 w-full`}
             type="submit"
             // onKeyPress={(e) => {
             //   if (e.key === "Enter") {
