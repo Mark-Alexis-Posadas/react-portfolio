@@ -1,3 +1,4 @@
+import React from "react";
 import { SkillsCardLayoutProps } from "../../types/Skills";
 import {
   FaHtml5,

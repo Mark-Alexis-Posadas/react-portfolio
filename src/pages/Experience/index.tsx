@@ -13,7 +13,7 @@ const Experience: React.FC<ExperienceProps> = ({
 }) => {
   return (
     <section>
-      <PageTitle pageTitle={experienceTitle} />
+      <PageTitle isDark={isDark} pageTitle={experienceTitle} />
       <SubTitle
         subTitleText={experienceSubTitle}
         classNames="mb-4 font-light text-base lg:text-2xl text-slate-900"

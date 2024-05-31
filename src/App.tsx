@@ -188,11 +188,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div
-      className={`${
-        isDark ? "dark:bg-black dark:text-white" : "dark:bg-white"
-      } min-h-screen flex items-center font-sans`}
-    >
+    <div className="min-h-screen flex items-center font-sans">
       <Sidebar
         sidebarData={sidebarData}
         contactData={contactData}
@@ -206,6 +202,7 @@ const App: React.FC = () => {
       <Main
         handleToggleSidebar={handleToggleSidebar}
         toggleSidebar={toggleSidebar}
+        isDark={isDark}
       >
         <Routes>
           <Route
@@ -214,6 +211,7 @@ const App: React.FC = () => {
               <Home
                 handleSetActive={handleSetActive}
                 homeSubTitle={homeSubTitle}
+                isDark={isDark}
               />
             }
           />
@@ -270,6 +268,7 @@ const App: React.FC = () => {
                 handleNameChange={handleNameChange}
                 handleEmailChange={handleEmailChange}
                 handleBlur={handleBlur}
+                isDark={isDark}
               />
             }
           />

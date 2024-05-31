@@ -1,3 +1,4 @@
+import React from "react";
 import { ProjectsCardLayoutProps } from "../../types/Project";
 import { Link } from "react-router-dom";
 import { IconName } from "@fortawesome/fontawesome-svg-core";

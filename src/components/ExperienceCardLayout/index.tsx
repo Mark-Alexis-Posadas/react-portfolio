@@ -1,3 +1,4 @@
+import React from "react";
 import { ExperienceCardLayoutProps } from "../../types/Experience";
 export const experienceCardLayout: React.FC<ExperienceCardLayoutProps> = ({
   data,

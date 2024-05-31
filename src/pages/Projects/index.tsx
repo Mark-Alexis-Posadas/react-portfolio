@@ -15,7 +15,7 @@ const Projects: React.FC<ProjectsProps> = ({
   return (
     <section>
       <Wrapper>
-        <PageTitle pageTitle={projectsTitle} />
+        <PageTitle isDark={isDark} pageTitle={projectsTitle} />
         <SubTitle
           subTitleText={projectsSubTitle}
           classNames="mb-4 font-light text-base lg:text-2xl text-slate-900"

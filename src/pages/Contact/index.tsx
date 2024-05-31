@@ -4,26 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import PageTitle from "../../components/PageTitle";
 import SubTitle from "../../components/SubTitle";
 import Wrapper from "../../components/Wrapper";
-
-interface FormFields {
-  name: string;
-  email: string;
-  textarea: string;
-  nameError: string;
-  emailError: string;
-}
-
-interface ContactTypes {
-  contactTitle: string;
-  contactSubTitle: string;
-  forms: FormFields;
-  setForms: React.Dispatch<React.SetStateAction<FormFields>>;
-  formRef: React.RefObject<HTMLFormElement>;
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-  handleNameChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleEmailChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleBlur: (e: React.FocusEvent<HTMLInputElement>) => void;
-}
+import { ContactTypes } from "../../types/Contact";
 
 const Contact: React.FC<ContactTypes> = ({
   contactTitle,
@@ -35,11 +16,12 @@ const Contact: React.FC<ContactTypes> = ({
   handleNameChange,
   handleEmailChange,
   handleBlur,
+  isDark,
 }) => {
   return (
     <section>
       <Wrapper>
-        <PageTitle pageTitle={contactTitle} />
+        <PageTitle isDark={isDark} pageTitle={contactTitle} />
         <SubTitle
           subTitleText={contactSubTitle}
           classNames="mb-4 font-light text-base lg:text-2xl text-slate-900"
