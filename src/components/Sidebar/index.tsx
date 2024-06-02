@@ -51,7 +51,12 @@ const Sidebar: React.FC<SidebarType> = ({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={data.icon} className="text-2xl" />
+                <FontAwesomeIcon
+                  icon={data.icon}
+                  className={`${
+                    isDark ? "dark:text-white" : "dark:text-dark"
+                  } text-2xl`}
+                />
               </a>
             ) : (
               <a
@@ -59,7 +64,12 @@ const Sidebar: React.FC<SidebarType> = ({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={data.icon} className="text-2xl" />
+                <FontAwesomeIcon
+                  icon={data.icon}
+                  className={`${
+                    isDark ? "dark:text-white" : "dark:text-dark"
+                  } text-2xl`}
+                />
               </a>
             )}
           </li>
@@ -68,7 +78,9 @@ const Sidebar: React.FC<SidebarType> = ({
           <FontAwesomeIcon
             icon={isDark ? faSun : faMoon}
             onClick={toggleTheme}
-            className="cursor-pointer text-2xl"
+            className={`${
+              isDark ? "dark:text-white" : "dark:text-dark"
+            } text-2xl cursor-pointer`}
           />
         </li>
       </ul>
