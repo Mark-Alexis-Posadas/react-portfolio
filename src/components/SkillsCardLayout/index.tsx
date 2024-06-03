@@ -18,33 +18,34 @@ import { RiTailwindCssFill } from "react-icons/ri";
 const renderIcon = (iconName: string) => {
   switch (iconName) {
     case "FaHtml5":
-      return <FaHtml5 />;
+      return <FaHtml5 color="#E34F26" />;
     case "FaCss3Alt":
-      return <FaCss3Alt />;
+      return <FaCss3Alt color="#1572B6" />;
     case "FaJsSquare":
-      return <FaJsSquare />;
+      return <FaJsSquare color="#F7DF1E" />;
     case "FaSass":
-      return <FaSass />;
+      return <FaSass color="#CC6699" />;
     case "SiBem":
-      return <SiBem />;
+      return <SiBem color="#000000" />;
     case "FaBootstrap":
-      return <FaBootstrap />;
+      return <FaBootstrap color="#7952B3" />;
     case "FaGulp":
-      return <FaGulp />;
+      return <FaGulp color="#CF4647" />;
     case "FaNpm":
-      return <FaNpm />;
+      return <FaNpm color="#CB3837" />;
     case "FaGit":
-      return <FaGit />;
+      return <FaGit color="#F05032" />;
     case "FaReact":
-      return <FaReact />;
+      return <FaReact color="#61DAFB" />;
     case "SiStyledcomponents":
-      return <SiStyledcomponents />;
+      return <SiStyledcomponents color="#DB7093" />;
     case "RiTailwindCssFill":
-      return <RiTailwindCssFill />;
+      return <RiTailwindCssFill color="#06B6D4" />;
     default:
       return null;
   }
 };
+
 export const skillsCardLayout: React.FC<SkillsCardLayoutProps> = ({
   data,
   isDark,
