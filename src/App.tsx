@@ -188,7 +188,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center font-sans">
+    <div className="min-h-screen flex items-center">
       <Sidebar
         sidebarData={sidebarData}
         contactData={contactData}

@@ -28,7 +28,7 @@ const Sidebar: React.FC<SidebarType> = ({
               to={`/${data.text === "home" ? "" : data.text}`}
               className={`${
                 isDark && "dark:text-white"
-              } w-full flex items-center justify-between p-2 my-3 md:rounded cursor-pointer ${
+              } w-full flex items-center justify-between p-2 my-3 md:rounded cursor-pointer  ${
                 index === active ? "text-white bg-black" : "text-black"
               }`}
             >
