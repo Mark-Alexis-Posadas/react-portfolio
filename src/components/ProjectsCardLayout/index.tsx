@@ -24,9 +24,9 @@ export const projectsCardLayout: React.FC<ProjectsCardLayoutProps> = ({
 
       <p className="text-sm mb-auto">{data.description}</p>
       <ul className="flex items-center gap-3">
-        <FaReact className="text-2xl" />
-        <SiTypescript className="text-2xl" />
-        <RiTailwindCssFill className="text-2xl" />
+        <FaReact className="text-2xl text-[#61DBFB]" />
+        <SiTypescript className="text-2xl text-[#007acc]" />
+        <RiTailwindCssFill className="text-2xl text-[#06b6d4]" />
       </ul>
     </Link>
   );
