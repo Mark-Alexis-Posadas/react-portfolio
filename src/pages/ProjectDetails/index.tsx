@@ -2,6 +2,8 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import Wrapper from "../../components/Wrapper";
 import { Project } from "../../types/Project";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp, faEye } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
   projectsData: Project[];
@@ -46,11 +48,22 @@ const ProjectDetails: React.FC<Props> = ({ projectsData, isDark }) => {
             {project.pageTitle}
           </h1>
 
-          <p className="text-lg text-slate-600 my-4">{project.description}</p>
+          <p
+            className={`${
+              isDark ? "dark:text-[#999]" : "dark:text-slate-600"
+            } text-lg  my-4`}
+          >
+            {project.description}
+          </p>
           <h2 className="font-bold">Features</h2>
           <ul className="list-disc ml-3 my-4">
             {project.features.map((feature, index) => (
-              <li key={index} className="text-slate-600">
+              <li
+                key={index}
+                className={`${
+                  isDark ? "dark:text-[#999]" : "dark:text-slate-600"
+                }`}
+              >
                 {feature.text}
               </li>
             ))}
@@ -61,16 +74,26 @@ const ProjectDetails: React.FC<Props> = ({ projectsData, isDark }) => {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white bg-black rounded p-2"
+              className={`${
+                isDark
+                  ? "dark:bg-white dark:text-black"
+                  : "dark:bg-black dark:text-white"
+              } rounded p-2 border-2 border-black`}
             >
+              <FontAwesomeIcon icon={faEye} className="mr-2" />
               Demo
             </a>
             <a
               href={project.source}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded text-black border border-black p-2"
+              className={`${
+                isDark
+                  ? "dark:text-[#999] dark:border-[#999]"
+                  : "dark:text-black dark:border-black "
+              } border-dashed border-2 rounded p-2 flex items-center justify-center`}
             >
+              <FontAwesomeIcon icon={faArrowUp} className="mr-2" />
               Source
             </a>
           </ul>
