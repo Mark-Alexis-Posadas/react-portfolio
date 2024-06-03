@@ -229,7 +229,9 @@ const App: React.FC = () => {
           />
           <Route
             path="/projects/:pageTitle"
-            element={<ProjectDetails projectsData={projectsData} />}
+            element={
+              <ProjectDetails projectsData={projectsData} isDark={isDark} />
+            }
           />
           <Route
             path="/skills"

@@ -1,23 +1,14 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import Wrapper from "../../components/Wrapper";
-
-interface Project {
-  id: string;
-  pageTitle: string;
-  description: string;
-  features: { text: string }[];
-  source: string;
-  demo: string;
-  buttons: string[];
-  tags: string[];
-}
+import { Project } from "../../types/Project";
 
 interface Props {
   projectsData: Project[];
+  isDark: boolean;
 }
 
-const ProjectDetails: React.FC<Props> = ({ projectsData }) => {
+const ProjectDetails: React.FC<Props> = ({ projectsData, isDark }) => {
   const { pageTitle } = useParams<{ pageTitle?: string }>(); // Make pageTitle optional
 
   if (!pageTitle) {
@@ -36,10 +27,24 @@ const ProjectDetails: React.FC<Props> = ({ projectsData }) => {
     <section>
       <Wrapper>
         <Link to="/projects" className="mr-5">
-          <button className="bg-black rounded p-2 text-white">Back</button>
+          <button
+            className={`${
+              isDark
+                ? "dark:bg-white dark:text-black"
+                : "dark:bg-black dark:text-white"
+            } rounded p-2`}
+          >
+            Back
+          </button>
         </Link>
         <div className="mt-4">
-          <h1 className="font-bold text-5xl">{project.pageTitle}</h1>
+          <h1
+            className={`${
+              isDark ? "dark:text-white" : "dark:text-black"
+            } font-bold text-5xl`}
+          >
+            {project.pageTitle}
+          </h1>
 
           <p className="text-lg text-slate-600 my-4">{project.description}</p>
           <h2 className="font-bold">Features</h2>

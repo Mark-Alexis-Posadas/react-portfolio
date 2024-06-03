@@ -18,7 +18,7 @@ const projectsData: Project[] = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/tab",
     demo: "https://tab-theta.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["react"],
+    tags: ["react", "typescript", "tailwind CSS"],
   },
 
   {
@@ -37,7 +37,7 @@ const projectsData: Project[] = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://codesandbox.io/p/sandbox/faq-accordion-59gsdr",
     buttons: ["Demo", "Source"],
-    tags: ["react"],
+    tags: ["react", "typescript", "tailwind CSS"],
   },
   {
     id: uuidv4(),
@@ -55,7 +55,7 @@ const projectsData: Project[] = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["react"],
+    tags: ["react", "typescript", "tailwind CSS"],
   },
   {
     id: uuidv4(),
@@ -73,7 +73,7 @@ const projectsData: Project[] = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["react"],
+    tags: ["react", "typescript", "tailwind CSS"],
   },
   {
     id: uuidv4(),
@@ -91,7 +91,7 @@ const projectsData: Project[] = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["react"],
+    tags: ["react", "typescript", "tailwind CSS"],
   },
   {
     id: uuidv4(),
@@ -109,7 +109,7 @@ const projectsData: Project[] = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["react"],
+    tags: ["react", "typescript", "tailwind CSS"],
   },
 
   {
@@ -128,7 +128,7 @@ const projectsData: Project[] = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["react"],
+    tags: ["react", "typescript", "tailwind CSS"],
   },
   {
     id: uuidv4(),
@@ -146,7 +146,7 @@ const projectsData: Project[] = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["react"],
+    tags: ["react", "typescript", "tailwind CSS"],
   },
 
   {
@@ -165,7 +165,7 @@ const projectsData: Project[] = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["react"],
+    tags: ["react", "typescript", "tailwind CSS"],
   },
   {
     id: uuidv4(),
@@ -183,7 +183,7 @@ const projectsData: Project[] = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["react"],
+    tags: ["react", "typescript", "tailwind CSS"],
   },
   {
     id: uuidv4(),
@@ -201,7 +201,7 @@ const projectsData: Project[] = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["react"],
+    tags: ["react", "typescript", "tailwind CSS"],
   },
   {
     id: uuidv4(),
@@ -219,7 +219,7 @@ const projectsData: Project[] = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["react"],
+    tags: ["react", "typescript", "tailwind CSS"],
   },
 
   {
@@ -238,7 +238,7 @@ const projectsData: Project[] = [
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
     demo: "https://accordion-sage-eight.vercel.app/",
     buttons: ["Demo", "Source"],
-    tags: ["react"],
+    tags: ["react", "typescript", "tailwind CSS"],
   },
 ];
 

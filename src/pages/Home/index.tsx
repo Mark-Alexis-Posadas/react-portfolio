@@ -37,6 +37,7 @@ const Home: React.FC<HomeType> = ({
           Hello! I'm Mark Alexis Posadas
         </h1>
         <SubTitle
+          isDark={isDark}
           subTitleText={homeSubTitle}
           classNames={`${
             isDark ? "dark:text-[#999]" : "dark:text-black"

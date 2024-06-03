@@ -1,8 +1,10 @@
 import React from "react";
 import { ProjectsCardLayoutProps } from "../../types/Project";
 import { Link } from "react-router-dom";
-import { IconName } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { SiTypescript } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+
 export const projectsCardLayout: React.FC<ProjectsCardLayoutProps> = ({
   data,
   isDark,
@@ -10,7 +12,7 @@ export const projectsCardLayout: React.FC<ProjectsCardLayoutProps> = ({
   return (
     <Link
       to={`/projects/${data.pageTitle.replace(/ /g, "")}`}
-      className="h-full block p-7"
+      className="h-full flex flex-col justify-between p-7"
     >
       <h1
         className={`font-bold mb-2 ${
@@ -20,16 +22,11 @@ export const projectsCardLayout: React.FC<ProjectsCardLayoutProps> = ({
         {data.pageTitle}
       </h1>
 
-      <p className="text-sm">{data.description}</p>
-      <ul>
-        {data.tags.map((tag, index) => (
-          <li key={index}>
-            <FontAwesomeIcon
-              icon={["fab", tag as IconName]}
-              className="text-blue-500"
-            />
-          </li>
-        ))}
+      <p className="text-sm mb-auto">{data.description}</p>
+      <ul className="flex items-center gap-3">
+        <FaReact className="text-2xl" />
+        <SiTypescript className="text-2xl" />
+        <RiTailwindCssFill className="text-2xl" />
       </ul>
     </Link>
   );
