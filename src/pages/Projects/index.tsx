@@ -19,6 +19,7 @@ const Projects: React.FC<ProjectsProps> = ({
         <SubTitle
           subTitleText={projectsSubTitle}
           classNames="mb-4 font-light text-base lg:text-2xl text-slate-900"
+          isDark={isDark}
         />
         <ul
           className="grid grid-cols-1 md:grid-cols-3  gap-5"

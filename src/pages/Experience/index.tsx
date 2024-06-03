@@ -15,6 +15,7 @@ const Experience: React.FC<ExperienceProps> = ({
     <section>
       <PageTitle isDark={isDark} pageTitle={experienceTitle} />
       <SubTitle
+        isDark={isDark}
         subTitleText={experienceSubTitle}
         classNames="mb-4 font-light text-base lg:text-2xl text-slate-900"
       />

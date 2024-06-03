@@ -23,6 +23,7 @@ const Contact: React.FC<ContactTypes> = ({
       <Wrapper>
         <PageTitle isDark={isDark} pageTitle={contactTitle} />
         <SubTitle
+          isDark={isDark}
           subTitleText={contactSubTitle}
           classNames="mb-4 font-light text-base lg:text-2xl text-slate-900"
         />

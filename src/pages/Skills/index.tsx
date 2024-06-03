@@ -16,6 +16,7 @@ const Skills: React.FC<SkillsProps> = ({
       <Wrapper>
         <PageTitle isDark={isDark} pageTitle={skillsTitle} />
         <SubTitle
+          isDark={isDark}
           subTitleText={skillsSubTitle}
           classNames="mb-4 font-light text-base lg:text-2xl text-slate-900"
         />
