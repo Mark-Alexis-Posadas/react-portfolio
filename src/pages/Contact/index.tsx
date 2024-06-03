@@ -38,7 +38,7 @@ const Contact: React.FC<ContactTypes> = ({
                 placeholder="name"
                 className={`${
                   isDark ? "dark:bg-[#1f1f1f]" : "bg-white"
-                } p-2 rounded shadow-md w-full`}
+                } p-2 rounded shadow-custom-shadow w-full`}
                 onChange={handleNameChange}
                 onBlur={handleBlur}
                 value={forms.name}
@@ -52,7 +52,7 @@ const Contact: React.FC<ContactTypes> = ({
                 placeholder="email"
                 className={`${
                   isDark ? "dark:bg-[#1f1f1f]" : "bg-white"
-                } p-2 rounded shadow-md w-full`}
+                } p-2 rounded shadow-custom-shadow w-full`}
                 onChange={handleEmailChange}
                 onBlur={handleBlur}
                 value={forms.email}
@@ -65,7 +65,7 @@ const Contact: React.FC<ContactTypes> = ({
                 placeholder="message"
                 className={`${
                   isDark ? "dark:bg-[#1f1f1f]" : "bg-white"
-                }  p-2 rounded shadow-md w-full min-h-[500px]`}
+                }  p-2 rounded shadow-custom-shadow w-full min-h-[500px]`}
                 value={forms.textarea}
                 onChange={(e) =>
                   setForms({ ...forms, textarea: e.target.value })
@@ -77,7 +77,7 @@ const Contact: React.FC<ContactTypes> = ({
             className={`${
               isDark
                 ? "dark:bg-white dark:text-black"
-                : "dark:bg-white dark:text-white"
+                : "dark:bg-black dark:text-white"
             } rounded p-3 w-full`}
             type="submit"
             // onKeyPress={(e) => {

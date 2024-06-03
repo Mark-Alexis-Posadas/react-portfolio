@@ -17,7 +17,7 @@ const Sidebar: React.FC<SidebarType> = ({
     <aside
       className={`${
         isDark ? "dark:bg-[#1f1f1f]" : "dark:bg-white"
-      } md:w-[250px] lg:w-[300px] 2xl:w-[350px] fixed bg-white shadow-md h-full overflow-hidden left-0 top-0 z-10 bottom-0 md:p-3 lg:p-10 lg:block ${
+      } md:w-[250px] lg:w-[300px] 2xl:w-[350px] fixed bg-white shadow-md h-full overflow-hidden left-0 top-0 z-10 bottom-0 p-3 lg:p-10 lg:block ${
         toggleSidebar ? "block" : "hidden"
       }`}
     >

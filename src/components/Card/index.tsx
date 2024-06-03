@@ -12,7 +12,7 @@ const Card: React.FC<CardProps> = ({
     <li
       className={`${
         isDark ? "dark:bg-[#1f1f1f] dark:text-[#999]" : "dark:bg-white"
-      } shadow-md rounded transition transform duration-300 hover:shadow-lg hover:scale-105`}
+      } shadow-custom-shadow rounded transition transform duration-300 hover:shadow-lg hover:scale-105`}
     >
       {projectsCardLayout && "pageTitle" in data
         ? projectsCardLayout({ data, isDark })
