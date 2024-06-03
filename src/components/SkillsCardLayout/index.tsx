@@ -10,10 +10,11 @@ import {
   FaNpm,
   FaGit,
   FaReact,
-  FaFigma,
 } from "react-icons/fa";
 
 import { SiStyledcomponents, SiBem } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
+
 const renderIcon = (iconName: string) => {
   switch (iconName) {
     case "FaHtml5":
@@ -38,8 +39,8 @@ const renderIcon = (iconName: string) => {
       return <FaReact />;
     case "SiStyledcomponents":
       return <SiStyledcomponents />;
-    case "FaFigma":
-      return <FaFigma />;
+    case "RiTailwindCssFill":
+      return <RiTailwindCssFill />;
     default:
       return null;
   }

@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({
         : skillsCardLayout && "name" in data
         ? skillsCardLayout({ data, isDark })
         : experienceCardLayout && "company" in data
-        ? experienceCardLayout({ data })
+        ? experienceCardLayout({ data, isDark })
         : null}
     </li>
   );

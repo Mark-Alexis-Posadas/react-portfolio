@@ -71,9 +71,9 @@ export const skillsData: Skills[] = [
 
   {
     id: uuidv4(),
-    name: "Figma",
-    icon: "FaFigma",
-    url: "https://www.figma.com/",
+    name: "Tailwind CSS",
+    icon: "RiTailwindCssFill",
+    url: "https://tailwindcss.com/",
   },
 ];
 

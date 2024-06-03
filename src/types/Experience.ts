@@ -10,6 +10,7 @@ export interface Experience {
 
 export interface ExperienceCardLayoutProps {
   data: Experience;
+  isDark: boolean;
 }
 
 export interface ExperienceProps {
