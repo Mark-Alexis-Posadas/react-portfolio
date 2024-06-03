@@ -44,7 +44,10 @@ const renderIcon = (iconName: string) => {
       return null;
   }
 };
-export const skillsCardLayout: React.FC<SkillsCardLayoutProps> = ({ data }) => {
+export const skillsCardLayout: React.FC<SkillsCardLayoutProps> = ({
+  data,
+  isDark,
+}) => {
   return (
     <a
       className="h-full flex flex-col items-center justify-center"
@@ -53,7 +56,13 @@ export const skillsCardLayout: React.FC<SkillsCardLayoutProps> = ({ data }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="text-[7rem]">{renderIcon(data.icon)}</div>
+      <div
+        className={`${
+          isDark ? "dark:text-white" : "dark:text-black"
+        } text-[7rem]`}
+      >
+        {renderIcon(data.icon)}
+      </div>
       <span className="mt-1">{data.name}</span>
     </a>
   );

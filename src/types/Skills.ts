@@ -7,6 +7,7 @@ export interface Skills {
 
 export interface SkillsCardLayoutProps {
   data: Skills;
+  isDark: boolean;
 }
 
 export interface SkillsProps {
