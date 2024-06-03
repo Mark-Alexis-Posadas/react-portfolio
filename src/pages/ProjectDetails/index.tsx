@@ -68,7 +68,7 @@ const ProjectDetails: React.FC<Props> = ({ projectsData, isDark }) => {
               </li>
             ))}
           </ul>
-
+          {/* 
           <ul className="flex items-center gap-3">
             <a
               href={project.demo}
@@ -96,7 +96,7 @@ const ProjectDetails: React.FC<Props> = ({ projectsData, isDark }) => {
               <FontAwesomeIcon icon={faArrowUp} className="mr-2" />
               Source
             </a>
-          </ul>
+          </ul> */}
         </div>
       </Wrapper>
     </section>
