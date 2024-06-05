@@ -76,7 +76,7 @@ const Contact: React.FC<ContactTypes> = ({
           <button
             className={`${
               isDark
-                ? "dark:bg-white dark:text-black"
+                ? "dark:bg-[#999] dark:text-white"
                 : "dark:bg-black dark:text-white"
             } rounded p-3 w-full`}
             type="submit"

@@ -27,7 +27,7 @@ const Sidebar: React.FC<SidebarType> = ({
             <Link
               to={`/${data.text === "home" ? "" : data.text}`}
               className={`${
-                isDark && "dark:text-white"
+                isDark && "dark:text-[#999]"
               } w-full flex items-center justify-between p-2 my-3 md:rounded cursor-pointer  ${
                 index === active ? "text-white bg-black" : "text-black"
               }`}
@@ -54,7 +54,7 @@ const Sidebar: React.FC<SidebarType> = ({
                 <FontAwesomeIcon
                   icon={data.icon}
                   className={`${
-                    isDark ? "dark:text-white" : "dark:text-dark"
+                    isDark ? "dark:text-[#999]" : "dark:text-dark"
                   } text-2xl`}
                 />
               </a>
@@ -67,7 +67,7 @@ const Sidebar: React.FC<SidebarType> = ({
                 <FontAwesomeIcon
                   icon={data.icon}
                   className={`${
-                    isDark ? "dark:text-white" : "dark:text-dark"
+                    isDark ? "dark:text-[#999]" : "dark:text-dark"
                   } text-2xl`}
                 />
               </a>
@@ -79,7 +79,7 @@ const Sidebar: React.FC<SidebarType> = ({
             icon={isDark ? faSun : faMoon}
             onClick={toggleTheme}
             className={`${
-              isDark ? "dark:text-white" : "dark:text-dark"
+              isDark ? "dark:text-[#999]" : "dark:text-dark"
             } text-2xl cursor-pointer`}
           />
         </li>

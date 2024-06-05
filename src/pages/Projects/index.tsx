@@ -23,7 +23,7 @@ const Projects: React.FC<ProjectsProps> = ({
         />
         <ul
           className="grid grid-cols-1 md:grid-cols-3  gap-5"
-          style={{ gridAutoRows: "225px" }}
+          // style={{ gridAutoRows: "225px" }}
         >
           {projectsData.map((data) => (
             <Card
