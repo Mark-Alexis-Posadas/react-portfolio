@@ -36,7 +36,13 @@ const Sidebar: React.FC<SidebarType> = ({
                 icon={data.icon}
                 className="hidden md:block text-2xl"
               />
-              {data.text.charAt(0).toUpperCase() + data.text.slice(1)}
+              <span
+                className={`${isDark ? "dark:text-white" : "dark:text-black"} ${
+                  index === active ? "dark:text-white" : "dark:text-black"
+                }`}
+              >
+                {data.text.charAt(0).toUpperCase() + data.text.slice(1)}
+              </span>
             </Link>
           </li>
         ))}

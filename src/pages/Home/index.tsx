@@ -48,7 +48,7 @@ const Home: React.FC<HomeType> = ({
             <button
               className={`${
                 isDark
-                  ? "dark:bg-white dark:text-black"
+                  ? "dark:bg-[#9999] dark:text-white"
                   : "dark:text-white dark:bg-black"
               } rounded p-3 min-w-[200px] flex items-center justify-center gap-2`}
               onClick={handleGetInTouchClick}
