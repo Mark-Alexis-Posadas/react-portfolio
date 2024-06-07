@@ -3,7 +3,10 @@ import { Link, useParams } from "react-router-dom";
 import Wrapper from "../../components/Wrapper";
 import { Project } from "../../types/Project";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp, faEye } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowUpRightFromSquare,
+  faEye,
+} from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
   projectsData: Project[];
@@ -68,7 +71,7 @@ const ProjectDetails: React.FC<Props> = ({ projectsData, isDark }) => {
               </li>
             ))}
           </ul>
-          {/* 
+
           <ul className="flex items-center gap-3">
             <a
               href={project.demo}
@@ -93,10 +96,13 @@ const ProjectDetails: React.FC<Props> = ({ projectsData, isDark }) => {
                   : "dark:text-black dark:border-black "
               } border-dashed border-2 rounded p-2 flex items-center justify-center`}
             >
-              <FontAwesomeIcon icon={faArrowUp} className="mr-2" />
+              <FontAwesomeIcon
+                icon={faArrowUpRightFromSquare}
+                className="mr-2"
+              />
               Source
             </a>
-          </ul> */}
+          </ul>
         </div>
       </Wrapper>
     </section>

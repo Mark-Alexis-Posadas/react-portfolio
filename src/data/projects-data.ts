@@ -16,7 +16,7 @@ const projectsData: Project[] = [
     ],
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/tab",
-    demo: "https://tab-theta.vercel.app/",
+    demo: "https://tjc6fc.csb.app/",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
   },
@@ -35,7 +35,7 @@ const projectsData: Project[] = [
     ],
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
-    demo: "https://codesandbox.io/p/sandbox/faq-accordion-59gsdr",
+    demo: "https://kjky7y.csb.app/",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
   },
@@ -167,7 +167,7 @@ const projectsData: Project[] = [
     ],
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/carousel",
-    demo: "https://carousel-component.vercel.app/",
+    demo: "https://nmqnld.csb.app/",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
   },
@@ -185,7 +185,7 @@ const projectsData: Project[] = [
     ],
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/theme-switcher",
-    demo: "https://theme-switcher.vercel.app/",
+    demo: "https://z8xq86.csb.app/",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
   },
