@@ -15,7 +15,7 @@ const projectsData: Project[] = [
       { text: "Customizable styles and components" },
     ],
     source:
-      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/tab",
+      "https://github.com/Mark-Alexis-Posadas/react-typescript-mini-projects/blob/main/src/pages/Tab/index.tsx",
     demo: "https://tjc6fc.csb.app/",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
@@ -34,7 +34,7 @@ const projectsData: Project[] = [
       { text: "Customizable styles and components" },
     ],
     source:
-      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/accordion",
+      "https://github.com/Mark-Alexis-Posadas/react-typescript-mini-projects/blob/main/src/pages/Accordion/index.tsx",
     demo: "https://kjky7y.csb.app/",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
@@ -58,7 +58,7 @@ const projectsData: Project[] = [
       { text: "Customizable styles and components" },
     ],
     source:
-      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/color-picker",
+      "https://github.com/Mark-Alexis-Posadas/react-typescript-mini-projects/blob/main/src/pages/ColorPicker/index.tsx",
     demo: "https://color-picker.vercel.app/",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
@@ -94,7 +94,7 @@ const projectsData: Project[] = [
       { text: "Customizable styles and components" },
     ],
     source:
-      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/todo-list",
+      "https://github.com/Mark-Alexis-Posadas/react-typescript-mini-projects/blob/main/src/pages/Todo/index.tsx",
     demo: "https://lq6hgj.csb.app/",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
@@ -166,7 +166,7 @@ const projectsData: Project[] = [
       { text: "Customizable styles and components" },
     ],
     source:
-      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/carousel",
+      "https://github.com/Mark-Alexis-Posadas/react-typescript-mini-projects/blob/main/src/pages/Carousel/index.tsx",
     demo: "https://nmqnld.csb.app/",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
@@ -184,7 +184,7 @@ const projectsData: Project[] = [
       { text: "Customizable styles and components" },
     ],
     source:
-      "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/theme-switcher",
+      "https://github.com/Mark-Alexis-Posadas/react-typescript-mini-projects/blob/main/src/pages/Theme/index.tsx",
     demo: "https://z8xq86.csb.app/",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],

@@ -36,9 +36,9 @@ const ProjectDetails: React.FC<Props> = ({ projectsData, isDark }) => {
           <button
             className={`${
               isDark
-                ? "dark:bg-white dark:text-black"
+                ? "dark:bg-[#999] dark:text-white"
                 : "dark:bg-black dark:text-white"
-            } rounded p-2 flex items-center gap-3`}
+            } rounded p-2 flex items-center gap-2`}
           >
             <FontAwesomeIcon icon={faArrowLeft} />
             Back
