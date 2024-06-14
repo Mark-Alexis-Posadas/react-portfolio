@@ -4,6 +4,7 @@ import Wrapper from "../../components/Wrapper";
 import { Project } from "../../types/Project";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faArrowLeft,
   faArrowUpRightFromSquare,
   faEye,
 } from "@fortawesome/free-solid-svg-icons";
@@ -14,10 +15,10 @@ interface Props {
 }
 
 const ProjectDetails: React.FC<Props> = ({ projectsData, isDark }) => {
-  const { pageTitle } = useParams<{ pageTitle?: string }>(); // Make pageTitle optional
+  const { pageTitle } = useParams<{ pageTitle?: string }>();
 
   if (!pageTitle) {
-    return <div>Project not found</div>; // Handle the case where pageTitle is undefined
+    return <div>Project not found</div>;
   }
 
   const project = projectsData.find(
@@ -37,8 +38,9 @@ const ProjectDetails: React.FC<Props> = ({ projectsData, isDark }) => {
               isDark
                 ? "dark:bg-white dark:text-black"
                 : "dark:bg-black dark:text-white"
-            } rounded p-2`}
+            } rounded p-2 flex items-center gap-3`}
           >
+            <FontAwesomeIcon icon={faArrowLeft} />
             Back
           </button>
         </Link>

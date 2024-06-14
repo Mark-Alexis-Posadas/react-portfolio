@@ -95,7 +95,7 @@ const projectsData: Project[] = [
     ],
     source:
       "https://github.com/Mark-Alexis-Posadas/vanilla-js-projects/tree/main/todo-list",
-    demo: "https://todolist-app.vercel.app/",
+    demo: "https://lq6hgj.csb.app/",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
   },
