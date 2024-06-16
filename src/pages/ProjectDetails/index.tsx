@@ -38,10 +38,9 @@ const ProjectDetails: React.FC<Props> = ({ projectsData, isDark }) => {
               isDark
                 ? "dark:bg-[#999] dark:text-white"
                 : "dark:bg-black dark:text-white"
-            } rounded p-2 flex items-center gap-2`}
+            } rounded-full w-10 h-10 p-3 flex items-center gap-2`}
           >
             <FontAwesomeIcon icon={faArrowLeft} />
-            Back
           </button>
         </Link>
         <div className="mt-4">
