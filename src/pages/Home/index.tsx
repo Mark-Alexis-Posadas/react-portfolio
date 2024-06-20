@@ -41,7 +41,7 @@ const Home: React.FC<HomeType> = ({
           subTitleText={homeSubTitle}
           classNames={`${
             isDark ? "dark:text-[#999]" : "dark:text-black"
-          }  mb-4 font-light text-2xl lg:text-3xl text-slate-900 my-8`}
+          }  font-light text-2xl lg:text-3xl text-slate-900 my-8`}
         />
         <div className="flex flex-col md:flex-row items-center justify-center gap-5">
           <Link to="/contact">
