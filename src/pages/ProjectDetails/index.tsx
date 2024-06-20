@@ -59,7 +59,14 @@ const ProjectDetails: React.FC<Props> = ({ projectsData, isDark }) => {
           >
             {project.description}
           </p>
-          <h2 className="font-bold">Features</h2>
+
+          <h2
+            className={`${
+              isDark ? "dark:text-white" : "dark:text-black"
+            } font-bold`}
+          >
+            Features
+          </h2>
           <ul className="list-disc ml-3 my-4">
             {project.features.map((feature, index) => (
               <li
