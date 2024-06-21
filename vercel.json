@@ -1,1 +1,4 @@
-{ "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
+{
+  "framework": "vitejs",
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+}
