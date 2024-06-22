@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import { projectsCardLayout } from "./components/ProjectsCardLayout";
@@ -36,7 +37,7 @@ library.add(
 import { library } from "@fortawesome/fontawesome-svg-core";
 import Main from "./components/Main";
 import Sidebar from "./components/Sidebar";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 import {
   Home,
@@ -79,14 +80,22 @@ const App: React.FC = () => {
   const [active, setActive] = useState<number>(0);
   const [toggleSidebar, setToggleSidebar] = useState<boolean>(false);
   const { isDark, toggleTheme } = useTheme();
-
+  const navigate = useNavigate();
   //sidebar
+
+  // Restore active state from localStorage on initial load
   useEffect(() => {
     const storedIndex = localStorage.getItem("activeIndex");
     if (storedIndex !== null) {
-      setActive(parseInt(storedIndex));
+      setActive(parseInt(storedIndex, 10));
     }
   }, []);
+
+  // Listen for changes in 'active' state and navigate accordingly
+  useEffect(() => {
+    const path = sidebarData[active]?.text.toLowerCase() || "";
+    navigate(path);
+  }, [active, navigate, sidebarData]);
 
   const handleSetActive = (index: number) => {
     setActive(index);
@@ -206,7 +215,7 @@ const App: React.FC = () => {
       >
         <Routes>
           <Route
-            path="/"
+            path="home"
             element={
               <Home
                 handleSetActive={handleSetActive}
