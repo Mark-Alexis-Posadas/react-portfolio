@@ -1,3 +1,9 @@
+import Sidebar from "./components/sidebar";
+
 export default function App() {
-  return <div>App</div>;
+  return (
+    <>
+      <Sidebar />
+    </>
+  );
 }
