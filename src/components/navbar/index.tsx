@@ -2,6 +2,7 @@ import { NavbarTypes } from "../../types/navbar";
 interface NavbarProps {
   navbarData: NavbarTypes[];
 }
+
 export default function Navbar({ navbarData }: NavbarProps) {
   return (
     <nav className="flex items-center gap-3">
