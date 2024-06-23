@@ -3,7 +3,6 @@ import { Experience } from "../types/experience";
 const experienceData: Experience[] = [
   {
     id: uuidv4(),
-    logo: "src/assets/images/ipsum-logo.png",
     title: "Front-End Developer",
     company: "Ipsum.ph",
     date: "June 2021 - January 2023",
@@ -24,7 +23,6 @@ const experienceData: Experience[] = [
 
   {
     id: uuidv4(),
-    logo: "src/assets/images/olit-logo.png",
     title: "Front-End Developer",
     company: "Online IT Solutions",
     date: "December 2018 - July 2020",
