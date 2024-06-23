@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <section className="min-h-[50vh]" id="about">
-      <p>
+      <p className="text-xl">
         Hey there! I'm Juan, a dedicated front-end developer passionate about
         creating seamless and captivating digital experiences. With a journey in
         web development that began in 2017, I've continually evolved my skills

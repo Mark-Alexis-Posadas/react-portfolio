@@ -5,9 +5,9 @@ import Projects from "./pages/projects";
 
 export default function App() {
   return (
-    <div className="flex">
+    <div className="md:flex">
       <Sidebar />
-      <main className="ml-[600px] w-full min-h-screen py-14 px-20">
+      <main className="md:ml-[40%] w-full min-h-screen py-14 px-20">
         <About />
         <Experience />
         <Projects />

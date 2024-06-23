@@ -6,7 +6,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function Sidebar() {
   return (
-    <aside className="w-[600px] flex flex-col h-screen fixed border-r border-slate-300 p-14">
+    <aside className="w-full md:w-[40%] flex flex-col h-screen md:fixed border-r border-slate-300 p-5 md:p-14">
       <Navbar navbarData={navbarData} />
 
       <h1 className="font-bold text-5xl mt-auto mb-5">
