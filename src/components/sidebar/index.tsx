@@ -30,14 +30,20 @@ export default function Sidebar({
 
       <ul className="flex items-center gap-3 mt-auto">
         <li>
-          <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
+          <a href="#">
+            <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
+          </a>
         </li>
 
         <li>
-          <FontAwesomeIcon icon={faEnvelope} className="text-2xl" />
+          <a href="#">
+            <FontAwesomeIcon icon={faEnvelope} className="text-2xl" />
+          </a>
         </li>
         <li>
-          <FontAwesomeIcon icon={faGithub} className="text-2xl" />
+          <a href="#">
+            <FontAwesomeIcon icon={faGithub} className="text-2xl" />
+          </a>
         </li>
         <li>
           <button onClick={handleToggleTheme}>
