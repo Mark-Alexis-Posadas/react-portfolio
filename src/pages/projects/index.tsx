@@ -9,13 +9,13 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 export default function Projects() {
   return (
     <section
-      className="min-h-[50vh] grid grid-cols-1 md:grid-cols-2 md:gap-3"
+      className="min-h-[50vh] grid grid-cols-1 md:grid-cols-2 md:gap-3 py-14"
       id="projects"
     >
       {projectsData.map((data) => (
         <div
           key={data.id}
-          className="rounded transition transform duration-300 hover:shadow-lg hover:scale-105 p-5 mb-5"
+          className="rounded transition transform duration-300 hover:shadow-lg hover:scale-105 p-5 border border-slate-300"
         >
           <header className="flex items-center justify-between">
             <FontAwesomeIcon className="text-2xl" icon={faFolder} />

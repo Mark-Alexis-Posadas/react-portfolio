@@ -1,7 +1,7 @@
 import experienceData from "../../data/experience";
 export default function Experience() {
   return (
-    <section className="min-h-[50vh] mb-5" id="experience">
+    <section className="min-h-[50vh] mb-5 py-14" id="experience">
       {experienceData.map((data) => (
         <article className="mb-5" key={data.id}>
           <header className="mb-3">
