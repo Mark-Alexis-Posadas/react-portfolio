@@ -46,8 +46,8 @@
 
 export default function About() {
   return (
-    <section className="min-h-[50vh] mb-5 py-14" id="about">
-      <p className="text-xl">
+    <section className="min-h-[50vh] py-10" id="about">
+      <p>
         Hey there! I'm Juan, a dedicated front-end developer passionate about
         creating seamless and captivating digital experiences. With a journey in
         web development that began in 2017, I've continually evolved my skills

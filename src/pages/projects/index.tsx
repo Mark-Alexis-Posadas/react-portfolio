@@ -9,7 +9,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 export default function Projects() {
   return (
     <section
-      className="min-h-[50vh] grid grid-cols-1 md:grid-cols-2 md:gap-3 py-14"
+      className="min-h-[50vh] grid grid-cols-1 md:grid-cols-2 md:gap-3 py-10"
       id="projects"
     >
       {projectsData.map((data) => (
@@ -31,8 +31,8 @@ export default function Projects() {
             {data.pageTitle}
           </h1>
 
-          <p className="text-sm mb-auto pb-3">{data.description}</p>
-          <ul>
+          <p className="text-[#666] mb-auto pb-3">{data.description}</p>
+          <ul className="text-[#666]">
             {data.features.map((item, index) => (
               <li key={index}>- {item.text}</li>
             ))}

@@ -10,7 +10,7 @@ export default function Sidebar({
   handleToggleTheme,
 }: SidebarTypes) {
   return (
-    <aside className="w-full md:w-[40%] flex flex-col  md:h-screen md:fixed border-r border-slate-300 p-5 md:p-14">
+    <aside className="w-full md:w-[40%] flex flex-col md:h-screen md:fixed border-r border-slate-300 p-5 md:p-10">
       <Navbar navbarData={navbarData} />
 
       <h1 className="font-bold text-5xl mt-20 md:mt-auto mb-5">
