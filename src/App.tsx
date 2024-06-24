@@ -17,7 +17,7 @@ export default function App() {
         toggleTheme={toggleTheme}
         handleToggleTheme={handleToggleTheme}
       />
-      <main className="md:ml-[40%] w-full min-h-screen py-14 px-20">
+      <main className="md:ml-[40%] w-full min-h-screen py-14 px-5 md:px-20">
         <About />
         <Experience />
         <Projects />

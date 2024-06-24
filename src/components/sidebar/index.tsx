@@ -10,10 +10,10 @@ export default function Sidebar({
   handleToggleTheme,
 }: SidebarTypes) {
   return (
-    <aside className="w-full md:w-[40%] flex flex-col h-screen md:fixed border-r border-slate-300 p-5 md:p-14">
+    <aside className="w-full md:w-[40%] flex flex-col  md:h-screen md:fixed border-r border-slate-300 p-5 md:p-14">
       <Navbar navbarData={navbarData} />
 
-      <h1 className="font-bold text-5xl mt-auto mb-5">
+      <h1 className="font-bold text-5xl mt-20 md:mt-auto mb-5">
         Hello! I'm Mark Alexis Posadas
       </h1>
       <p className="text-xl">
@@ -28,7 +28,7 @@ export default function Sidebar({
         </button>
       </p>
 
-      <ul className="flex items-center gap-3 mt-auto">
+      <ul className="flex flex-col fixed left-0 bottom-0 md:relative md:flex-row md:items-center gap-3 mt-auto z-10 bg-white md:bg-none md:shadow-none p-3 md:p-0 shadow-md rounded">
         <li>
           <a href="#">
             <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
