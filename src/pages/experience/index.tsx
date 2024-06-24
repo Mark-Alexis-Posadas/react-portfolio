@@ -3,7 +3,7 @@ export default function Experience() {
   return (
     <section className="min-h-[50vh]" id="experience">
       {experienceData.map((data) => (
-        <article className="mb-5 p-7">
+        <article className="mb-5 p-7" key={data.id}>
           <header className="mb-3">
             <h3>{data.title}</h3>
             <h2 className="font-bold text-rose-600 mb-2">{data.company}</h2>
