@@ -8,7 +8,10 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Projects() {
   return (
-    <section className="min-h-[50vh]" id="projects">
+    <section
+      className="min-h-[50vh] grid grid-cols-1 md:grid-cols-2 md:gap-3"
+      id="projects"
+    >
       {projectsData.map((data) => (
         <div
           key={data.id}

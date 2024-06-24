@@ -30,18 +30,26 @@ export default function Sidebar({
 
       <ul className="flex flex-col fixed left-0 bottom-0 md:relative md:flex-row md:items-center gap-3 mt-auto z-10 bg-white md:bg-none md:shadow-none p-3 md:p-0 shadow-md rounded">
         <li>
-          <a href="#">
+          <a
+            href="https://www.linkedin.com/in/mark-alexis-posadas-996a04151/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
           </a>
         </li>
 
         <li>
-          <a href="#">
+          <a href="mailto:markalexisposadas@gmail.com?referrer=markalexisposadas@gmail.com">
             <FontAwesomeIcon icon={faEnvelope} className="text-2xl" />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a
+            href="https://github.com/Mark-Alexis-Posadas"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={faGithub} className="text-2xl" />
           </a>
         </li>
