@@ -23,7 +23,7 @@ const experienceData: Experience[] = [
 
   {
     id: uuidv4(),
-    title: "Front-End Developer",
+    title: "Junior Front-End Developer",
     company: "Online IT Solutions",
     date: "December 2018 - July 2020",
     address: "56 Conchu St. Project 4, Cubao, Quezon City, Metro Manila",

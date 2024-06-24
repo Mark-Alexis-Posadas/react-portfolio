@@ -12,7 +12,7 @@ export default function Projects() {
       {projectsData.map((data) => (
         <div
           key={data.id}
-          className="bg-white shadow-custom-shadow rounded transition transform duration-300 hover:shadow-lg hover:scale-105 p-5 mb-5"
+          className="rounded transition transform duration-300 hover:shadow-lg hover:scale-105 p-5 mb-5"
         >
           <header className="flex items-center justify-between">
             <FontAwesomeIcon className="text-2xl" icon={faFolder} />

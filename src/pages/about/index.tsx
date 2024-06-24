@@ -46,7 +46,7 @@
 
 export default function About() {
   return (
-    <section className="min-h-[50vh]" id="about">
+    <section className="min-h-[50vh] mb-5" id="about">
       <p className="text-xl">
         Hey there! I'm Juan, a dedicated front-end developer passionate about
         creating seamless and captivating digital experiences. With a journey in
