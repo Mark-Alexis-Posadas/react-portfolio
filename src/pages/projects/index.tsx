@@ -5,8 +5,9 @@ import {
 import projectsData from "../../data/projects";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { ToggleThemeType } from "../../types/toggle-theme";
 
-export default function Projects() {
+export default function Projects({ toggleTheme }: ToggleThemeType) {
   return (
     <section
       className="min-h-[50vh] grid grid-cols-1 md:grid-cols-2 md:gap-3 py-10"
@@ -15,7 +16,11 @@ export default function Projects() {
       {projectsData.map((data) => (
         <div
           key={data.id}
-          className="rounded transition transform duration-300 hover:shadow-lg hover:scale-105 p-5 border border-slate-300"
+          className={`rounded transition transform duration-300 hover:shadow-lg hover:scale-105 p-5 border ${
+            toggleTheme
+              ? "dark:bg-[#1f1f1f] dark:text-[#999] border-none"
+              : "border-slate-300"
+          }`}
         >
           <header className="flex items-center justify-between">
             <FontAwesomeIcon className="text-2xl" icon={faFolder} />

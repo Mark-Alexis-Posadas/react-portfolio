@@ -25,8 +25,8 @@ export default function App() {
       />
       <main className="md:ml-[40%] w-full min-h-screen px-5 md:px-20">
         <About />
-        <Experience />
-        <Projects />
+        <Experience toggleTheme={toggleTheme} />
+        <Projects toggleTheme={toggleTheme} />
       </main>
     </div>
   );

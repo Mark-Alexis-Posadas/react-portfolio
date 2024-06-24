@@ -47,7 +47,7 @@
 export default function About() {
   return (
     <section className="min-h-[50vh] py-10" id="about">
-      <p>
+      <p className="text-[#666]">
         Hey there! I'm Mark Alexis Posadas, a dedicated front-end developer
         passionate about creating seamless and captivating digital experiences.
         With a journey in web development that began in 2017, I've continually
@@ -73,14 +73,14 @@ export default function About() {
         <li>Redux Toolkit</li>
         <li>Typescript</li>
       </ul>
-      <p>
+      <p className="text-[#666]">
         My Approach From translating design concepts into functional websites to
         optimizing performance and user experience, I thrive on turning ideas
         into reality. Detail-oriented and always eager to learn, I enjoy
         tackling challenges and finding creative solutions to enhance digital
         projects.
       </p>
-      <p>
+      <p className="text-[#666]">
         Let's Collaborate! Whether you're looking to revamp your online
         presence, improve website functionality, or discuss new ideas in web
         development, I'm here to help. Let's connect and create something
