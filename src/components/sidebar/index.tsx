@@ -3,6 +3,7 @@ import { navbarData } from "../../data/navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { GrDocumentPdf } from "react-icons/gr";
 
 export default function Sidebar() {
   return (
@@ -15,6 +16,13 @@ export default function Sidebar() {
       <p className="text-xl">
         I am a front-end developer with a passion for creating beautiful,
         functional, and user-friendly websites.
+        <button
+          className="text-black border-black
+        border-dashed border-2 rounded p-2 mt-4 flex items-center justify-center gap-2"
+        >
+          <GrDocumentPdf />
+          Resume
+        </button>
       </p>
 
       <ul className="flex items-center gap-3 mt-auto">
