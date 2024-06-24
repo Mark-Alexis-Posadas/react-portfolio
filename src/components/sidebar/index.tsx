@@ -10,7 +10,10 @@ export default function Sidebar({
   handleToggleTheme,
 }: SidebarTypes) {
   return (
-    <aside className="w-full md:w-[40%] flex flex-col md:h-screen md:fixed border-r border-slate-300 p-5 md:p-10">
+    <aside
+      className="w-full md:w-[40%] flex flex-col md:h-screen md:fixed border-r border-slate-300 p-5 md:py-10 md:px-20
+    "
+    >
       <Navbar navbarData={navbarData} />
 
       <h1 className="font-bold text-5xl mt-20 md:mt-auto mb-5">
@@ -28,7 +31,7 @@ export default function Sidebar({
         </button>
       </p>
 
-      <ul className="flex flex-col fixed left-0 bottom-0 md:relative md:flex-row md:items-center gap-3 mt-auto z-10 bg-white md:bg-none md:shadow-none p-3 md:p-0 shadow-md rounded">
+      <ul className="flex flex-col fixed left-0 bottom-0 md:relative md:flex-row md:items-center gap-3 mt-auto z-10 bg-white md:bg-inherit md:shadow-none p-3 md:p-0 shadow-md rounded">
         <li>
           <a
             href="https://www.linkedin.com/in/mark-alexis-posadas-996a04151/"

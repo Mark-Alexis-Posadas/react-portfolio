@@ -48,10 +48,10 @@ export default function About() {
   return (
     <section className="min-h-[50vh] py-10" id="about">
       <p>
-        Hey there! I'm Juan, a dedicated front-end developer passionate about
-        creating seamless and captivating digital experiences. With a journey in
-        web development that began in 2017, I've continually evolved my skills
-        to stay at the forefront of this dynamic industry.
+        Hey there! I'm Mark Alexis Posadas, a dedicated front-end developer
+        passionate about creating seamless and captivating digital experiences.
+        With a journey in web development that began in 2017, I've continually
+        evolved my skills to stay at the forefront of this dynamic industry.
       </p>
       <b className="my-5 block">
         Technological Expertise I specialize in utilizing a variety of

@@ -12,7 +12,7 @@ export default function Experience() {
             <span className="italic text-sm mr-2">{data.date}</span>
             <span className="text-sm">{data.address}</span>
           </header>
-          <ul className="list-none p-7 text-[#666]">
+          <ul className="list-none py-2 px-7 text-[#666]">
             {data.jobDescriptions.map((description, index) => (
               <li key={index}>- {description}</li>
             ))}

@@ -27,9 +27,7 @@ export default function Projects() {
               />
             </div>
           </header>
-          <h1 className="font-bold text-xl my-3 text-black">
-            {data.pageTitle}
-          </h1>
+          <h1 className="font-bold text-xl my-3">{data.pageTitle}</h1>
 
           <p className="text-[#666] mb-auto pb-3">{data.description}</p>
           <ul className="text-[#666]">
