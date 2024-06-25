@@ -46,8 +46,8 @@
 
 export default function About() {
   return (
-    <section className="min-h-[50vh] py-10" id="about">
-      <p className="text-[#666] text-xl font-light">
+    <section className="py-10" id="about">
+      <p className="text-[#666]">
         Hey there! I'm Mark Alexis Posadas, a dedicated front-end developer
         passionate about creating seamless and captivating digital experiences.
         With a journey in web development that began in 2017, I've continually

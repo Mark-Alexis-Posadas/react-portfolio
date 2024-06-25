@@ -19,7 +19,7 @@ export default function Sidebar({
       <h1 className="font-bold text-5xl mt-20 md:mt-auto mb-5">
         Hello! I'm Mark Alexis Posadas
       </h1>
-      <p className={`${toggleTheme && "dark:text-[#999]"} text-xl`}>
+      <p className={`${toggleTheme && "dark:text-[#999]"} text-[#666] text-xl`}>
         I am a front-end developer with a passion for creating beautiful,
         functional, and user-friendly websites.
         <button
@@ -27,7 +27,7 @@ export default function Sidebar({
             toggleTheme
               ? "dark:text-[#999] dark:border-[#999]"
               : "text-black border-black"
-          } text-sm
+          }
         border-dashed border-2 rounded p-2 mt-4 flex items-center justify-center gap-2`}
         >
           <GrDocumentPdf />

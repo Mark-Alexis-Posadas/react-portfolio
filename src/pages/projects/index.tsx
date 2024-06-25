@@ -10,13 +10,13 @@ import { ToggleThemeType } from "../../types/toggle-theme";
 export default function Projects({ toggleTheme }: ToggleThemeType) {
   return (
     <section
-      className="min-h-[50vh] grid grid-cols-1 md:grid-cols-2 md:gap-3 py-10"
+      className="grid grid-cols-1 md:grid-cols-2 gap-3 py-10"
       id="projects"
     >
       {projectsData.map((data) => (
         <div
           key={data.id}
-          className={`rounded transition transform duration-300 hover:shadow-lg hover:scale-105 p-5 border ${
+          className={`flex flex-col rounded transition transform duration-300 hover:shadow-lg hover:scale-105 p-5 border ${
             toggleTheme
               ? "dark:bg-[#1f1f1f] dark:text-[#999] border-none"
               : "border-slate-300"
@@ -35,7 +35,7 @@ export default function Projects({ toggleTheme }: ToggleThemeType) {
           <h1 className="font-bold text-xl my-3">{data.pageTitle}</h1>
 
           <p className="text-[#666] mb-auto pb-3">{data.description}</p>
-          <ul className="text-[#666]">
+          <ul className="text-[#666] mt-auto">
             {data.features.map((item, index) => (
               <li key={index}>- {item.text}</li>
             ))}

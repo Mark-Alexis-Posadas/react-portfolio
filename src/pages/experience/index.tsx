@@ -2,7 +2,7 @@ import experienceData from "../../data/experience";
 import { ToggleThemeType } from "../../types/toggle-theme";
 export default function Experience({ toggleTheme }: ToggleThemeType) {
   return (
-    <section className="min-h-[50vh] py-10" id="experience">
+    <section className="py-10" id="experience">
       {experienceData.map((data) => (
         <article className="mb-5" key={data.id}>
           <header className="mb-3">
