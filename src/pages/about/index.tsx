@@ -47,7 +47,7 @@
 export default function About() {
   return (
     <section className="min-h-[50vh] py-10" id="about">
-      <p className="text-[#666]">
+      <p className="text-[#666] text-xl font-light">
         Hey there! I'm Mark Alexis Posadas, a dedicated front-end developer
         passionate about creating seamless and captivating digital experiences.
         With a journey in web development that began in 2017, I've continually
@@ -57,23 +57,30 @@ export default function About() {
         Technological Expertise I specialize in utilizing a variety of
         technologies to build responsive and visually appealing websites:
       </b>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Scss/Sass</li>
-        <li>BEM</li>
-        <li>Bootstrap</li>
-        <li>Tailwind CSS</li>
-        <li>Styled Components</li>
-        <li>JavaScript (ES6)</li>
-
-        <li>React JS</li>
-        <li>React Router</li>
-        <li>Next JS</li>
-        <li>Redux Toolkit</li>
-        <li>Typescript</li>
-      </ul>
-      <p className="text-[#666]">
+      <div className="grid grid-cols-4 gap-3">
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Scss/Sass</li>
+        </ul>
+        <ul>
+          <li>BEM</li>
+          <li>Bootstrap</li>
+          <li>Tailwind CSS</li>
+        </ul>
+        <ul>
+          <li>Styled Components</li>
+          <li>JavaScript (ES6)</li>
+          <li>React JS</li>
+        </ul>
+        <ul>
+          <li>React Router</li>
+          <li>Next JS</li>
+          <li>Redux Toolkit</li>
+          <li>Typescript</li>
+        </ul>
+      </div>
+      <p className="text-[#666] my-5">
         My Approach From translating design concepts into functional websites to
         optimizing performance and user experience, I thrive on turning ideas
         into reality. Detail-oriented and always eager to learn, I enjoy
