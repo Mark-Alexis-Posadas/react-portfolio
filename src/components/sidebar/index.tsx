@@ -11,8 +11,8 @@ export default function Sidebar({
 }: SidebarTypes) {
   return (
     <aside
-      className="w-full md:w-[40%] flex flex-col md:h-screen md:fixed border-r border-slate-300 p-5 md:py-10 md:px-20
-    "
+      className={`w-full md:w-[40%] flex flex-col md:h-screen md:fixed  border-slate-300 p-5 md:py-10 md:px-20
+      ${toggleTheme ? "dark:border-none" : "dark:border-r"}`}
     >
       <Navbar navbarData={navbarData} />
 
@@ -23,8 +23,12 @@ export default function Sidebar({
         I am a front-end developer with a passion for creating beautiful,
         functional, and user-friendly websites.
         <button
-          className="text-black border-black text-sm
-        border-dashed border-2 rounded p-2 mt-4 flex items-center justify-center gap-2"
+          className={`${
+            toggleTheme
+              ? "dark:text-[#999] dark:border-[#999]"
+              : "text-black border-black"
+          } text-sm
+        border-dashed border-2 rounded p-2 mt-4 flex items-center justify-center gap-2`}
         >
           <GrDocumentPdf />
           Resume
