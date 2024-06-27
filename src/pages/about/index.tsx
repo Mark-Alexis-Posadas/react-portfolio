@@ -43,8 +43,9 @@
 //       return null;
 //   }
 // };
+import { ToggleThemeType } from "../../types/toggle-theme";
 
-export default function About() {
+export default function About({ toggleTheme }: ToggleThemeType) {
   return (
     <section className="py-10" id="about">
       <p className="text-[#666]">
@@ -57,7 +58,11 @@ export default function About() {
         Technological Expertise I specialize in utilizing a variety of
         technologies to build responsive and visually appealing websites:
       </b>
-      <div className="grid grid-cols-4 gap-3">
+      <div
+        className={`grid grid-cols-4 gap-3 ${
+          toggleTheme ? "dark:text-[#999]" : "dark:text-[#666]"
+        }`}
+      >
         <ul>
           <li>HTML</li>
           <li>CSS</li>
