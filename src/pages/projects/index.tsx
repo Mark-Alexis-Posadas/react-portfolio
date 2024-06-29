@@ -26,12 +26,18 @@ export default function Projects({ toggleTheme }: ToggleThemeType) {
           >
             <header className="flex items-center justify-between">
               <FontAwesomeIcon className="text-2xl" icon={faFolder} />
+
               <div className="flex items-center gap-3">
-                <FontAwesomeIcon className="text-2xl" icon={faGithub} />
-                <FontAwesomeIcon
-                  className="text-2xl"
-                  icon={faArrowUpRightFromSquare}
-                />
+                <a href={data.source} target="_blank">
+                  <FontAwesomeIcon className="text-2xl" icon={faGithub} />
+                </a>
+
+                <a href={data.demo} target="_blank">
+                  <FontAwesomeIcon
+                    className="text-2xl"
+                    icon={faArrowUpRightFromSquare}
+                  />
+                </a>
               </div>
             </header>
             <h1 className="font-bold text-xl my-3">{data.pageTitle}</h1>
