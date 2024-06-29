@@ -14,7 +14,7 @@ export default function Sidebar({
       className={`w-full md:w-[40%] flex flex-col md:h-screen md:fixed  border-slate-300 p-5 md:py-10 md:px-20
       ${toggleTheme ? "dark:border-none" : "dark:border-r"}`}
     >
-      <Navbar navbarData={navbarData} />
+      <Navbar navbarData={navbarData} toggleTheme={toggleTheme} />
 
       <h1 className="font-bold text-5xl mt-20 md:mt-auto mb-5">
         Hello! I'm Mark Alexis Posadas
