@@ -57,8 +57,14 @@ export default function Projects({ toggleTheme }: ToggleThemeType) {
         ))}
 
         <button className="flex items-center justify-center gap-3">
-          View all projects here
-          <FontAwesomeIcon icon={faArrowRight} />
+          <a
+            href="https://react-typescript-projects-three.vercel.app/"
+            className="flex items-center gap-3"
+            target="_blank"
+          >
+            View all projects here
+            <FontAwesomeIcon icon={faArrowRight} />
+          </a>
         </button>
       </>
     </section>
