@@ -53,6 +53,12 @@ export const skillsData: Skills[] = [
   },
   {
     id: uuidv4(),
+    name: "Github",
+    icon: "FaGithub",
+    url: "https://github.com/",
+  },
+  {
+    id: uuidv4(),
     name: "React",
     icon: "FaReact",
     url: "https://react.dev/",
@@ -69,6 +75,12 @@ export const skillsData: Skills[] = [
     name: "Tailwind CSS",
     icon: "RiTailwindCssFill",
     url: "https://tailwindcss.com/",
+  },
+  {
+    id: uuidv4(),
+    name: "React Router",
+    icon: "SiReactrouter",
+    url: "https://reactrouter.com/en/main",
   },
 ];
 

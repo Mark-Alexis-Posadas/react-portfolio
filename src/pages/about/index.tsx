@@ -7,10 +7,11 @@ import {
   FaBootstrap,
   FaGulp,
   FaGit,
+  FaGithub,
   FaReact,
 } from "react-icons/fa";
 
-import { SiStyledcomponents, SiBem } from "react-icons/si";
+import { SiStyledcomponents, SiReactrouter, SiBem } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 
 const renderIcon = (iconName: string) => {
@@ -32,12 +33,16 @@ const renderIcon = (iconName: string) => {
 
     case "FaGit":
       return <FaGit color="#F05032" />;
+    case "FaGithub":
+      return <FaGithub color="#222" />;
     case "FaReact":
       return <FaReact color="#61DAFB" />;
     case "SiStyledcomponents":
       return <SiStyledcomponents color="#DB7093" />;
     case "RiTailwindCssFill":
       return <RiTailwindCssFill color="#06B6D4" />;
+    case "SiReactrouter":
+      return <SiReactrouter color="#61DAFB" />;
     default:
       return null;
   }
