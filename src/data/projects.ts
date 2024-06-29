@@ -34,7 +34,7 @@ const projectsData: ProjectType[] = [
     ],
     source:
       "https://github.com/Mark-Alexis-Posadas/react-typescript-mini-projects/blob/main/src/pages/Tab/index.tsx",
-    demo: "https://tjc6fc.csb.app/",
+    demo: "https://react-typescript-projects-three.vercel.app/tab",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
   },
@@ -54,7 +54,7 @@ const projectsData: ProjectType[] = [
     ],
     source:
       "https://github.com/Mark-Alexis-Posadas/react-typescript-mini-projects/blob/main/src/pages/Accordion/index.tsx",
-    demo: "https://kjky7y.csb.app/",
+    demo: "https://react-typescript-projects-three.vercel.app/accordion",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
   },
@@ -72,7 +72,7 @@ const projectsData: ProjectType[] = [
     ],
     source:
       "https://github.com/Mark-Alexis-Posadas/react-typescript-mini-projects/blob/main/src/pages/Carousel/index.tsx",
-    demo: "https://nmqnld.csb.app/",
+    demo: "https://react-typescript-projects-three.vercel.app/carousel",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
   },
@@ -90,7 +90,7 @@ const projectsData: ProjectType[] = [
     ],
     source:
       "https://github.com/Mark-Alexis-Posadas/react-typescript-mini-projects/blob/main/src/pages/Theme/index.tsx",
-    demo: "https://z8xq86.csb.app/",
+    demo: "https://react-typescript-projects-three.vercel.app/theme",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
   },
