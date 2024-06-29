@@ -40,7 +40,13 @@ export default function Projects({ toggleTheme }: ToggleThemeType) {
                 </a>
               </div>
             </header>
-            <h1 className="font-bold text-xl my-3">{data.pageTitle}</h1>
+            <h1
+              className={`${
+                toggleTheme && "dark:text-white"
+              } font-bold text-xl my-3`}
+            >
+              {data.pageTitle}
+            </h1>
 
             <p className="text-[#666] mb-auto pb-3">{data.description}</p>
             <ul className="text-[#666] mt-auto">
