@@ -11,45 +11,58 @@ import {
   FaReact,
 } from "react-icons/fa";
 
-import { SiStyledcomponents, SiReactrouter, SiBem } from "react-icons/si";
+import {
+  SiStyledcomponents,
+  SiReactrouter,
+  SiBem,
+  SiRedux,
+  SiTypescript,
+  SiReactquery,
+} from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 
-const renderIcon = (iconName: string) => {
-  switch (iconName) {
-    case "FaHtml5":
-      return <FaHtml5 color="#E34F26" />;
-    case "FaCss3Alt":
-      return <FaCss3Alt color="#1572B6" />;
-    case "FaJsSquare":
-      return <FaJsSquare color="#F7DF1E" />;
-    case "FaSass":
-      return <FaSass color="#CC6699" />;
-    case "SiBem":
-      return <SiBem color="#000000" />;
-    case "FaBootstrap":
-      return <FaBootstrap color="#7952B3" />;
-    case "FaGulp":
-      return <FaGulp color="#CF4647" />;
-
-    case "FaGit":
-      return <FaGit color="#F05032" />;
-    case "FaGithub":
-      return <FaGithub color="#222" />;
-    case "FaReact":
-      return <FaReact color="#61DAFB" />;
-    case "SiStyledcomponents":
-      return <SiStyledcomponents color="#DB7093" />;
-    case "RiTailwindCssFill":
-      return <RiTailwindCssFill color="#06B6D4" />;
-    case "SiReactrouter":
-      return <SiReactrouter color="#61DAFB" />;
-    default:
-      return null;
-  }
-};
 import { ToggleThemeType } from "../../types/toggle-theme";
 
 export default function About({ toggleTheme }: ToggleThemeType) {
+  const renderIcon = (iconName: string) => {
+    switch (iconName) {
+      case "FaHtml5":
+        return <FaHtml5 color="#E34F26" />;
+      case "FaCss3Alt":
+        return <FaCss3Alt color="#1572B6" />;
+      case "FaJsSquare":
+        return <FaJsSquare color="#F7DF1E" />;
+      case "FaSass":
+        return <FaSass color="#CC6699" />;
+      case "SiBem":
+        return <SiBem color={toggleTheme ? "#fff" : "#000000"} />;
+      case "FaBootstrap":
+        return <FaBootstrap color="#7952B3" />;
+      case "FaGulp":
+        return <FaGulp color="#CF4647" />;
+      case "FaGit":
+        return <FaGit color="#F05032" />;
+      case "FaGithub":
+        return <FaGithub color={toggleTheme ? "#fff" : "#000000"} />;
+      case "FaReact":
+        return <FaReact color="#61DAFB" />;
+      case "SiStyledcomponents":
+        return <SiStyledcomponents color="#DB7093" />;
+      case "RiTailwindCssFill":
+        return <RiTailwindCssFill color="#06B6D4" />;
+      case "SiReactrouter":
+        return <SiReactrouter color="#CA4245" />;
+      case "SiRedux":
+        return <SiRedux color="#764ABC" />;
+      case "SiTypescript":
+        return <SiTypescript color="#3178C6" />;
+      case "SiReactquery":
+        return <SiReactquery color="#00D68F" />;
+
+      default:
+        return null;
+    }
+  };
   return (
     <section className="py-10" id="about">
       <p className="text-[#666]">

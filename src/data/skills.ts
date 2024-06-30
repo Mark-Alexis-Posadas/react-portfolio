@@ -73,23 +73,23 @@ export const skillsData: Skills[] = [
   {
     id: uuidv4(),
     name: "Redux",
-    icon: "SiReactrouter",
+    icon: "SiRedux",
   },
 
   {
     id: uuidv4(),
     name: "Typescript",
-    icon: "SiReactrouter",
+    icon: "SiTypescript",
   },
   {
     id: uuidv4(),
     name: "React Query",
-    icon: "SiReactrouter",
+    icon: "SiReactquery",
   },
   {
     id: uuidv4(),
     name: "Api Integration",
-    icon: "<CiSettings />",
+    icon: "CiSettings",
   },
 ];
 
