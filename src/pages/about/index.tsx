@@ -11,45 +11,58 @@ import {
   FaReact,
 } from "react-icons/fa";
 
-import { SiStyledcomponents, SiReactrouter, SiBem } from "react-icons/si";
+import {
+  SiStyledcomponents,
+  SiReactrouter,
+  SiBem,
+  SiRedux,
+  SiTypescript,
+  SiReactquery,
+} from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 
-const renderIcon = (iconName: string) => {
-  switch (iconName) {
-    case "FaHtml5":
-      return <FaHtml5 color="#E34F26" />;
-    case "FaCss3Alt":
-      return <FaCss3Alt color="#1572B6" />;
-    case "FaJsSquare":
-      return <FaJsSquare color="#F7DF1E" />;
-    case "FaSass":
-      return <FaSass color="#CC6699" />;
-    case "SiBem":
-      return <SiBem color="#000000" />;
-    case "FaBootstrap":
-      return <FaBootstrap color="#7952B3" />;
-    case "FaGulp":
-      return <FaGulp color="#CF4647" />;
-
-    case "FaGit":
-      return <FaGit color="#F05032" />;
-    case "FaGithub":
-      return <FaGithub color="#222" />;
-    case "FaReact":
-      return <FaReact color="#61DAFB" />;
-    case "SiStyledcomponents":
-      return <SiStyledcomponents color="#DB7093" />;
-    case "RiTailwindCssFill":
-      return <RiTailwindCssFill color="#06B6D4" />;
-    case "SiReactrouter":
-      return <SiReactrouter color="#61DAFB" />;
-    default:
-      return null;
-  }
-};
 import { ToggleThemeType } from "../../types/toggle-theme";
 
 export default function About({ toggleTheme }: ToggleThemeType) {
+  const renderIcon = (iconName: string) => {
+    switch (iconName) {
+      case "FaHtml5":
+        return <FaHtml5 color="#E34F26" />;
+      case "FaCss3Alt":
+        return <FaCss3Alt color="#1572B6" />;
+      case "FaJsSquare":
+        return <FaJsSquare color="#F7DF1E" />;
+      case "FaSass":
+        return <FaSass color="#CC6699" />;
+      case "SiBem":
+        return <SiBem color={toggleTheme ? "#fff" : "#000000"} />;
+      case "FaBootstrap":
+        return <FaBootstrap color="#7952B3" />;
+      case "FaGulp":
+        return <FaGulp color="#CF4647" />;
+      case "FaGit":
+        return <FaGit color="#F05032" />;
+      case "FaGithub":
+        return <FaGithub color={toggleTheme ? "#fff" : "#000000"} />;
+      case "FaReact":
+        return <FaReact color="#61DAFB" />;
+      case "SiStyledcomponents":
+        return <SiStyledcomponents color="#DB7093" />;
+      case "RiTailwindCssFill":
+        return <RiTailwindCssFill color="#06B6D4" />;
+      case "SiReactrouter":
+        return <SiReactrouter color="#CA4245" />;
+      case "SiRedux":
+        return <SiRedux color="#764ABC" />;
+      case "SiTypescript":
+        return <SiTypescript color="#3178C6" />;
+      case "SiReactquery":
+        return <SiReactquery color="#00D68F" />;
+
+      default:
+        return null;
+    }
+  };
   return (
     <section className="py-10" id="about">
       <p className="text-[#666]">
@@ -59,43 +72,40 @@ export default function About({ toggleTheme }: ToggleThemeType) {
         evolved my skills to stay at the forefront of this dynamic industry.
       </p>
       <b className="my-5 block">
-        Technological Expertise I specialize in utilizing a variety of
-        technologies to build responsive and visually appealing websites:
+        Technological Expertise: I specialize in utilizing a variety of
+        technologies to build responsive and visually appealing websites.
       </b>
-      <div
-        className={`grid grid-cols-4 gap-3 ${
+      <ul
+        className={`grid grid-cols-4 gap-3 my-5 ${
           toggleTheme ? "dark:text-[#999]" : "dark:text-[#666]"
         }`}
       >
-        {skillsData.map((item) => (
-          <div key={item.id}>
-            <div className="text-4xl">{renderIcon(item.icon)}</div>
-            <span className="mt-1 text-sm">{item.name}</span>
-          </div>
-        ))}
+        {skillsData.map((item, index) =>
+          index <= 11 ? (
+            <li key={item.id}>
+              <div className="text-4xl">{renderIcon(item.icon)}</div>
+              <span className="mt-1 text-sm">{item.name}</span>
+            </li>
+          ) : null
+        )}
+      </ul>
 
-        {/* <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Scss/Sass</li>
-        </ul>
-        <ul>
-          <li>BEM</li>
-          <li>Bootstrap</li>
-          <li>Tailwind CSS</li>
-        </ul>
-        <ul>
-          <li>Styled Components</li>
-          <li>JavaScript (ES6)</li>
-          <li>React JS</li>
-        </ul>
-        <ul>
-          <li>React Router</li>
-          <li>Next JS</li>
-          <li>Redux Toolkit</li>
-          <li>Typescript</li>
-        </ul> */}
-      </div>
+      <b>Currently learning these technologies:</b>
+      <ul
+        className={`grid grid-cols-4 gap-3 my-5 ${
+          toggleTheme ? "dark:text-[#999]" : "dark:text-[#666]"
+        }`}
+      >
+        {skillsData.map((item, index) =>
+          index > 11 ? (
+            <li key={item.id}>
+              <div className="text-4xl">{renderIcon(item.icon)}</div>
+              <span className="mt-1 text-sm">{item.name}</span>
+            </li>
+          ) : null
+        )}
+      </ul>
+
       <p className="text-[#666] my-5">
         My Approach From translating design concepts into functional websites to
         optimizing performance and user experience, I thrive on turning ideas
