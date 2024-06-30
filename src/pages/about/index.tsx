@@ -59,43 +59,40 @@ export default function About({ toggleTheme }: ToggleThemeType) {
         evolved my skills to stay at the forefront of this dynamic industry.
       </p>
       <b className="my-5 block">
-        Technological Expertise I specialize in utilizing a variety of
-        technologies to build responsive and visually appealing websites:
+        Technological Expertise: I specialize in utilizing a variety of
+        technologies to build responsive and visually appealing websites.
       </b>
-      <div
+      <ul
         className={`grid grid-cols-4 gap-3 ${
           toggleTheme ? "dark:text-[#999]" : "dark:text-[#666]"
         }`}
       >
-        {skillsData.map((item) => (
-          <div key={item.id}>
-            <div className="text-4xl">{renderIcon(item.icon)}</div>
-            <span className="mt-1 text-sm">{item.name}</span>
-          </div>
-        ))}
+        {skillsData.map((item, index) =>
+          index <= 11 ? (
+            <li key={item.id}>
+              <div className="text-4xl">{renderIcon(item.icon)}</div>
+              <span className="mt-1 text-sm">{item.name}</span>
+            </li>
+          ) : null
+        )}
+      </ul>
 
-        {/* <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Scss/Sass</li>
-        </ul>
-        <ul>
-          <li>BEM</li>
-          <li>Bootstrap</li>
-          <li>Tailwind CSS</li>
-        </ul>
-        <ul>
-          <li>Styled Components</li>
-          <li>JavaScript (ES6)</li>
-          <li>React JS</li>
-        </ul>
-        <ul>
-          <li>React Router</li>
-          <li>Next JS</li>
-          <li>Redux Toolkit</li>
-          <li>Typescript</li>
-        </ul> */}
-      </div>
+      <b>Currently learning these technologies:</b>
+      <ul
+        className={`grid grid-cols-4 gap-3 ${
+          toggleTheme ? "dark:text-[#999]" : "dark:text-[#666]"
+        }`}
+      >
+        {skillsData.map((item, index) =>
+          index > 11 ? (
+            <li key={item.id}>
+              <div className="text-4xl">{renderIcon(item.icon)}</div>
+              <span className="mt-1 text-sm">{item.name}</span>
+            </li>
+          ) : null
+        )}
+      </ul>
+
       <p className="text-[#666] my-5">
         My Approach From translating design concepts into functional websites to
         optimizing performance and user experience, I thrive on turning ideas
