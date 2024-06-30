@@ -63,7 +63,7 @@ export default function About({ toggleTheme }: ToggleThemeType) {
         technologies to build responsive and visually appealing websites.
       </b>
       <ul
-        className={`grid grid-cols-4 gap-3 ${
+        className={`grid grid-cols-4 gap-3 my-5 ${
           toggleTheme ? "dark:text-[#999]" : "dark:text-[#666]"
         }`}
       >
@@ -79,7 +79,7 @@ export default function About({ toggleTheme }: ToggleThemeType) {
 
       <b>Currently learning these technologies:</b>
       <ul
-        className={`grid grid-cols-4 gap-3 ${
+        className={`grid grid-cols-4 gap-3 my-5 ${
           toggleTheme ? "dark:text-[#999]" : "dark:text-[#666]"
         }`}
       >
