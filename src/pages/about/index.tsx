@@ -10,6 +10,7 @@ import {
   FaGithub,
   FaReact,
 } from "react-icons/fa";
+import { TbSettingsCog } from "react-icons/tb";
 
 import {
   SiStyledcomponents,
@@ -58,6 +59,9 @@ export default function About({ toggleTheme }: ToggleThemeType) {
         return <SiTypescript color="#3178C6" />;
       case "SiReactquery":
         return <SiReactquery color="#00D68F" />;
+
+      case "TbSettingsCog":
+        return <TbSettingsCog color={toggleTheme ? "#fff" : "#000000"} />;
 
       default:
         return null;
