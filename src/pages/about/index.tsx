@@ -69,11 +69,29 @@ export default function About({ toggleTheme }: ToggleThemeType) {
   };
   return (
     <section className="py-10" id="about">
-      <p className="text-[#666]">
-        Hey there! I'm Mark Alexis Posadas, a dedicated front-end developer
-        passionate about creating seamless and captivating digital experiences.
-        With a journey in web development that began in 2017, I've continually
-        evolved my skills to stay at the forefront of this dynamic industry.
+      <p className="text-[#666] my-4">
+        Hello! I'm Mark Alexis Posadas, a passionate front-end developer with
+        over 3 years of experience. My journey into the world of front-end
+        development began in 2017, driven by a fascination with creating
+        engaging user experiences and solving complex problems through code.
+      </p>
+
+      <p className="text-[#666] my-4">
+        I thrive on challenges and enjoy diving deep into new technologies to
+        expand my skill set. Whether it's crafting responsive layouts,
+        optimizing performance, or integrating cutting-edge features, I'm always
+        eager to push the boundaries of what's possible in web development.
+      </p>
+      <p className="text-[#666] my-4">
+        Beyond coding, I value collaboration and continuous learning. I find joy
+        in connecting with fellow developers, exchanging ideas, and contributing
+        to a supportive community that fuels innovation.
+      </p>
+
+      <p className="text-[#666] my-4">
+        Explore my portfolio to see examples of my work and how I bring ideas to
+        life through clean, efficient code and intuitive design. Let's create
+        something remarkable together!
       </p>
       <b className="my-5 block">
         Technological Expertise: I specialize in utilizing a variety of
