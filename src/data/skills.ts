@@ -89,7 +89,7 @@ export const skillsData: Skills[] = [
   {
     id: uuidv4(),
     name: "Api Integration",
-    icon: "CiSettings",
+    icon: "TbSettingsCog",
   },
 ];
 
