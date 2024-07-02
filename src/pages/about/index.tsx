@@ -104,7 +104,7 @@ export default function About({ toggleTheme }: ToggleThemeType) {
       >
         {skillsData.map((item, index) =>
           index <= 11 ? (
-            <li key={item.id}>
+            <li key={item.id} className="p-3 md:p-2">
               <div className="text-4xl">{renderIcon(item.icon)}</div>
               <span className="mt-1 text-sm">{item.name}</span>
             </li>
@@ -120,7 +120,7 @@ export default function About({ toggleTheme }: ToggleThemeType) {
       >
         {skillsData.map((item, index) =>
           index > 11 ? (
-            <li key={item.id}>
+            <li key={item.id} className="p-3 md:p-2">
               <div className="text-4xl">{renderIcon(item.icon)}</div>
               <span className="mt-1 text-sm">{item.name}</span>
             </li>
