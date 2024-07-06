@@ -18,10 +18,10 @@ export default function Projects({ toggleTheme }: ToggleThemeType) {
         {projectsData.map((data) => (
           <div
             key={data.id}
-            className={`flex flex-col rounded transition transform duration-300 hover:shadow-lg hover:scale-105 p-5 border ${
+            className={`flex flex-col rounded transition transform duration-300 hover:shadow-lg hover:scale-105 p-5 ${
               toggleTheme
-                ? "dark:bg-[#1f1f1f] dark:text-[#999] border-none"
-                : "border-slate-300"
+                ? "dark:bg-[#1f1f1f] dark:text-[#999]"
+                : "dark:bg-white shadow-custom-shadow"
             }`}
           >
             <header className="flex items-center justify-between">
@@ -49,11 +49,11 @@ export default function Projects({ toggleTheme }: ToggleThemeType) {
             </h1>
 
             <p className="text-[#666] mb-auto pb-3">{data.description}</p>
-            <ul className="text-[#666] mt-auto">
+            {/* <ul className="text-[#666] mt-auto">
               {data.features.map((item, index) => (
                 <li key={index}>- {item.text}</li>
               ))}
-            </ul>
+            </ul> */}
             {/* <ul className="flex items-center gap-3">
             <FaReact className="text-2xl text-[#61DBFB]" />
             <SiTypescript className="text-2xl text-[#007acc]" />
