@@ -34,7 +34,7 @@ export default function App() {
         toggleTheme={toggleTheme}
         handleToggleTheme={handleToggleTheme}
       />
-      <main className="md:ml-[40%] w-full min-h-screen px-5 md:px-20">
+      <main className="md:ml-[40%] w-full min-h-screen px-5 md:px-10 lg:px-20">
         <About toggleTheme={toggleTheme} />
         <Experience toggleTheme={toggleTheme} />
         <Projects toggleTheme={toggleTheme} />
