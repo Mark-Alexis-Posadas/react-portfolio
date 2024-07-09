@@ -78,21 +78,28 @@ const projectsData: ProjectType[] = [
   },
   {
     id: uuidv4(),
-    pageTitle: "Theme",
+    pageTitle: "Employee Management System",
     description:
-      "This project demonstrates a theme switcher built using React, Tailwind CSS, and React Hooks. It allows users to switch between different themes.",
+      "This project implements a simple Employee Management System where users can add, read, edit, and delete employee records. The application also utilizes local storage to persist employee data across sessions.",
     features: [
-      { text: "Light/Dark mode switch" },
-      { text: "Responsive layout with Tailwind CSS" },
-      { text: "State management with React Hooks" },
-      { text: "Dynamic content rendering" },
-      { text: "Customizable styles and components" },
+      {
+        text: "Add Employee: Users can add a new employee with details such as name, position, etc.",
+      },
+      {
+        text: "Read Employee: Users can view a list of all employees currently stored.",
+      },
+      {
+        text: "Edit Employee: Users can update the details of existing employees.",
+      },
+      { text: "Delete Employee: Users can remove employees from the system." },
+      {
+        text: "Local Storage Persistence: Employee data is stored locally, allowing the application to maintain state across page refreshes.",
+      },
     ],
-    source:
-      "https://github.com/Mark-Alexis-Posadas/react-typescript-mini-projects/blob/main/src/pages/Theme/index.tsx",
+    source: "https://github.com/Mark-Alexis-Posadas/employee-list",
     demo: "https://react-typescript-projects-three.vercel.app/theme",
     buttons: ["Demo", "Source"],
-    tags: ["react", "typescript", "tailwind CSS"],
+    tags: ["react js", "uuid", "fontawesome icon", "tailwind CSS"],
   },
 ];
 
