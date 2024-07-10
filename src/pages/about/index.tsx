@@ -22,9 +22,7 @@ import {
 } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 
-import { ToggleThemeType } from "../../types/toggle-theme";
-
-export default function About({ toggleTheme }: ToggleThemeType) {
+export default function About() {
   const renderIcon = (iconName: string) => {
     switch (iconName) {
       case "FaHtml5":
@@ -36,7 +34,7 @@ export default function About({ toggleTheme }: ToggleThemeType) {
       case "FaSass":
         return <FaSass color="#CC6699" />;
       case "SiBem":
-        return <SiBem color={toggleTheme ? "#fff" : "#000000"} />;
+        return <SiBem color="dark:text-white text-black" />;
       case "FaBootstrap":
         return <FaBootstrap color="#7952B3" />;
       case "FaGulp":
@@ -44,7 +42,7 @@ export default function About({ toggleTheme }: ToggleThemeType) {
       case "FaGit":
         return <FaGit color="#F05032" />;
       case "FaGithub":
-        return <FaGithub color={toggleTheme ? "#fff" : "#000000"} />;
+        return <FaGithub color="dark:text-white text-black" />;
       case "FaReact":
         return <FaReact color="#61DAFB" />;
       case "SiStyledcomponents":
@@ -61,7 +59,7 @@ export default function About({ toggleTheme }: ToggleThemeType) {
         return <SiReactquery color="#00D68F" />;
 
       case "TbSettingsCog":
-        return <TbSettingsCog color={toggleTheme ? "#fff" : "#000000"} />;
+        return <TbSettingsCog color="dark:text-white text-black" />;
 
       default:
         return null;
@@ -98,9 +96,8 @@ export default function About({ toggleTheme }: ToggleThemeType) {
         technologies to build responsive and visually appealing websites.
       </b>
       <ul
-        className={`grid grid-cols-4 gap-3 my-5 ${
-          toggleTheme ? "dark:text-[#999]" : "dark:text-[#666]"
-        }`}
+        className="grid grid-cols-4 gap-3 my-5 
+          toggleTheme  text-[#999] dark:text-[#666]"
       >
         {skillsData.map((item, index) =>
           index <= 11 ? (
@@ -114,9 +111,8 @@ export default function About({ toggleTheme }: ToggleThemeType) {
 
       <b>Currently learning these technologies:</b>
       <ul
-        className={`grid grid-cols-4 gap-3 my-5 ${
-          toggleTheme ? "dark:text-[#999]" : "dark:text-[#666]"
-        }`}
+        className="grid grid-cols-4 gap-3 my-5 ${
+          toggleTheme text-[#999] dark:text-[#666]"
       >
         {skillsData.map((item, index) =>
           index > 11 ? (
