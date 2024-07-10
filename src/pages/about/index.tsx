@@ -21,8 +21,9 @@ import {
   SiReactquery,
 } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { ToggleThemeType } from "../../types/toggle-theme";
 
-export default function About() {
+export default function About({ toggleTheme }: ToggleThemeType) {
   const renderIcon = (iconName: string) => {
     switch (iconName) {
       case "FaHtml5":
@@ -34,7 +35,7 @@ export default function About() {
       case "FaSass":
         return <FaSass color="#CC6699" />;
       case "SiBem":
-        return <SiBem color="dark:text-white text-black" />;
+        return <SiBem color={toggleTheme ? "#fff" : "#000000"} />;
       case "FaBootstrap":
         return <FaBootstrap color="#7952B3" />;
       case "FaGulp":
@@ -42,7 +43,7 @@ export default function About() {
       case "FaGit":
         return <FaGit color="#F05032" />;
       case "FaGithub":
-        return <FaGithub color="dark:text-white text-black" />;
+        return <FaGithub color={toggleTheme ? "#fff" : "#000000"} />;
       case "FaReact":
         return <FaReact color="#61DAFB" />;
       case "SiStyledcomponents":
@@ -59,7 +60,7 @@ export default function About() {
         return <SiReactquery color="#00D68F" />;
 
       case "TbSettingsCog":
-        return <TbSettingsCog color="dark:text-white text-black" />;
+        return <TbSettingsCog color={toggleTheme ? "#fff" : "#000000"} />;
 
       default:
         return null;

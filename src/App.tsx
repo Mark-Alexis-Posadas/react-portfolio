@@ -32,7 +32,7 @@ export default function App() {
         handleToggleTheme={handleToggleTheme}
       />
       <main className="md:ml-[40%] w-full min-h-screen px-5 md:px-10 lg:px-20">
-        <About />
+        <About toggleTheme={toggleTheme} />
         <Experience />
         <Projects />
       </main>
