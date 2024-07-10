@@ -11,16 +11,18 @@ export default function App() {
   });
 
   const handleToggleTheme = () => {
-    setToggleTheme((pT) => {
-      const newTheme = !pT;
-      localStorage.setItem("toggleTheme", JSON.stringify(newTheme));
-      return newTheme;
-    });
-    document.body.classList.toggle("dark");
+    const newTheme = !toggleTheme;
+    setToggleTheme(newTheme);
+    localStorage.setItem("toggleTheme", JSON.stringify(newTheme));
   };
 
   useEffect(() => {
-    localStorage.setItem("toggleTheme", JSON.stringify(toggleTheme));
+    // Apply theme on initial load
+    if (toggleTheme) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
   }, [toggleTheme]);
 
   return (

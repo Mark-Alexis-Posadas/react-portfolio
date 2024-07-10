@@ -1,6 +1,4 @@
 import { NavbarTypes } from "../../types/navbar";
-import { ToggleThemeType } from "../../types/toggle-theme";
-
 interface NavbarProps {
   navbarData: NavbarTypes[];
 }
