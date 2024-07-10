@@ -11,33 +11,30 @@ export default function App() {
   });
 
   const handleToggleTheme = () => {
-    setToggleTheme((pT) => {
-      const newTheme = !pT;
-      localStorage.setItem("toggleTheme", JSON.stringify(newTheme));
-      return newTheme;
-    });
+    const newTheme = !toggleTheme;
+    setToggleTheme(newTheme);
+    localStorage.setItem("toggleTheme", JSON.stringify(newTheme));
   };
 
   useEffect(() => {
-    localStorage.setItem("toggleTheme", JSON.stringify(toggleTheme));
+    // Apply theme on initial load
+    if (toggleTheme) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
   }, [toggleTheme]);
 
   return (
-    <div
-      className={`md:flex ${
-        toggleTheme
-          ? "dark:bg-black dark:text-white"
-          : "dark:bg-white dark:text-black"
-      }`}
-    >
+    <div className="md:flex bg-white text-black dark:bg-black dark:text-white">
       <Sidebar
         toggleTheme={toggleTheme}
         handleToggleTheme={handleToggleTheme}
       />
       <main className="md:ml-[40%] w-full min-h-screen px-5 md:px-10 lg:px-20">
         <About toggleTheme={toggleTheme} />
-        <Experience toggleTheme={toggleTheme} />
-        <Projects toggleTheme={toggleTheme} />
+        <Experience />
+        <Projects />
       </main>
     </div>
   );

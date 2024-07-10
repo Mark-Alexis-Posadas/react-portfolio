@@ -21,7 +21,6 @@ import {
   SiReactquery,
 } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
-
 import { ToggleThemeType } from "../../types/toggle-theme";
 
 export default function About({ toggleTheme }: ToggleThemeType) {
@@ -98,9 +97,8 @@ export default function About({ toggleTheme }: ToggleThemeType) {
         technologies to build responsive and visually appealing websites.
       </b>
       <ul
-        className={`grid grid-cols-4 gap-3 my-5 ${
-          toggleTheme ? "dark:text-[#999]" : "dark:text-[#666]"
-        }`}
+        className="grid grid-cols-4 gap-3 my-5 
+          toggleTheme  text-[#999] dark:text-[#666]"
       >
         {skillsData.map((item, index) =>
           index <= 11 ? (
@@ -114,9 +112,8 @@ export default function About({ toggleTheme }: ToggleThemeType) {
 
       <b>Currently learning these technologies:</b>
       <ul
-        className={`grid grid-cols-4 gap-3 my-5 ${
-          toggleTheme ? "dark:text-[#999]" : "dark:text-[#666]"
-        }`}
+        className="grid grid-cols-4 gap-3 my-5 ${
+          toggleTheme text-[#999] dark:text-[#666]"
       >
         {skillsData.map((item, index) =>
           index > 11 ? (

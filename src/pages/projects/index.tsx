@@ -6,9 +6,8 @@ import {
 import projectsData from "../../data/projects";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { ToggleThemeType } from "../../types/toggle-theme";
 
-export default function Projects({ toggleTheme }: ToggleThemeType) {
+export default function Projects() {
   return (
     <section
       className="grid grid-cols-1 md:grid-cols-2 gap-3 py-10"
@@ -18,11 +17,7 @@ export default function Projects({ toggleTheme }: ToggleThemeType) {
         {projectsData.map((data) => (
           <div
             key={data.id}
-            className={`flex flex-col rounded transition transform duration-300 hover:shadow-lg hover:scale-105 p-5 ${
-              toggleTheme
-                ? "dark:bg-[#1f1f1f] dark:text-[#999]"
-                : "dark:bg-white shadow-custom-shadow"
-            }`}
+            className="flex flex-col rounded transition transform duration-300 hover:shadow-lg hover:scale-105 p-5 dark:bg-[#1f1f1f] dark:text-[#999] bg-white shadow-custom-shadow"
           >
             <header className="flex items-center justify-between">
               <FontAwesomeIcon className="text-2xl" icon={faFolder} />
@@ -40,11 +35,7 @@ export default function Projects({ toggleTheme }: ToggleThemeType) {
                 </a>
               </div>
             </header>
-            <h1
-              className={`${
-                toggleTheme && "dark:text-white"
-              } font-bold text-xl my-3`}
-            >
+            <h1 className="dark:text-white font-bold text-xl my-3">
               {data.pageTitle}
             </h1>
 
