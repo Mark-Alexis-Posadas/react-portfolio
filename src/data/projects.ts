@@ -97,7 +97,7 @@ const projectsData: ProjectType[] = [
       },
     ],
     source: "https://github.com/Mark-Alexis-Posadas/employee-list",
-    demo: "https://react-typescript-projects-three.vercel.app/theme",
+    demo: "https://employee-management-system-ruby.vercel.app/",
     buttons: ["Demo", "Source"],
     tags: ["react js", "uuid", "fontawesome icon", "tailwind CSS"],
   },
