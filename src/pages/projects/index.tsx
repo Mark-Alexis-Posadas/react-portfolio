@@ -56,7 +56,7 @@ export default function Projects() {
         <button className="flex items-center justify-center gap-3">
           <a
             href="https://react-typescript-projects-three.vercel.app/"
-            className="flex items-center gap-3"
+            className="flex items-center gap-3 hover:underline"
             target="_blank"
           >
             View all projects here
