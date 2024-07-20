@@ -72,7 +72,7 @@ export const skillsData: Skills[] = [
 
   {
     id: uuidv4(),
-    name: "Redux",
+    name: "Redux Toolkit",
     icon: "SiRedux",
   },
 
@@ -81,10 +81,11 @@ export const skillsData: Skills[] = [
     name: "Typescript",
     icon: "SiTypescript",
   },
+
   {
     id: uuidv4(),
-    name: "React Query",
-    icon: "SiReactquery",
+    name: "RTK Query",
+    icon: "SiRedux",
   },
   {
     id: uuidv4(),
