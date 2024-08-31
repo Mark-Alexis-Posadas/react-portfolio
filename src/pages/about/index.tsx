@@ -9,6 +9,7 @@ import {
   FaGit,
   FaGithub,
   FaReact,
+  FaNodeJs,
 } from "react-icons/fa";
 import { TbSettingsCog } from "react-icons/tb";
 
@@ -19,6 +20,8 @@ import {
   SiRedux,
   SiTypescript,
   SiReactquery,
+  SiMongodb,
+  SiExpress,
 } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { ToggleThemeType } from "../../types/toggle-theme";
@@ -58,7 +61,14 @@ export default function About({ toggleTheme }: ToggleThemeType) {
         return <SiTypescript color="#3178C6" />;
       case "SiReactquery":
         return <SiReactquery color="#00D68F" />;
+      case "SiMongodb":
+        return <SiMongodb color="#00D68F" />;
 
+      case "SiExpress":
+        return <SiExpress color="#00D68F" />;
+
+      case "FaNodeJs":
+        return <FaNodeJs color="#00D68F" />;
       case "TbSettingsCog":
         return <TbSettingsCog color={toggleTheme ? "#fff" : "#000000"} />;
 
