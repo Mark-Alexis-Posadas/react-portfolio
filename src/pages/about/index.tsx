@@ -65,7 +65,7 @@ export default function About({ toggleTheme }: ToggleThemeType) {
         return <SiMongodb color="#4DB33D" />;
 
       case "SiExpress":
-        return <SiExpress color="#000000" />;
+        return <SiExpress color={toggleTheme ? "#fff" : "#000000"} />;
 
       case "FaNodeJs":
         return <FaNodeJs color="#8CC84B" />;
