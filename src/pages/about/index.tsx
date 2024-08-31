@@ -62,13 +62,14 @@ export default function About({ toggleTheme }: ToggleThemeType) {
       case "SiReactquery":
         return <SiReactquery color="#00D68F" />;
       case "SiMongodb":
-        return <SiMongodb color="#00D68F" />;
+        return <SiMongodb color="#4DB33D" />;
 
       case "SiExpress":
-        return <SiExpress color="#00D68F" />;
+        return <SiExpress color="#000000" />;
 
       case "FaNodeJs":
-        return <FaNodeJs color="#00D68F" />;
+        return <FaNodeJs color="#8CC84B" />;
+
       case "TbSettingsCog":
         return <TbSettingsCog color={toggleTheme ? "#fff" : "#000000"} />;
 
