@@ -87,6 +87,25 @@ export const skillsData: Skills[] = [
     name: "RTK Query",
     icon: "SiRedux",
   },
+
+  {
+    id: uuidv4(),
+    name: "Mongo DB",
+    icon: "SiMongodb",
+  },
+
+  {
+    id: uuidv4(),
+    name: "Express JS",
+    icon: "SiExpress",
+  },
+
+  {
+    id: uuidv4(),
+    name: "Node JS",
+    icon: "FaNodeJs",
+  },
+
   {
     id: uuidv4(),
     name: "Api Integration",
