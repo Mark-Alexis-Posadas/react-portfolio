@@ -79,7 +79,7 @@ export default function About({ toggleTheme }: ToggleThemeType) {
   };
   return (
     <section className="py-10" id="about">
-      <p className="text-[#666] my-4">
+      <p className="text-[#666] mb-4">
         Hello! I'm Mark Alexis Posadas, a passionate front-end developer with
         over 3 years of experience. My journey into the world of front-end
         development began in 2017, driven by a fascination with creating
