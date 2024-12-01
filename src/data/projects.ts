@@ -6,16 +6,39 @@ const projectsData: ProjectType[] = [
     id: uuidv4(),
     pageTitle: "Blog Admin Panel",
     description:
-      "This is a Todo List application built with React, Tailwind CSS, and React Hooks. Users can add, edit, and delete tasks.",
+      "The Blog Admin Panel is a robust and user-friendly web application designed for efficient management of blog content. Built with modern web technologies such as React.js, Tailwind CSS, and Redux Toolkit, this platform offers a seamless and interactive interface for administrators to manage blog posts with full CRUD (Create, Read, Update, Delete) functionality.",
     features: [
-      { text: "Task management (add, edit, delete)" },
-      { text: "Responsive layout with Tailwind CSS" },
-      { text: "State management with React Hooks" },
-      { text: "Dynamic content rendering" },
-      { text: "Customizable styles and components" },
+      {
+        text: "Developed a comprehensive Blog Admin Panel with full CRUD functionality (Create, Read, Update, Delete) for managing blog posts.",
+      },
+      {
+        text: "Utilized React.js, React Hooks, and Tailwind CSS to build a responsive and interactive user interface, ensuring state management via localStorage for persistent data storage.",
+      },
+      {
+        text: "Added key features, including an authentication system for secure access, allowing user login and registration.",
+      },
+      {
+        text: "Implemented functionality to view, edit, and delete blog posts with real-time updates using Redux Toolkit Query.",
+      },
+      {
+        text: "Enhanced data integrity and user experience with form validation using Formik and Yup.",
+      },
+      {
+        text: "Used dynamic routing with React Router to navigate between different sections seamlessly.",
+      },
+      {
+        text: "Integrated MySQL2, Node.js, and Express.js for efficient backend development and API integration.",
+      },
+      {
+        text: "Styled the application with Tailwind CSS for a clean and modern design.",
+      },
+      {
+        text: "Implemented robust authentication and authorization to enhance security.",
+      },
     ],
-    source: "https://github.com/Mark-Alexis-Posadas/todo-list-app",
-    demo: "https://todo-list-app-omega-murex.vercel.app/",
+
+    source: "https://github.com/Mark-Alexis-Posadas/blog-admin-panel",
+    demo: "https://github.com/Mark-Alexis-Posadas/blog-admin-panel",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
   },
@@ -31,8 +54,8 @@ const projectsData: ProjectType[] = [
       { text: "Dynamic content rendering" },
       { text: "Customizable styles and components" },
     ],
-    source: "https://github.com/Mark-Alexis-Posadas/todo-list-app",
-    demo: "https://todo-list-app-omega-murex.vercel.app/",
+    source: "https://github.com/Mark-Alexis-Posadas/blog-site",
+    demo: "https://github.com/Mark-Alexis-Posadas/blog-site",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
   },
