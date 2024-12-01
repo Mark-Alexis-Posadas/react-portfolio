@@ -4,6 +4,40 @@ import { ProjectType } from "../types/projects";
 const projectsData: ProjectType[] = [
   {
     id: uuidv4(),
+    pageTitle: "Blog Admin Panel",
+    description:
+      "This is a Todo List application built with React, Tailwind CSS, and React Hooks. Users can add, edit, and delete tasks.",
+    features: [
+      { text: "Task management (add, edit, delete)" },
+      { text: "Responsive layout with Tailwind CSS" },
+      { text: "State management with React Hooks" },
+      { text: "Dynamic content rendering" },
+      { text: "Customizable styles and components" },
+    ],
+    source: "https://github.com/Mark-Alexis-Posadas/todo-list-app",
+    demo: "https://todo-list-app-omega-murex.vercel.app/",
+    buttons: ["Demo", "Source"],
+    tags: ["react", "typescript", "tailwind CSS"],
+  },
+  {
+    id: uuidv4(),
+    pageTitle: "Blog Site",
+    description:
+      "This is a Todo List application built with React, Tailwind CSS, and React Hooks. Users can add, edit, and delete tasks.",
+    features: [
+      { text: "Task management (add, edit, delete)" },
+      { text: "Responsive layout with Tailwind CSS" },
+      { text: "State management with React Hooks" },
+      { text: "Dynamic content rendering" },
+      { text: "Customizable styles and components" },
+    ],
+    source: "https://github.com/Mark-Alexis-Posadas/todo-list-app",
+    demo: "https://todo-list-app-omega-murex.vercel.app/",
+    buttons: ["Demo", "Source"],
+    tags: ["react", "typescript", "tailwind CSS"],
+  },
+  {
+    id: uuidv4(),
     pageTitle: "TodoList App",
     description:
       "This is a Todo List application built with React, Tailwind CSS, and React Hooks. Users can add, edit, and delete tasks.",
