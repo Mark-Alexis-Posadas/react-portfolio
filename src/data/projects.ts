@@ -79,15 +79,17 @@ const projectsData: ProjectType[] = [
 
   {
     id: uuidv4(),
-    pageTitle: "Tab",
+    pageTitle: "Note taking app",
     description:
-      "This project is a tabbed interface built with React, utilizing Tailwind CSS for styling and React Hooks for state management. The project provides a simple and intuitive way to navigate between different sections or content within a single page application.",
+      "This Note Taking app is built with React, styled with Tailwind CSS, and uses React Hooks for state management. The application provides an efficient way to create, edit, and organize your notes with an intuitive and dynamic interface.",
     features: [
-      { text: "Tabbed Navigation" },
-      { text: "Responsive layout with Tailwind CSS" },
-      { text: "State management with React Hooks" },
+      { text: "Create, delete, and edit notes" },
+      { text: "Tabbed Navigation for easy organization" },
+      { text: "Responsive design with Tailwind CSS" },
+      { text: "Real-time updates with React Hooks" },
       { text: "Dynamic content rendering" },
       { text: "Customizable styles and components" },
+      { text: "Alerts for note status notifications" },
     ],
     source:
       "https://github.com/Mark-Alexis-Posadas/react-typescript-mini-projects/blob/main/src/pages/Tab/index.tsx",
