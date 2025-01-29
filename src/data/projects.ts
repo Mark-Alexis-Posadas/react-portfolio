@@ -91,9 +91,8 @@ const projectsData: ProjectType[] = [
       { text: "Customizable styles and components" },
       { text: "Alerts for note status notifications" },
     ],
-    source:
-      "https://github.com/Mark-Alexis-Posadas/react-typescript-mini-projects/blob/main/src/pages/Tab/index.tsx",
-    demo: "https://react-typescript-projects-three.vercel.app/tab",
+    source: "https://github.com/Mark-Alexis-Posadas/react-notes",
+    demo: "https://react-notes-wine.vercel.app/",
     buttons: ["Demo", "Source"],
     tags: ["react", "typescript", "tailwind CSS"],
   },
