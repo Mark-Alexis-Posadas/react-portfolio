@@ -99,43 +99,6 @@ const projectsData: ProjectType[] = [
 
   {
     id: uuidv4(),
-    pageTitle: "Accordion",
-
-    description:
-      "This project demonstrates an accordion component built using React, Tailwind CSS for styling, and React Hooks for state management. It allows users to expand and collapse sections to show and hide content.",
-    features: [
-      { text: "Expandable and collapsible sections" },
-      { text: "Responsive layout with Tailwind CSS" },
-      { text: "State management with React Hooks" },
-      { text: "Dynamic content rendering" },
-      { text: "Customizable styles and components" },
-    ],
-    source:
-      "https://github.com/Mark-Alexis-Posadas/react-typescript-mini-projects/blob/main/src/pages/Accordion/index.tsx",
-    demo: "https://react-typescript-projects-three.vercel.app/accordion",
-    buttons: ["Demo", "Source"],
-    tags: ["react", "typescript", "tailwind CSS"],
-  },
-
-  {
-    id: uuidv4(),
-    pageTitle: "Carousel",
-    description:
-      "This project is a carousel component built using React, Tailwind CSS, and React Hooks. It allows users to navigate through a set of images or content.",
-    features: [
-      { text: "Image/content sliding" },
-      { text: "Responsive layout with Tailwind CSS" },
-      { text: "State management with React Hooks" },
-      { text: "Customizable styles and components" },
-    ],
-    source:
-      "https://github.com/Mark-Alexis-Posadas/react-typescript-mini-projects/blob/main/src/pages/Carousel/index.tsx",
-    demo: "https://react-typescript-projects-three.vercel.app/carousel",
-    buttons: ["Demo", "Source"],
-    tags: ["react", "typescript", "tailwind CSS"],
-  },
-  {
-    id: uuidv4(),
     pageTitle: "Employee Management System",
     description:
       "This project implements a simple Employee Management System where users can add, read, edit, and delete employee records. The application also utilizes local storage to persist employee data across sessions.",
