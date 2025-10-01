@@ -1,12 +1,28 @@
 import { v4 as uuidv4 } from "uuid";
 import { Experience } from "../types/experience";
+
 const experienceData: Experience[] = [
+  {
+    id: uuidv4(),
+    title: "Freelance Developer",
+    company: "Self-Employed",
+    date: "April 2023 – Present",
+    address: "Remote",
+    jobDescriptions: [
+      "Developing responsive and SEO-friendly websites using React, JavaScript, and modern front-end practices.",
+      "Building scalable components with React and Tailwind CSS to improve reusability and maintainability.",
+      "Collaborating with clients to gather requirements, provide technical recommendations, and deliver tailored solutions.",
+      "Implementing performance optimization techniques to enhance website speed and user experience.",
+      "Integrating APIs and third-party services to extend web application functionality.",
+      "Managing end-to-end project lifecycles, including planning, development, testing, and deployment.",
+    ],
+  },
   {
     id: uuidv4(),
     title: "Front-End Developer",
     company: "Ipsum.ph",
     date: "June 2021 - January 2023",
-    address: " 18B Marilag Street Brgy. U.P. Village Quezon City 1101",
+    address: "18B Marilag Street Brgy. U.P. Village Quezon City 1101",
     jobDescriptions: [
       "Develop SEO-friendly, well-structured responsive website experiences across the home page, landing pages, and unstructured content.",
       "Maintain and update website to ensure it remains SEO-friendly and responsive.",
@@ -20,7 +36,6 @@ const experienceData: Experience[] = [
       "Recommend improvements on e-commerce websites as necessary, including design, functionality, and user experience.",
     ],
   },
-
   {
     id: uuidv4(),
     title: "Junior Front-End Developer",

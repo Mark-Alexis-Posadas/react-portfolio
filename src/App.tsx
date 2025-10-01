@@ -17,7 +17,6 @@ export default function App() {
   };
 
   useEffect(() => {
-    // Apply theme on initial load
     if (toggleTheme) {
       document.body.classList.add("dark");
     } else {
