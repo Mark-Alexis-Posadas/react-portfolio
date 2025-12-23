@@ -23,3 +23,17 @@
     rgba(31, 31, 31, 1)
   ); /* for dark mode */
 }
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  animation-name: fall;
+  animation-timing-function: linear;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
