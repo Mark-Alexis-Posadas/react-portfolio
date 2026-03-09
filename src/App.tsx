@@ -3,7 +3,6 @@ import Sidebar from "./components/sidebar";
 import About from "./pages/about";
 import Experience from "./pages/experience";
 import Projects from "./pages/projects";
-import Snow from "./pages/Snow";
 
 export default function App() {
   const [toggleTheme, setToggleTheme] = useState<boolean>(() => {
@@ -27,8 +26,6 @@ export default function App() {
 
   return (
     <div className="md:flex bg-white text-black dark:bg-black dark:text-white">
-      <Snow isDark={toggleTheme} />
-
       <Sidebar
         toggleTheme={toggleTheme}
         handleToggleTheme={handleToggleTheme}
