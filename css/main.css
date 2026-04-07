@@ -17,13 +17,20 @@ body {
 .glass:hover {
   transform: translateY(-5px);
 }
-
 .badge {
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* .badge {
   padding: 6px 12px;
   border-radius: 999px;
   font-size: 12px;
   background: rgba(0, 0, 0, 0.05);
-}
+} */
 
 .dark .badge {
   background: rgba(255, 255, 255, 0.05);
