@@ -1,19 +1,258 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mark Alexis Posadas - Portfolio Website</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <title>Mark Alexis Posadas | Frontend Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      @keyframes fadeUp {
+        0% {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-up {
+        animation: fadeUp 0.8s ease forwards;
+      }
+
+      .delay-1 {
+        animation-delay: 0.2s;
+      }
+      .delay-2 {
+        animation-delay: 0.4s;
+      }
+      .delay-3 {
+        animation-delay: 0.6s;
+      }
+
+      .glow {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(99, 102, 241, 0.3) 0%,
+          transparent 70%
+        );
+        filter: blur(80px);
+        z-index: 0;
+      }
+    </style>
   </head>
-  <body class="font-jost">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+
+  <body class="bg-black text-white overflow-x-hidden">
+    <!-- BACKGROUND GLOW -->
+    <div class="glow top-[-100px] left-[-100px]"></div>
+    <div class="glow bottom-[-120px] right-[-120px]"></div>
+
+    <section
+      class="min-h-screen flex items-center justify-center px-6 relative z-10"
+    >
+      <div class="max-w-7xl w-full grid md:grid-cols-2 gap-16 items-center">
+        <!-- LEFT -->
+        <div>
+          <p class="text-indigo-400 text-sm tracking-widest uppercase fade-up">
+            Frontend Developer
+          </p>
+
+          <h1
+            class="text-4xl md:text-6xl font-bold leading-tight mt-4 fade-up delay-1"
+          >
+            Hi, I'm
+            <span
+              class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text"
+            >
+              Mark Alexis Posadas
+            </span>
+          </h1>
+
+          <p
+            class="mt-6 text-gray-300 text-lg max-w-xl leading-relaxed fade-up delay-2"
+          >
+            I craft modern, scalable, and high-performance web applications
+            using React, Next.js, and TypeScript — focused on clean UI, smooth
+            UX, and real-world impact.
+          </p>
+
+          <p class="mt-4 text-gray-400 fade-up delay-2">
+            Available for
+            <span class="text-indigo-400 font-medium">freelance</span>,
+            <span class="text-indigo-400 font-medium">projects</span>, and
+            <span class="text-indigo-400 font-medium">full-time roles</span>.
+          </p>
+
+          <!-- BUTTONS -->
+          <div class="mt-10 flex flex-wrap gap-4 fade-up delay-3">
+            <!-- Hire Me -->
+            <a
+              href="mailto:markalexisposadas@gmail.com?subject=Hiring%20Inquiry%20-%20Frontend%20Developer"
+              class="px-7 py-3 bg-indigo-500 hover:bg-indigo-600 rounded-xl font-medium transition shadow-lg shadow-indigo-500/30 hover:scale-105"
+            >
+              🚀 Hire Me
+            </a>
+
+            <!-- View Projects -->
+            <a
+              href="https://github.com/Mark-Alexis-Posadas"
+              target="_blank"
+              class="px-7 py-3 border border-gray-700 hover:border-indigo-400 rounded-xl transition hover:bg-white/5"
+            >
+              View Projects
+            </a>
+
+            <!-- Download CV -->
+            <a
+              href="/MarkAlexisPosadas_FrontendDeveloper_Resume.pdf"
+              download
+              class="px-7 py-3 bg-white text-black hover:bg-gray-200 rounded-xl font-medium transition shadow-lg hover:scale-105"
+            >
+              📄 Download CV
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT CARD -->
+        <div class="relative fade-up delay-2">
+          <!-- glow -->
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 blur-2xl rounded-3xl"
+          ></div>
+
+          <div
+            class="relative bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-2xl"
+          >
+            <h2 class="text-xl font-semibold mb-6 text-indigo-300">
+              Tech Stack
+            </h2>
+
+            <div class="space-y-6 text-sm">
+              <!-- FRONTEND -->
+              <div>
+                <p class="text-gray-400 mb-2 uppercase tracking-wider text-xs">
+                  Frontend
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >React</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >Next.js</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >TypeScript</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >JavaScript</span
+                  >
+                </div>
+              </div>
+
+              <!-- STYLING -->
+              <div>
+                <p class="text-gray-400 mb-2 uppercase tracking-wider text-xs">
+                  Styling
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >Tailwind</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >SCSS</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >CSS3</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >Responsive Design</span
+                  >
+                </div>
+              </div>
+
+              <!-- STATE / DATA -->
+              <div>
+                <p class="text-gray-400 mb-2 uppercase tracking-wider text-xs">
+                  State & Data
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >Redux Toolkit</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >Zustand</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >React Query</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >REST API</span
+                  >
+                </div>
+              </div>
+
+              <!-- BACKEND -->
+              <div>
+                <p class="text-gray-400 mb-2 uppercase tracking-wider text-xs">
+                  Backend
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >Node.js</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >Express.js</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >MongoDB</span
+                  >
+                </div>
+              </div>
+
+              <!-- TOOLS -->
+              <div>
+                <p class="text-gray-400 mb-2 uppercase tracking-wider text-xs">
+                  Tools
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >Git</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >GitHub</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-lg hover:bg-indigo-500/20 transition"
+                    >Vite</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
