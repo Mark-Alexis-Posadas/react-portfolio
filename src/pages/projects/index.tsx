@@ -147,8 +147,14 @@ export default function Projects() {
           </div>
 
           {/* Bottom Accent */}
-          <div
-            className="
+          <a
+            href={data.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View live demo"
+          >
+            <div
+              className="
             mt-auto
             flex items-center
             text-sm
@@ -162,18 +168,19 @@ export default function Projects() {
             dark:text-zinc-500
             dark:group-hover:text-white
             "
-          >
-            View Project
-            <FontAwesomeIcon
-              icon={faArrowRight}
-              className="
+            >
+              View Project
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className="
               ml-2
               text-xs
               transition-transform
               group-hover:translate-x-1
               "
-            />
-          </div>
+              />
+            </div>
+          </a>
         </article>
       ))}
 
