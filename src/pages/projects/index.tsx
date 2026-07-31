@@ -3,64 +3,218 @@ import {
   faArrowUpRightFromSquare,
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
-import projectsData from "../../data/projects";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import projectsData from "../../data/projects";
 
 export default function Projects() {
   return (
-    <section className="grid grid-cols-1 gap-3 py-10" id="projects">
-      <>
-        {projectsData.map((data) => (
+    <section
+      className="
+      grid 
+      grid-cols-1 
+      gap-6 
+      py-10 
+      md:grid-cols-2
+      items-stretch
+      "
+      id="projects"
+    >
+      {projectsData.map((data) => (
+        <article
+          key={data.id}
+          className="
+              group relative flex flex-col overflow-hidden rounded-2xl
+              border border-zinc-200 bg-white p-6
+              transition-all duration-300 ease-out
+
+              hover:-translate-y-2
+              hover:border-zinc-300
+              hover:shadow-xl
+
+              dark:border-zinc-800
+              dark:bg-[#181818]
+              dark:hover:border-zinc-700
+              "
+        >
+          {/* Top Gradient Line */}
           <div
-            key={data.id}
-            className="flex flex-col rounded transition transform duration-300 hover:scale-105 p-5 dark:bg-[#1f1f1f] dark:text-[#999]  hover:bg-white hover:shadow-custom-shadow"
-          >
-            <header className="flex items-center justify-between">
-              <FontAwesomeIcon className="text-2xl" icon={faFolder} />
+            className="
+            absolute left-0 top-0 h-1 w-full
+            bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
+            opacity-0 transition-opacity duration-300
+            group-hover:opacity-100
+            "
+          />
 
-              <div className="flex items-center gap-3">
-                <a href={data.source} target="_blank">
-                  <FontAwesomeIcon className="text-2xl" icon={faGithub} />
-                </a>
+          <header className="flex items-center justify-between">
+            {/* Folder Icon */}
+            <div
+              className="
+              flex h-12 w-12 items-center justify-center
+              rounded-xl
+              bg-zinc-100
+              transition-all duration-300
+              group-hover:bg-black
+              dark:bg-zinc-800
+              dark:group-hover:bg-white
+              "
+            >
+              <FontAwesomeIcon
+                icon={faFolder}
+                className="
+                text-xl
+                text-zinc-600
+                transition-colors
+                group-hover:text-white
+                dark:text-zinc-300
+                dark:group-hover:text-black
+                "
+              />
+            </div>
 
-                <a href={data.demo} target="_blank">
-                  <FontAwesomeIcon
-                    className="text-2xl"
-                    icon={faArrowUpRightFromSquare}
-                  />
-                </a>
-              </div>
-            </header>
-            <h1 className="dark:text-white font-bold text-xl my-3">
+            {/* Links */}
+            <div className="flex items-center gap-3">
+              <a
+                href={data.source}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View source on GitHub"
+                className="
+                flex h-9 w-9 items-center justify-center
+                rounded-lg
+                bg-zinc-100
+                text-zinc-600
+                transition-all
+                hover:bg-black
+                hover:text-white
+                dark:bg-zinc-800
+                dark:text-zinc-300
+                dark:hover:bg-white
+                dark:hover:text-black
+                "
+              >
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+
+              <a
+                href={data.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View live demo"
+                className="
+                flex h-9 w-9 items-center justify-center
+                rounded-lg
+                bg-zinc-100
+                text-zinc-600
+                transition-all
+                hover:bg-black
+                hover:text-white
+                dark:bg-zinc-800
+                dark:text-zinc-300
+                dark:hover:bg-white
+                dark:hover:text-black
+                "
+              >
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+              </a>
+            </div>
+          </header>
+
+          {/* Content */}
+          <div className="mt-6 flex-1">
+            <h2
+              className="
+              text-xl font-bold tracking-tight
+              text-zinc-900
+              dark:text-white
+              "
+            >
               {data.pageTitle}
-            </h1>
+            </h2>
 
-            <p className="text-[#666] mb-auto pb-3">{data.description}</p>
-            {/* <ul className="text-[#666] mt-auto">
-              {data.features.map((item, index) => (
-                <li key={index}>- {item.text}</li>
-              ))}
-            </ul> */}
-            {/* <ul className="flex items-center gap-3">
-            <FaReact className="text-2xl text-[#61DBFB]" />
-            <SiTypescript className="text-2xl text-[#007acc]" />
-            <RiTailwindCssFill className="text-2xl text-[#06b6d4]" />
-          </ul> */}
+            <p
+              className="
+              my-3
+              text-sm
+              leading-7
+              text-zinc-600
+              dark:text-zinc-400
+              "
+            >
+              {data.description}
+            </p>
           </div>
-        ))}
 
-        <button className="flex items-center justify-center gap-3">
+          {/* Bottom Accent */}
           <a
-            href="https://react-typescript-projects-three.vercel.app/"
-            className="flex items-center gap-3 hover:underline"
+            href={data.demo}
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View live demo"
           >
-            View all projects here
-            <FontAwesomeIcon icon={faArrowRight} />
+            <div
+              className="
+            mt-auto
+            flex items-center
+            text-sm
+            font-medium
+            text-zinc-500
+
+            transition-colors
+
+            group-hover:text-black
+
+            dark:text-zinc-500
+            dark:group-hover:text-white
+            "
+            >
+              View Project
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className="
+              ml-2
+              text-xs
+              transition-transform
+              group-hover:translate-x-1
+              "
+              />
+            </div>
           </a>
-        </button>
-      </>
+        </article>
+      ))}
+
+      {/* View All */}
+      <a
+        href="https://react-typescript-projects-three.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+        group col-span-full
+        mt-2
+        flex items-center justify-center gap-2
+
+        text-sm font-medium
+        text-zinc-600
+
+        transition-colors
+
+        hover:text-black
+
+        dark:text-zinc-400
+        dark:hover:text-white
+        "
+      >
+        View all projects
+        <FontAwesomeIcon
+          icon={faArrowRight}
+          className="
+          text-xs
+          transition-transform
+          group-hover:translate-x-1
+          "
+        />
+      </a>
     </section>
   );
 }
