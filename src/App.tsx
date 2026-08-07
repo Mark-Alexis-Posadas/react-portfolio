@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Sidebar from "./components/sidebar";
 import About from "./pages/about";
 import Experience from "./pages/experience";
@@ -32,7 +32,7 @@ export default function App() {
         handleToggleTheme={handleToggleTheme}
       />
       <main className="md:ml-[40%] w-full min-h-screen px-5 md:px-10 lg:px-20">
-        <About toggleTheme={toggleTheme} />
+        <About />
         <Experience />
         <Projects />
       </main>

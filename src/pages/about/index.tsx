@@ -28,9 +28,7 @@ import {
 
 import { RiTailwindCssFill } from "react-icons/ri";
 
-import { ToggleThemeType } from "../../types/toggle-theme";
-
-export default function About({ toggleTheme }: ToggleThemeType) {
+export default function About() {
   const renderIcon = (iconName: string) => {
     const icons = {
       FaHtml5: <FaHtml5 className="text-[#E34F26]" />,
