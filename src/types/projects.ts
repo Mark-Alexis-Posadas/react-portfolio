@@ -1,10 +1,10 @@
 export interface ProjectType {
   id: string;
   pageTitle: string;
-  description: string;
-  features: { text: string }[];
+  objective: string;
+  architecture: { label: string; detail: string }[];
+  aiWorkflow: string;
   source: string;
   demo: string;
-  buttons: string[];
   tags: string[];
 }
